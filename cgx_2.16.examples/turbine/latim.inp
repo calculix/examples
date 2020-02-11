@@ -1,0 +1,82 @@
+***********************************************************************
+*HEADING
+FW05 mit HE20 elementen
+***********************************************************************
+**
+*include, input=all.msh
+** ZYLINDERSYSTEM FUER DIE KNOTENVERSCHIEBUNGEN
+*TRANSFORM, NSET=Nall, TYPE=C
+0.,0.,0., 1.,0.,0.
+***********************************************************************
+**CYCLIC SYMMETRY
+***********************************************************************
+*include, input=CYC1.nam
+*include, input=CYC2.nam
+*SURFACE,NAME=SURF1,TYPE=NODE
+NCYC1
+*SURFACE,NAME=SURF2,TYPE=NODE
+NCYC2
+*TIE,NAME=TIE1,CYCLIC SYMMETRY
+SURF1,SURF2
+*CYCLIC SYMMETRY MODEL,N=12
+0.,0.,0., 1.,0.,0.
+***********************************************************************
+**RANDBEDINGUNGEN
+***********************************************************************
+*BOUNDARY
+*include, input=SPC_23.bou
+**MATERIALPARAMETER:
+*************************************************
+**               MATERIALDATEN
+**   (T IN CELSIUS, REST IM N,MM,S-SYSTEM, DH.:
+**    E-MODUL IN N/MM**2, ALPHA IN 1/K, RHO IN
+**    10**3*KG/MM**3, ZEIT IN S, VERSCHIEB. IN
+**    MM, SPANNG. IN MPA)
+*************************************************
+*MATERIAL,NAME=NI
+*ELASTIC,TYPE=ISO
+2.0E5,0.3,291.
+1.5E5,0.3,1200.
+*EXPANSION,TYPE=ISO,ZERO=293.
+13.E-6,291.
+16.E-6,1200.
+*DENSITY
+8.E-9
+***********************************************************************
+**ZUORDNUNG DER ELEMENTE ZU MATERIALIEN:
+*SOLID SECTION,ELSET=Eall,MATERIAL=NI
+***********************************************************************
+**
+*INITIAL CONDITIONS, TYPE=TEMPERATURE
+Nall, 293.15
+**
+***********************************************************************
+**              BELASTUNG UND AUSZUGEBENDE GROESSEN                  **
+** fuer n=110000/min
+***********************************************************************
+*STEP
+*STATIC
+**  n=110000/min
+*TEMPERATURE
+*include, input=../map/slave_ds20.dat
+*DLOAD
+Eall, CENTRIF, 1.3269e8,  0., 0., 0.,  1., 0., 0.
+*DLOAD
+*include, input=../map/faces_ds1e1.dlo
+*include, input=BACK.dlo
+*NODE FILE,FREQUENCY=1
+U
+*EL FILE,FREQUENCY=1,POSITION=AVERAGED AT NODES
+S
+*END STEP
+*STEP, PERTURBATION
+*FREQUENCY,EIGENSOLVER=LANCZOS
+4
+*SELECT CYCLIC SYMMETRY MODES, NMIN=5, NMAX=5
+*NODE PRINT,FREQUENCY=0
+*EL PRINT,FREQUENCY=0
+*NODE FILE,FREQUENCY=1
+PU,U
+*EL FILE,FREQUENCY=1,POSITION=AVERAGED AT NODES
+S
+*END STEP

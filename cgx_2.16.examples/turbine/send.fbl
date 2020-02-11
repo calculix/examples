@@ -1,0 +1,8 @@
+read latim.fbd
+read mesh.fbl
+send SPC abq spc 23
+send CYC1 abq nam
+send CYC2 abq nam
+send BACK abq press 1.054001e-01
+send all abq
+quit

@@ -1,0 +1,17 @@
+# 'map' <slave-set> <master-set> ['surf' 'ds'<nr> ]|['volu' 'ds'<nr>
+# ]|[ 'x'|'y'|'z'|'rx'|'ry'|'rz' 'ds'<nr> ]
+#
+read ../turbine/latim.fbd
+read ../turbine/mesh.fbl
+#
+move all rot x -.1
+seta slave e all
+comp slave do
+seto master
+# the result file ../therm/latimtrans.frd must have been created before
+read ../therm/latimtrans.frd add
+setc
+map  slave master volu ds
+send slave abq ds20
+ds 20 e 1
+plot fv slave

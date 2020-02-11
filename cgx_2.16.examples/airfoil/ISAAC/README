@@ -1,0 +1,24 @@
+ISAAC is a cfd code which can be found in www.sourceforge.net
+
+call cgx in the build mode:
+
+  cgx -b ../rae2822.fbd
+
+Then type (in the cgx-graphic window, not the xterm!)
+
+  read isaac.fbl
+
+The grid is the written.
+
+Then combine the prepared input file-header with the block-structure:
+
+  cat RAE2822.hdr isaac.dat >| RAE2822.dat
+
+call isaac with the prepared input file:
+
+  isaac < RAE2822.dat
+
+Post-processing with:
+
+  cgx -isaac2d RAE2822
+

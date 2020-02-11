@@ -1,0 +1,54 @@
+text if&value&while demo
+# def the leading letter of point names
+valu vp P
+# define the initial x value
+valu vx 0.
+# define parameters
+valu v2 4
+valu v3 1
+# start loop:
+while vx < v2
+ valu vy 0.
+ valu vz 0.
+ seto S1
+ while vy < v2
+  # define the pnt coordinates
+  valu vy + vy v3
+  valu vy int vy
+  valu vx int vx
+  valu vz int vz
+  # define the pnt name
+  valu p1 & vp vy
+  valu p1 & p1 vx
+  valu p1 & p1 vz
+  # generate the pnt
+  pnt p1 vx vy vz
+ endwhile
+ setc
+ valu vy 0.
+ valu vz 1.
+ seto S2
+ while vy < v2
+  valu vy + vy v3
+  valu vy int vy
+  valu vx int vx
+  valu vz int vz
+  valu p2 & vp vy
+  valu p2 & p2 vx
+  valu p2 & p2 vz
+  pnt p2 vx vy vz
+ endwhile
+ setc
+ valu vx + vx v3
+ if vx == 1
+   plot pa S1 r
+ else
+   plus pa S2 b
+ endif
+endwhile
+send all fbd
+# demo on how to write the content of variables to a file
+# look into writedemo.txt
+valu vx int vx
+valu vy int vy
+sys echo VX: vx VY: vx VZ: vz >| writedemo.txt

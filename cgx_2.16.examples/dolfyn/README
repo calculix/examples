@@ -1,0 +1,28 @@
+The files in this directory were provided by Runar Tenfjord.
+------------------------------------------------------------
+
+cgx.patch:
+
+Patch against the trunk version ofDolfyn.
+The patch for dolfyn adds support for the cgx result format (.frd files):
+
+   use,cgx
+
+   # nodal results
+   post, u, vert, yes
+   post, v, vert, yes
+   post, w, vert, yes
+   post, p, vert, yes
+
+Particles are not written as these are not supported by cgx results
+files.
+
+The walls are also omitted as these are available as face sets in
+CGX. The exported .sur filed can be read in when viewing the
+result file . Alternative by selecting 'Toggle Back/Front' the front
+faces can be removed and the interior is visible.
+
+
+mirror:
+
+cgx example for dolfyn.

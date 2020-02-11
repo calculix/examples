@@ -1,0 +1,50 @@
+read ring1.fbd
+elty all qu8c
+mesh all
+send UP abq nam
+send N1 abq nam
+send N2 abq nam
+send SPC abq nam
+send slave abq surf
+send master abq surf
+send all abq
+#
+# calculate
+sys ccx ring1
+#
+# read results and sweep elements
+read ring1.frd
+ds 2 e 7
+swep all s2 rot x 45 10 a
+enq all sv rec 0.950000 0.047562 0.015454 0.001 i
+#
+# post process, generate a line trough the structure and plot stresses
+plot fv all
+seta nv n sv
+stack on
+norm nv
+stack off
+valu nvx pop 2
+valu nvy pop
+valu nvz pop
+stack on
+prnt se nv
+stack off
+valu ncx pop 16
+valu ncy pop
+valu ncz pop
+valu v-1 -.2
+valu nvx * nvx v-1 
+valu nvy * nvy v-1  
+valu nvz * nvz v-1 
+seto lv
+pnt p1 ncx ncy ncz
+swep lv lv tra nvx nvy nvz 10
+setc
+graph lv l +
+#
+# generate a movie
+movi frames auto
+ds 2 4 e 7
+movi make
+movi clean

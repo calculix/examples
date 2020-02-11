@@ -1,0 +1,8 @@
+Run the examples and study the send.fbl files which control cgx
+You learn
+- the general way cgx and ccx work and work together
+- how to use batch files for pre- and post-processing (./therm)
+- to create boundary conditions files ..
+- .. how ccx makes use of this files
+
+Please start with "therm"

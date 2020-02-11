@@ -1,0 +1,42 @@
+# 'map' <slave-set> <master-set> ['surf' 'ds'<nr> ]|['volu' 'ds'<nr>
+# ]|[ 'x'|'y'|'z'|'rx'|'ry'|'rz' 'ds'<nr> ]
+#
+read ../turbine/latim.fbd
+read ../turbine/mesh.fbl
+#
+move all rot x -.1
+seta slave f all
+comp slave do
+seto master
+sys cp -f pressure.bak pressure.frd
+read pressure.frd add
+setc
+move master scal 1000
+move master rot x -30
+comp master do
+seta mss f master
+comp mss do
+copy master mps rot x -30
+seta master se mps
+comp master do
+seta mall f master
+comp mall do
+#
+# map both sides at once should be avoided because SS and PS might use
+# the wrong master-side for interpolation.
+#map  slave mall surf ds
+#
+# map all sides independent to avoid using wrong master-sides
+gtol 0.01
+map LE master surf ds
+map TE master surf ds
+map SSO master surf ds
+map SSI master surf ds
+map SFS mss surf ds
+map SFP mps surf ds
+seta faces f LE TE SSO SSI SFS SFP
+ds 1 s 1e-6
+ds 1 e 1
+send faces abq pres ds1 e1
+plot f slave
+plus fv faces

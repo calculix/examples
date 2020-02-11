@@ -1,0 +1,9 @@
+Purpose:
+Demonstrates how to create and fill a user defined dataset.
+
+The following example generates and stores a temperature distibution based 
+on the local z coordinate:
+cgx -b temperature.fbl
+
+The following example generates and stores the local normal vector:
+cgx -b normals.fbl

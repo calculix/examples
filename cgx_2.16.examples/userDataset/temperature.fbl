@@ -1,0 +1,32 @@
+# read geo and mesh
+read ../geometry.fbd
+elty all he8i
+mesh all
+# get the number of nodes
+stack on
+prnt info
+stack off
+valu nnodes pop 3
+prnt v
+# generate a new dataset
+ds g TEMP 1
+# loop over all nodes and use the z coordinate to generate a temperature value
+valu nod 0
+while nod < nnodes 
+  valu nod + nod 1
+  valu nod int nod
+  stack on
+  prnt n nod
+  stack off
+  valu nz pop 5
+  valu temp + nz 293.15
+  node nod v temp
+endwhile
+# set entity parameter
+ds e T
+# finish the dataset
+ds f
+# show it
+ds 1 e 1
+plot fv all
+

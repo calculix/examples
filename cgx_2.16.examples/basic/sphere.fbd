@@ -1,0 +1,120 @@
+ PNT py      -0.00000        1.00000        0.00000 
+ PNT p1       1.00000       -0.00000        0.00000 
+ PNT P01A    -1.00000       -0.00000        0.00000 
+ PNT P006     0.70711        0.50000       -0.50000 
+ PNT P008    -0.00000        0.70711       -0.70711 
+ PNT P00C     0.70711       -0.00000        0.00000 
+ PNT P00K     0.70711        0.70711        0.00000 
+ PNT P00L    -0.00000       -0.00000        0.00000 
+ PNT P01B    -0.70711        0.50000        0.50000 
+ PNT P01C     0.00000        0.70711        0.70711 
+ PNT P01D    -0.70711       -0.00000        0.00000 
+ PNT P01E    -0.70711        0.70711        0.00000 
+ PNT P007     0.70711        0.50000        0.50000 
+ PNT P00E     0.70711       -0.00000        0.70711 
+ PNT P01H    -0.70711        0.50000       -0.50000 
+ PNT P01J    -0.70711       -0.00000       -0.70711 
+ PNT P00R     0.70711       -0.50000        0.50000 
+ PNT P00S    -0.00000       -0.70711        0.70711 
+ PNT P01L    -0.70711       -0.50000       -0.50000 
+ PNT P00V     0.70711       -0.70711       -0.00000 
+ PNT P00X    -0.00000       -1.00000       -0.00000 
+ PNT P01N    -0.70711       -0.70711        0.00000 
+ PNT P01Q    -0.70711       -0.50000        0.50000 
+ PNT P012     0.70711       -0.50000       -0.50000 
+ PNT P013    -0.00000       -0.70711       -0.70711 
+ PNT P015     0.70711        0.00000       -0.70711 
+ PNT P01S    -0.70711        0.00000        0.70711 
+ PNT P017    -0.00000        0.00000       -1.00000 
+ PNT P01T     0.00000        0.00000        1.00000 
+ LINE L001 p1 P015 P00L 8              
+ LINE L002 P015 P017 P00L 8              
+ LINE L003 p1 P006 P00L 8              
+ LINE L004 P006 P008 P00L 8              
+ LINE L006 P015 P006 P00C 8              
+ LINE L008 P017 P008 P00L 8              
+ LINE L00A p1 P00K P00L 8              
+ LINE L00C P00K py P00L 8              
+ LINE L00G P006 P00K P00C 8              
+ LINE L00J P008 py P00L 8              
+ LINE L009 p1 P007 P00L 8              
+ LINE L00E P007 P01C P00L 8              
+ LINE L00I P00K P007 P00C 8              
+ LINE L00K py P01C P00L 8              
+ LINE L00L p1 P00E P00L 8              
+ LINE L00N P00E P01T P00L 8              
+ LINE L00O P007 P00E P00C 8              
+ LINE L00P P01C P01T P00L 8              
+ LINE L00T p1 P00R P00L 8              
+ LINE L00V P00R P00S P00L 8              
+ LINE L00W P00E P00R P00C 8              
+ LINE L00X P01T P00S P00L 8              
+ LINE L00Z p1 P00V P00L 8              
+ LINE L010 P00V P00X P00L 8              
+ LINE L011 P00R P00V P00C 8              
+ LINE L012 P00S P00X P00L 8              
+ LINE L015 p1 P012 P00L 8              
+ LINE L016 P012 P013 P00L 8              
+ LINE L017 P00V P012 P00C 8              
+ LINE L019 P00X P013 P00L 8              
+ LINE L01C P012 P015 P00C 8              
+ LINE L01D P013 P017 P00L 8              
+ LINE L01E P01A P01S P00L 8              
+ LINE L01F P01S P01T P00L 8              
+ LINE L01H P01A P01B P00L 8              
+ LINE L01I P01B P01C P00L 8              
+ LINE L01J P01S P01B P01D 8              
+ LINE L01L P01A P01E P00L 8              
+ LINE L01M P01E py P00L 8              
+ LINE L01N P01B P01E P01D 8              
+ LINE L01S P01A P01H P00L 8              
+ LINE L01T P01H P008 P00L 8              
+ LINE L01U P01E P01H P01D 8              
+ LINE L01X P01A P01J P00L 8              
+ LINE L01Y P01J P017 P00L 8              
+ LINE L020 P01H P01J P01D 8              
+ LINE L028 P01A P01L P00L 8              
+ LINE L029 P01L P013 P00L 8              
+ LINE L02B P01J P01L P01D 8              
+ LINE L02E P01A P01N P00L 8              
+ LINE L02F P01N P00X P00L 8              
+ LINE L02G P01L P01N P01D 8              
+ LINE L02L P01A P01Q P00L 8              
+ LINE L02M P01Q P00S P00L 8              
+ LINE L02O P01N P01Q P01D 8              
+ LINE L02U P01Q P01S P01D 8              
+ SHPE SPH1 SPH P00L 1.000000
+ GSUR A005 + SPH1 - L003 + L001 + L006 
+ GSUR A002 - SPH1 - L002 + L006 + L004 - L008 
+ GSUR A006 + SPH1 + L003 + L00G - L00A 
+ GSUR A004 - SPH1 - L004 + L00G + L00C - L00J 
+ GSUR A001 + SPH1 - L009 + L00A + L00I 
+ GSUR A003 - SPH1 - L00C + L00I + L00E - L00K 
+ GSUR A007 + SPH1 + L009 + L00O - L00L 
+ GSUR A008 - SPH1 - L00E + L00O + L00N - L00P 
+ GSUR A009 + SPH1 - L00T + L00L + L00W 
+ GSUR A00A - SPH1 - L00N + L00W + L00V - L00X 
+ GSUR A00C + SPH1 + L00T + L011 - L00Z 
+ GSUR A00E - SPH1 - L00V + L011 + L010 - L012 
+ GSUR A00G + SPH1 - L015 + L00Z + L017 
+ GSUR A00I - SPH1 - L010 + L017 + L016 - L019 
+ GSUR A00J + SPH1 + L015 + L01C - L001 
+ GSUR A00K - SPH1 - L016 + L01C + L002 - L01D 
+ GSUR A00L + SPH1 - L01H + L01E + L01J 
+ GSUR A00N - SPH1 - L01F + L01J + L01I + L00P 
+ GSUR A00O + SPH1 + L01H + L01N - L01L 
+ GSUR A00P - SPH1 - L01I + L01N + L01M + L00K 
+ GSUR A00R + SPH1 - L01S + L01L + L01U 
+ GSUR A00S - SPH1 - L01M + L01U + L01T + L00J 
+ GSUR A00T + SPH1 + L01S + L020 - L01X 
+ GSUR A00V - SPH1 - L01T + L020 + L01Y + L008 
+ GSUR A00W + SPH1 - L028 + L01X + L02B 
+ GSUR A00X - SPH1 - L01Y + L02B + L029 + L01D 
+ GSUR A00Z + SPH1 + L028 + L02G - L02E 
+ GSUR A010 - SPH1 - L029 + L02G + L02F + L019 
+ GSUR A011 + SPH1 - L02L + L02E + L02O 
+ GSUR A012 - SPH1 - L02F + L02O + L02M + L012 
+ GSUR A013 + SPH1 + L02L + L02U - L01E 
+ GSUR A014 - SPH1 - L02M + L02U + L01F + L00X 
+ ELTY all tr6u
+

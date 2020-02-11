@@ -1,0 +1,16 @@
+read flange.fbd
+elty all
+elty all he20r
+mesh all
+# to force the dependent nodes out of the material:
+send PRESD PRESI abq areampc presfit s 
+# to fix the moved nodes in the calculated pos:
+send BOUD BOUI abq areampc 123 f
+send SPC abq spc 123
+send SPCB2 abq spc 1 0.1
+send CYC1 abq nam
+send CYC2 abq nam
+send CYC3 abq nam
+send CYC4 abq nam
+send all abq
+quit

@@ -1,0 +1,65 @@
+debug= 0 
+steps= 600 
+ngradient=1 
+
+use,vtk
+use,cgx
+
+post, u, vert, yes
+post, v, vert, yes
+post, w, vert, yes
+post, p, vert, yes
+post, k, vert, yes
+post, eps, vert, yes
+post, T, vert, yes
+
+
+# 
+# stuurparameters 
+# 
+Gamma,0.5 
+relax,0.35,0.15,0.35 # urf vel. pres. temp. scal. 
+rtol,0.1,0.05,0.1 
+atol,1.e-8,1.e-8,1.e-8 
+ 
+# 
+# stofeigenschappen 
+# 
+VisLam=0.000001 
+Density=1.2 
+Pref=1 
+
+#thermal 
+turbulence,ke
+#transient,0.01 
+# 
+# *** randvoorwaarden *** 
+# 
+boundary,1 # inlaat 
+inlet 
+ 0.1 0 0 
+1.2
+293.0        
+inle
+0.1 0.001
+# 
+boundary,2 # uitlaat 
+outlet 
+1.0 
+# 
+boundary,3 # tunnel muren en dak 
+symp 
+# 
+boundary,4 # vloer 
+wall 
+noslip 
+0. 0.0 0.0 
+fixed 
+273 
+# 
+boundary,5 # spiegel 
+wall 
+noslip 
+0. 0.0 0.0 
+fixed 
+273

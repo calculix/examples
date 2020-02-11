@@ -1,0 +1,27 @@
+ PNT py      -0.00000        1.00000       -0.00000 
+ PNT p1       1.00000       -0.00000       -0.00000 
+ PNT P001     0.70711       -0.00000       -0.70711 
+ PNT P003    -0.00000       -0.00000       -1.00000 
+ PNT P006     0.70711        0.50000       -0.50000 
+ PNT P008    -0.00000        0.70711       -0.70711 
+ PNT P00C     0.70711       -0.00000       -0.00000 
+ PNT P00K     0.70711        0.70711       -0.00000 
+ PNT P00L    -0.00000       -0.00000       -0.00000 
+ PNT P00N    -0.00000        1.00000       -0.00000 
+ LINE L001 p1 P001 P00L 8              
+ LINE L002 P001 P003 P00L 8              
+ LINE L003 p1 P006 P00L 8              
+ LINE L004 P006 P008 P00L 8              
+ LINE L006 P001 P006 P00C 8              
+ LINE L008 P003 P008 P00L 8              
+ LINE L00A p1 P00K P00L 8              
+ LINE L00C P00K P00N P00L 8              
+ LINE L00G P006 P00K P00C 8              
+ LINE L00J P008 P00N P00L 8              
+ SHPE SPH1 sph P00L 1.
+ GSUR A005 + SPH1  - L003 + L001 + L006 
+ GSUR A002 + SPH1  - L002 + L006 + L004 - L008 
+ GSUR A006 + SPH1  + L003 + L00G - L00A 
+ GSUR A004 + SPH1  - L004 + L00G + L00C - L00J 
+ ELTY all QU4 
+

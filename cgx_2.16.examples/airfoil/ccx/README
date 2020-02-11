@@ -1,0 +1,41 @@
+Purpose:
+This is a CalculiX-cfd example. The same model as for isaac 
+will be read. But because ccx run's an inviscid calculation the mesh-density 
+in the boundary-layer is reduced. In addition the model 
+is sweeped from 2D to 3D. In the current state 
+of ccx the achievable accuracy is only satisfying for inviscid calculations 
+with an overall high mesh density. 
+
+The results might be be compared to AGARD Report AR 138, May 1979
+
+call cgx in the build mode:
+
+  cgx -b send.fbl
+
+call ccx with the prepared input file: (use only 1 thread since parallel
+processing does not produce reliable results so far)
+
+  export OMP_NUM_THREADS=1; ccx rae2822
+
+Post-processing with:
+
+  cgx rae2822.frd
+
+
+Remark:
+a restart is possible after writing velocity, temperature and pressure with:
+send all abq lc<nr-of-dataset> (3 times, one for each dataset)
+Then include the files in the initial conditions section and
+start ccx again
+
+
+PS
+a second geometry file prepared for meshing with pentaeders is provided. The 
+calculation speed is much faster but accuray is lower:
+call cgx in the build mode:
+
+  cgx -b send_penta.fbl
+  export OMP_NUM_THREADS=4; ccx rae2822_penta
+  cgx rae2822_penta.frd
+
+REMARK: No valid solution could be achieved with the current version of ccx! 
