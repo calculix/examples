@@ -1,0 +1,280 @@
+** Welle + Turbine
+seto E17V
+read E-FW05-17V/E-FW05-17V.fbd
+copy E17VB1 E17VB2 rot x -30
+copy E17VB2 E17VB3 rot x -30
+copy E17VB3 E17VB4 rot x -30
+copy E17VB4 E17VB5 rot x -30
+copy E17VB5 E17VB6 rot x -30
+copy E17VB6 E17VB7 rot x -30
+copy E17VB7 E17VB8 rot x -30
+copy E17VB8 E17VB9 rot x -30
+copy E17VB9 E17VB10 rot x -30
+copy E17VB10 E17VB11 rot x -30
+copy E17VB11 E17VB12 rot x -30
+seta WEEL1 se WEEL DISK 
+seto WEEL
+swep WEEL1 WEEL2 rot x -90. 8
+swep WEEL2 WEEL3 rot x -90. 8
+swep WEEL3 WEEL4 rot x -90. 8
+swep WEEL4 WEEL5 rot x -90. 8
+setc
+setc
+seta NUT1 se NUT
+seto NUT
+swep NUT1 NUT2 rot x -90. 2
+swep NUT2 NUT3 rot x -90. 2
+swep NUT3 NUT4 rot x -90. 2
+swep NUT4 NUT5 rot x -90. 2
+setc
+** Verdichter
+seto E23V
+read E-FW05-23V/E-FW05-23V.fbd add
+copy E23VB1 E23VB2 rot x 51.428571
+copy E23VB2 E23VB3 rot x 51.428571
+copy E23VB3 E23VB4 rot x 51.428571
+copy E23VB4 E23VB5 rot x 51.428571
+copy E23VB5 E23VB6 rot x 51.428571
+copy E23VB6 E23VB7 rot x 51.428571
+setc
+** Dichtung
+seto E013
+read E-FW05-013/E-FW05-013.fbd add
+move E013 tra 11.80 0 0
+swep E013S1 E013S2 rot x -90. 8
+swep E013S2 E013S3 rot x -90. 8
+#swep E013S3 E013S4 rot x -90. 8
+#swep E013S4 E013S5 rot x -90. 8
+setc
+merg p E013 0.01
+merg l E013
+merg s E013
+** Lagerbuechse
+seto E21V
+read E-FW05-21V/E-FW05-21V.fbd add
+swep E21VS1 E21VS2 rot x -90. 8
+swep E21VS2 E21VS3 rot x -90. 8
+swep E21VS3 E21VS4 rot x -90. 8
+swep E21VS4 E21VS5 rot x -90. 8
+setc
+**copy E21V E21V_2 rot z 180.
+**move E21V_2 tra 88.3 0 0
+copy E21V E21V_2 rot y 180.
+move E21V_2 tra 88.3 0 0
+** Kugellager
+seto E22V
+read E-FW05-22V/E-FW05-22V.fbd add
+swep E22VS1 E22VS2 rot x -90. 8
+swep E22VS2 E22VS3 rot x -90. 8
+swep E22VS3 E22VS4 rot x -90. 8
+swep E22VS4 E22VS5 rot x -90. 8
+setc
+copy E22V E22V_2 rot z 180.
+move E22V_2 tra 88.3 0 0
+** Lageraufnahme
+seto E20V
+read E-FW05-20V/E-FW05-20V.fbd add
+copy E20VB1 E20VB2 rot x -45.
+copy E20VB2 E20VB3 rot x -45.
+copy E20VB3 E20VB4 rot x -45.
+setc
+** Lagergehaeuse
+seto E16V
+read E-FW05-16V/E-FW05-16V.fbd add
+move E16V tra 8.9 0 0
+swep E16VS1 E16VS2 rot x -90. 8
+swep E16VS2 E16VS3 rot x -90. 8
+#swep E16VS3 E16VS4 rot x -90. 8
+#swep E16VS4 E16VS5 rot x -90. 8
+setc
+** T-Dichtungstraeger
+seto E014
+read E-FW05-014/E-FW05-014.fbd add
+move E014 tra 79.85  0 0
+swep E014S1 E014S2 rot x -90. 8
+swep E014S2 E014S3 rot x -90. 8
+#swep E014S3 E014S4 rot x -90. 8
+#swep E014S4 E014S5 rot x -90. 8
+setc
+** Rueckwand
+seto E015
+read E-FW05-015/E-FW05-015.fbd add
+move E015 tra 61.55 0 0
+swep E015S1 E015S2 rot x -90. 8
+swep E015S2 E015S3 rot x -90. 8
+#swep E015S3 E015S4 rot x -90. 8
+#swep E015S4 E015S5 rot x -90. 8
+setc
+** Dichtungstraeger
+seto E05A
+read E-FW05-05A/E-FW05-05A.fbd add
+move E05A tra 8.9 0 0
+swep E05AS1 E05AS2 rot x -90. 8
+swep E05AS2 E05AS3 rot x -90. 8
+#swep E05AS3 E05AS4 rot x -90. 8
+#swep E05AS4 E05AS5 rot x -90. 8
+setc
+** Hitzeschild
+seto E11V
+read E-FW05-11V/E-FW05-11V.fbd add
+move E11V tra 70.55 0 0
+swep E11VS1 E11VS2 rot x -90. 8
+swep E11VS2 E11VS3 rot x -90. 8
+#swep E11VS3 E11VS4 rot x -90. 8
+#swep E11VS4 E11VS5 rot x -90. 8
+setc
+** Spannflansch
+seto E06A
+read E-FW05-06A/E-FW05-06A.fbd add
+move E06A tra 93.75 0 0
+swep E06AS1 E06AS2 rot x -90. 8
+swep E06AS2 E06AS3 rot x -90. 8
+#swep E06AS3 E06AS4 rot x -90. 8
+#swep E06AS4 E06AS5 rot x -90. 8
+setc
+** Leitring
+seto E02A
+read E-FW05-02A/E-FW05-02A.fbd add
+move E02A tra -1.2 0 0
+copy E02AB1 E02AB2 rot x -18.947368
+copy E02AB2 E02AB3 rot x -18.947368
+copy E02AB3 E02AB4 rot x -18.947368
+copy E02AB4 E02AB5 rot x -18.947368
+copy E02AB5 E02AB6 rot x -18.947368
+copy E02AB6 E02AB7 rot x -18.947368
+copy E02AB7 E02AB8 rot x -18.947368
+copy E02AB8 E02AB9 rot x -18.947368
+copy E02AB9 E02AB10 rot x -18.947368
+copy E02AB10 E02AB11 rot x -18.947368
+copy E02AB11 E02AB12 rot x -18.947368
+setc
+** Leitschaufel
+seto E24V
+read E-FW05-24V/E-FW05-24V.fbd add
+move E24V rot x -13.
+move E24V tra -7.2 0.0 47.15
+move E24V rot x -30.
+move E24V tra 0.0 0.795680 -0.071305 
+copy E24VB1 E24VB2 rot x -18.947368
+copy E24VB2 E24VB3 rot x -18.947368
+copy E24VB3 E24VB4 rot x -18.947368
+copy E24VB4 E24VB5 rot x -18.947368
+copy E24VB5 E24VB6 rot x -18.947368
+copy E24VB6 E24VB7 rot x -18.947368
+copy E24VB7 E24VB8 rot x -18.947368
+copy E24VB8 E24VB9 rot x -18.947368
+copy E24VB9 E24VB10 rot x -18.947368
+copy E24VB10 E24VB11 rot x -18.947368
+copy E24VB11 E24VB12 rot x -18.947368
+setc
+** Verdichtergehaeuse
+seto E01A
+read E-FW05-01A/E-FW05-01A.fbd add
+move E01A tra 7.8 0 0
+copy E01AB1 E01AB2 rot x -18.947368
+copy E01AB2 E01AB3 rot x -18.947368
+copy E01AB3 E01AB4 rot x -18.947368
+copy E01AB4 E01AB5 rot x -18.947368
+copy E01AB5 E01AB6 rot x -18.947368
+copy E01AB6 E01AB7 rot x -18.947368
+copy E01AB7 E01AB8 rot x -18.947368
+copy E01AB8 E01AB9 rot x -18.947368
+copy E01AB9 E01AB10 rot x -18.947368
+setc
+** Turbinenleitrad-assembly
+seto E07A
+read E-FW05-07A/assemble.fbd add
+move E07A tra 93.75 0 0
+copy LETB1 LETB2 rot x -67.5
+copy LETB2 LETB3 rot x -67.5
+#copy LETB3 LETB4 rot x -67.5
+setc
+** Flammrohr
+seto E63V
+read E-FW05-63V/E-FW05-63V.fbd add
+move E63V tra 93.75 0 0
+copy E63VB1 E63VB2 rot x -22.5
+copy E63VB2 E63VB3 rot x -22.5
+copy E63VB3 E63VB4 rot x -22.5
+copy E63VB4 E63VB5 rot x -22.5
+copy E63VB5 E63VB6 rot x -22.5
+copy E63VB6 E63VB7 rot x -22.5
+copy E63VB7 E63VB8 rot x -22.5
+#copy E63VB8 E63VB9 rot x -22.5
+setc
+** Verdampfer
+seto E66A
+read E-FW05-66A/E-FW05-66A.fbd add
+move E66A tra 116.75 0 0
+swep E66AS1 E66AS2 rot x -90. 8
+swep E66AS2 E66AS3 rot x -90. 8
+setc
+** Gehaeuse
+seto E69A
+read E-FW05-69A/E-FW05-69A.fbd add
+move E69A tra -17.2 0 0
+swep E69AS1 E69AS2 rot x -90. 8
+swep E69AS2 E69AS3 rot x -90. 8
+setc
+** BK-Flansch (Loch fehlt)
+seto E08A
+read E-FW05-08A/E-FW05-08A.fbd add
+move E08A tra 268.85 0 0
+swep E08AS1 E08AS2 rot x -90. 16
+swep E08AS2 E08AS3 rot x -90. 16
+setc
+** Duesen-Flansch (Loch fehlt)
+seto E09A
+read E-FW05-09A/E-FW05-09A.fbd add
+move E09A tra 267.8 0 0
+copy E09AB1 E09AB2 rot x -30.
+copy E09AB2 E09AB3 rot x -30.
+copy E09AB3 E09AB4 rot x -30.
+copy E09AB4 E09AB5 rot x -30.
+copy E09AB5 E09AB6 rot x -30.
+setc
+** Spacer (Loch fehlt)
+seto E03A
+read E-FW05-03A/E-FW05-03A.fbd add
+move E03A tra 7.3 0 0
+swep E03AS1 E03AS2 rot x -90. 16
+swep E03AS2 E03AS3 rot x -90. 16
+setc
+** Spannflansch (Loch fehlt)
+seto E04A
+read E-FW05-04A/E-FW05-04A.fbd add
+move E04A tra 7.4 0 0
+swep E04AS1 E04AS2 rot x -90. 16
+swep E04AS2 E04AS3 rot x -90. 16
+setc
+** Oelwanne
+seto E70A
+read E-FW05-70A/E-FW05-70A.fbd add
+move E70A tra 22.4 0 0
+swep E70AS1 E70AS2 rot x -90. 16
+swep E70AS2 E70AS3 rot x -90. 16
+setc
+** Distanzring
+seto E71A
+read E-FW05-71A/E-FW05-71A.fbd add
+move E71A tra 261.85 0 0
+swep E71AS1 E71AS2 rot x -90. 16
+swep E71AS2 E71AS3 rot x -90. 16
+setc
+**
+gtol 0.001
+merg p all
+merg l all
+merg s all
+merg n E17V 0.05
+elty all
+elty all he20r
+plot b all
+mesh all
+#view surf
+plot f all n
+plus f E17V r
+plus f E23V b
+#plus f E07A g
+#plus f E63V g
+#plus f E66A g

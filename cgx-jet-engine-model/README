@@ -1,0 +1,12 @@
+Do 26. Aug 19:40:37 CEST 2010
+created by Klaus Wittig
+
+Contains the whole engine model of the FW05 project.
+It demonstrates the use of cgx as a geometry generator
+and mesher.
+
+To assemble a cut off model type:
+
+cgx -b assemble.fbl
+
+It might take a while until the mesh is visible.

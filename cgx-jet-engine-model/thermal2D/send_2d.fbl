@@ -1,0 +1,437 @@
+sys rm *.flm *.nam *.bou *.sur *.msh
+read assemble_2d.fbd
+del me
+seta elem2D s all
+elty all
+elty qu8c qu4c
+elty tr6c tr3u
+elty qu8s qu4s
+#mesh elem2D
+#elty tr6c tr3c
+#
+elty NETWORK be3f
+elty INLET be2f
+elty OUTLET be2f
+#mesh NETWORK
+mesh all
+elty tr6c tr3c
+#
+#
+** COMPRESSOR
+send NUTE23 abq sur
+send E23NUT abq sur
+send E23E17 abq sur
+send E17E23 abq sur
+send E23E013 abq sur
+send E013E23 abq sur
+send E17E013 abq sur
+send E013E17 abq sur
+send E22E013 abq sur
+** COMPRESSOR BLADE DISK
+send E23BE23V abq sur
+send E23VE23B abq sur
+** WEEL BALL BEARING
+send E22E17 abq sur
+send E17E22 abq sur
+** BALL BEARING SOCKET
+send E22E21 abq sur
+send E21E22 abq sur
+** SOCKET HOUSING Front
+send E21E20F abq sur 
+send E20E21F abq sur
+** SOCKET HOUSING Rear
+send E21E20R abq sur 
+send E20E21R abq sur
+** HOUSING BEARING_CASING
+send E16E20 abq sur
+send E20E16 abq sur
+** BEARING_CASING COMPRESSOR SEAL
+send E16E05 abq sur 
+send E05E16 abq sur
+** COMPRESSOR SEAL STATOR REAR
+send E05E02 abq sur
+send E02E05 abq sur
+** VANE STATOR REAR
+send E24E02 abq sur
+send E02E24 abq sur
+** VANE STATOR FRONT
+send E24E01 abq sur 
+send E01E24 abq sur
+** STATOR REAR RING
+send E03E02 abq sur
+send E02E03 abq sur
+** RING OILTIN
+send E03E04 abq sur
+send E04E03 abq sur
+** OILTIN BC_SUPPORT
+send E70E06 abq sur
+send E06E70 abq sur
+** BC_SUPPORT HEAT_SHIELD
+send E06E11 abq sur
+send E11E06 abq sur
+** HEAT_SHIELD BEARING_CASING
+send E015E11 abq sur
+send E11E015 abq sur
+** BEARING_CHAMBER
+send E015E16 abq sur
+send E16E015 abq sur
+** BEARING_CASING SEALPLATE
+send E015E14 abq sur 
+send E14E015 abq sur
+** BC_SUPPORT VANE
+send LEE07 abq sur
+send E07LE abq sur
+** BOILER inner borders
+send S07E07 abq sur
+send E07S07 abq sur
+** BOILER inner borders
+send E66E07 abq sur
+send E07E66 abq sur
+** BOILER FLANGE
+send E66E09 abq sur
+send E09E66 abq sur
+** FLANGE CASING
+send E09E69 abq sur
+send E69E09 abq sur
+** CASING BOILER
+send E08E69 abq sur
+send E69E08 abq sur
+** BOILER FLAME_TUBE
+send E08E63 abq sur
+send E63E08 abq sur
+** BOILER
+send E08E66 abq sur
+send E66E08 abq sur
+** FLAME_TUBE RING
+send E71E63 abq sur
+send E63E71 abq sur
+** FLAME_TUBE inner borders
+send E63S63 abq sur
+send S63E63 abq sur
+** CASING STATOR FRONT
+send E01E69 abq sur
+send E69E01 abq sur
+** PISTONRING STATOR REAR
+send PR1E05 abq sur
+send E05PR1 abq sur
+** PISTONRING SEALPLATE
+send PR2E014 abq sur
+send E014PR2 abq sur
+** OILPLATE BALL BEARING
+send E22OILP abq sur
+send OILPE22 abq sur
+** OILPLATE WEEL
+send E17OILP abq sur
+send OILPE17 abq sur
+** TURBINE BLADE DISK
+send E17BE17V abq sur
+send E17VE17B abq sur
+#
+send all abq
+#
+send E03A abq spc t 500.
+send E06A abq spc t 1000.
+send E07A abq spc t 1000.
+send E08A abq spc t 1000.
+send E23V abq spc t 500.
+send LAV abq nam
+send LEV abq nam
+send LET abq nam
+send LAT abq nam
+#
+# element sets
+send qu8c abq nam
+send tr6c abq nam
+send qu8s abq nam
+send C355 abq nam
+send Al abq nam
+send IN713 abq nam
+send CrNiSt abq nam
+send MgSt abq nam
+#
+# film
+# calculated with thermalConduct.c
+valu ALPHA_LAVLE	  5.e-1
+valu ALPHA_LAVW		  4.e-1
+valu ALPHA_LAV		  4.e-1
+valu ALPHA_LAVR		  3.e-1
+valu ALPHA_LEVLE  	  5.e-1
+valu ALPHA_LEVW   	  3.e-1
+valu ALPHA_LEV    	  3.e-1
+valu ALPHA_LEVBEND	  3.e-1
+valu ALPHA_LEVCH1 	  3.e-1
+valu ALPHA_LEVCH2 	  3.e-1
+valu ALPHA_CAV1   	  2.e-1
+valu ALPHA_CAV2   	  2.e-1
+valu ALPHA_CAV3   	  2.e-1
+valu ALPHA_LETCORE  	  2.e-1
+valu ALPHA_BOILIN  	  4.e-1
+valu ALPHA_BOILO1  	  3.e-1
+valu ALPHA_BOILO2  	  3.e-1
+valu ALPHA_BOILI     	  3.e-1
+valu ALPHA_BC1   	  3.e-1
+valu ALPHA_BC2   	  3.e-1
+valu ALPHA_BC3   	  3.e-1
+valu ALPHA_BC4   	  2.5e-1
+valu ALPHA_BC5   	  2.e-1
+# the primary combustion zone gets an adder of 0.2 for alpha to regard
+# radiation of the reaction. The secondary zone .1
+valu ALPHA_FLAMTO1	  0.25
+valu ALPHA_FLAMTO2	  0.18
+valu ALPHA_FLAMTO3	  1.5e-1
+valu ALPHA_FLAMTO4	  1.
+valu ALPHA_LETLE  	  3.e-1
+valu ALPHA_LET  	  9.e-1
+valu ALPHA_FLAMTI1	  0.5e-1
+valu ALPHA_FLAMTI2	  0.8e-1
+valu ALPHA_FLAMTI3	  1.1e-1
+# duns
+valu ALPHA_LATLE   	  2.
+valu ALPHA_LAT   	  1.2
+valu ALPHA_LATR   	  1.3e-1
+#
+valu ALPHA_NOZ1   	  0.7
+valu ALPHA_NOZ2   	  0.8
+#
+valu TEMP_OILFACES  320.
+valu ALPHA_OILFACES 4.4
+#
+send NETWORK abq nam
+send NW_COMPR abq nam
+send NW_BOIL abq nam
+send NW_BC1 abq nam
+send NW_BC2 abq nam
+send NW_BC3 abq nam
+send NW_BC4 abq nam
+send NW_BC5 abq nam
+send NW_FLAMTO1 abq nam
+send NW_FLAMTO2 abq nam
+send NW_FLAMTO3 abq nam
+send NW_FLAMTO4 abq nam
+send P_IN abq nam
+send P_LAVW abq nam
+send P_FLAMT1 abq nam
+send P_FLAMT2 abq nam
+send P_FLAMT3 abq nam
+send P_FLAMT4 abq nam
+send P_LATLE  abq nam
+send P_LAT    abq nam
+send P_NOZ    abq nam
+send P_OUT abq nam
+#
+# load set
+valu vn n
+stack free
+stack on
+#
+prnt se \P_LAVLE
+valu \N_LAVLE pop 18
+valu \N_LAVLE int \N_LAVLE
+valu \N_LAVLE & vn \N_LAVLE
+prnt se \P_LAVW
+valu \N_LAVW pop 18
+valu \N_LAVW int \N_LAVW
+valu \N_LAVW & vn \N_LAVW
+prnt se \P_LAVR
+valu \N_LAVR pop 18
+valu \N_LAVR int \N_LAVR
+valu \N_LAVR & vn \N_LAVR
+prnt se \P_LEVLE
+valu \N_LEVLE pop 18
+valu \N_LEVLE int \N_LEVLE
+valu \N_LEVLE & vn \N_LEVLE
+prnt se \P_LEVW
+valu \N_LEVW pop 18
+valu \N_LEVW int \N_LEVW
+valu \N_LEVW & vn \N_LEVW
+prnt se \P_LEVBEND
+valu \N_LEVBEND pop 18
+valu \N_LEVBEND int \N_LEVBEND
+valu \N_LEVBEND & vn \N_LEVBEND
+prnt se \P_LEVCH1
+valu \N_LEVCH1 pop 18
+valu \N_LEVCH1 int \N_LEVCH1
+valu \N_LEVCH1 & vn \N_LEVCH1
+prnt se \P_LEVCH2
+valu \N_LEVCH2 pop 18
+valu \N_LEVCH2 int \N_LEVCH2
+valu \N_LEVCH2 & vn \N_LEVCH2
+prnt se \P_CAV
+valu \N_CAV pop 18
+valu \N_CAV int \N_CAV
+valu \N_CAV & vn \N_CAV
+prnt se \P_LET
+valu \N_LET pop 18
+valu \N_LET int \N_LET
+valu \N_LET & vn \N_LET
+prnt se \P_BOIL1
+valu \N_BOIL1 pop 18
+valu \N_BOIL1 int \N_BOIL1
+valu \N_BOIL1 & vn \N_BOIL1
+prnt se \P_BOIL2
+valu \N_BOIL2 pop 18
+valu \N_BOIL2 int \N_BOIL2
+valu \N_BOIL2 & vn \N_BOIL2
+prnt se \P_BOIL3
+valu \N_BOIL3 pop 18
+valu \N_BOIL3 int \N_BOIL3
+valu \N_BOIL3 & vn \N_BOIL3
+prnt se \P_BC1
+valu \N_BC1 pop 18
+valu \N_BC1 int \N_BC1
+valu \N_BC1 & vn \N_BC1
+prnt se \P_BC2
+valu \N_BC2 pop 18
+valu \N_BC2 int \N_BC2
+valu \N_BC2 & vn \N_BC2
+prnt se \P_BC3
+valu \N_BC3 pop 18
+valu \N_BC3 int \N_BC3
+valu \N_BC3 & vn \N_BC3
+prnt se \P_BC4
+valu \N_BC4 pop 18
+valu \N_BC4 int \N_BC4
+valu \N_BC4 & vn \N_BC4
+prnt se \P_BC5
+valu \N_BC5 pop 18
+valu \N_BC5 int \N_BC5
+valu \N_BC5 & vn \N_BC5
+prnt se \P_FLAMT1
+valu \N_FLAMT1 pop 18
+valu \N_FLAMT1 int \N_FLAMT1
+valu \N_FLAMT1 & vn \N_FLAMT1
+prnt se \P_FLAMT2
+valu \N_FLAMT2 pop 18
+valu \N_FLAMT2 int \N_FLAMT2
+valu \N_FLAMT2 & vn \N_FLAMT2
+prnt se \P_FLAMT3
+valu \N_FLAMT3 pop 18
+valu \N_FLAMT3 int \N_FLAMT3
+valu \N_FLAMT3 & vn \N_FLAMT3
+prnt se \P_FLAMT4
+valu \N_FLAMT4 pop 18
+valu \N_FLAMT4 int \N_FLAMT4
+valu \N_FLAMT4 & vn \N_FLAMT4
+prnt se \P_LETLE
+valu \N_LETLE pop 18
+valu \N_LETLE int \N_LETLE
+valu \N_LETLE & vn \N_LETLE
+
+prnt se \P_LATLE
+valu \N_LATLE pop 18
+valu \N_LATLE int \N_LATLE
+valu \N_LATLE & vn \N_LATLE
+prnt se \P_LAT
+valu \N_LAT pop 18
+valu \N_LAT int \N_LAT
+valu \N_LAT & vn \N_LAT
+prnt se \P_LATR
+valu \N_LATR pop 18
+valu \N_LATR int \N_LATR
+valu \N_LATR & vn \N_LATR
+prnt se \P_NOZ
+valu \N_NOZ pop 18
+valu \N_NOZ int \N_NOZ
+valu \N_NOZ & vn \N_NOZ
+prnt se \P_OUT
+valu \N_OUT pop 18
+valu \N_OUT int \N_OUT
+valu \N_OUT & vn \N_OUT
+#
+stack off
+#
+# send film
+send LAVLE   abq film N_LAVLE   ALPHA_LAVLE
+send LAVW    abq film N_LAVW    ALPHA_LAVW
+setr LAV f LAVL
+send LAV     abq film N_LAVW     ALPHA_LAV
+send LAVR    abq film N_LAVR     ALPHA_LAVR    
+send LEVLE   abq film N_LEVLE   ALPHA_LEVLE
+send LEVW    abq film N_LEVW    ALPHA_LEVW
+setr LEV f LEVL
+send LEV     abq film N_LEVW    ALPHA_LEV
+send LEVBEND abq film N_LEVBEND ALPHA_LEVBEND
+#
+del se buf1 buf2
+seta buf1 n E69E01
+enq buf1 buf2 rec _ -14.26 _ 9. a
+comp buf2 do
+seta LEVCH1 f buf2
+send LEVCH1 abq film N_LEVCH1   ALPHA_LEVCH1 
+#
+del se buf2
+enq buf1 buf2 rec _ -57.16 _ 34.6 a
+comp buf2 do
+seta LEVCH2 f buf2
+send LEVCH2 abq film N_LEVCH2   ALPHA_LEVCH2 
+#
+send CAV1    abq film N_CAV     ALPHA_CAV1   
+send CAV2    abq film N_CAV     ALPHA_CAV2   
+send CAV3    abq film N_CAV     ALPHA_CAV3   
+setr LETCORE f LETL
+send LETCORE abq film N_LET    ALPHA_LETCORE  -
+send BOILIN  abq film N_BOIL1    ALPHA_BOILIN  
+send BOILO1  abq film N_BOIL2    ALPHA_BOILO1
+send BOILO2  abq film N_BOIL3    ALPHA_BOILO2
+send BOILI   abq film N_BOIL2    ALPHA_BOILI
+#
+del se buf2
+enq buf1 buf2 rec _ -114.36 _ 23. a
+comp buf2 do
+seta BC1 f buf2
+send BC1    abq film N_BC1     ALPHA_BC1   
+#
+del se buf2
+enq buf1 buf2 rec _ -154.4  _ 17.4 a
+comp buf2 do
+seta BC2 f buf2
+send BC2    abq film N_BC2     ALPHA_BC2   
+#
+del se buf2
+enq buf1 buf2 rec _ -194.43 _ 23. a
+comp buf2 do
+seta BC3 f buf2
+send BC3    abq film N_BC3     ALPHA_BC3   
+#
+del se buf2
+enq buf1 buf2 rec _ -243.0 _ 25.7 a
+comp buf2 do
+seta BC4 f buf2
+send BC4    abq film N_BC4     ALPHA_BC4   
+send BC5    abq film N_BC5     ALPHA_BC5   
+#
+send FLAMTO1 abq film N_FLAMT1  ALPHA_FLAMTO1
+send FLAMTO2 abq film N_FLAMT2  ALPHA_FLAMTO2
+send FLAMTO3 abq film N_FLAMT3  ALPHA_FLAMTO3
+send FLAMTO4 abq film N_FLAMT4  ALPHA_FLAMTO4
+send LETLE   abq film N_LETLE   ALPHA_LETLE  
+setr LET f LETL
+send LET     abq film N_FLAMT4  ALPHA_LET    
+send FLAMTI1 abq film N_FLAMT1  ALPHA_FLAMTI1
+send FLAMTI2 abq film N_FLAMT2  ALPHA_FLAMTI2
+send FLAMTI3 abq film N_FLAMT3  ALPHA_FLAMTI3
+send LATLE   abq film N_LATLE    ALPHA_LATLE  
+send LATW    abq film N_LAT     ALPHA_LAT    
+send LATE    abq film N_LAT     ALPHA_LATR    
+setr LAT f LATL
+send LAT     abq film N_LAT      ALPHA_LAT    
+send LATR    abq film N_LATR     ALPHA_LATR    
+send NOZ1    abq film N_NOZ      ALPHA_NOZ1   
+send NOZ2    abq film N_OUT      ALPHA_NOZ2   
+#
+send OILFACES abq film TEMP_OILFACES ALPHA_OILFACES
+#
+# radiate
+#
+send OUTERFACES abq rad 293. 0.7
+send HOTFACES abq rad cr293. 0.7
+del se buf1 buf2
+seta buf1 n E69E01
+enq buf1 buf2 rec _ -138.3 _ 130.6 a
+comp buf2 do
+seta COLDFACES f buf2
+send COLDFACES abq rad cr293. 0.7
+#
+# delete values
+seta delv v all
+zap delv

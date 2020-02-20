@@ -1,0 +1,13 @@
+This package includes a thermal model of the jet engine from www.calculix.de
+
+To generate the solver input file:
+
+cgx -b send_2d.fbl
+
+The solver:
+
+ccx test_2d
+
+The result:
+
+cgx test_2d.frd
