@@ -1,0 +1,39 @@
+** Static Problem
+** Simple beam with SECTION=CIRC type of section
+
+*INCLUDE, INPUT=timber_OUT.inp
+
+** Imperial Units
+
+*MATERIAL,NAME=wood
+*ELASTIC
+1.000E+6,0.49
+*DENSITY
+0.800E-04
+
+** beam section card for beam elements
+*BEAM SECTION,MATERIAL=wood,ELSET=ln1,OFFSET1=0,SECTION=CIRC
+8,8.5
+
+
+
+*BOUNDARY
+1,1,3,0
+2,2,2,0
+2,3,3,0
+
+
+*STEP
+*STATIC
+
+
+** Gravity acceleration to the element group named “Eall”
+*DLOAD 
+ln1,GRAV,3.8640E+02,0,-1,0 
+
+
+*EL FILE,OUTPUT=3D
+S
+*NODE FILE
+U 
+*END STEP   

@@ -1,0 +1,4 @@
+Presfit
+This is example with using CGX preprocessor
+to apply BC. Read help for 'send' card for more information
+https://youtu.be/MLsQObUk_H8

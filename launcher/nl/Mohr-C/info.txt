@@ -1,0 +1,8 @@
+Mohr-Coulomb Soil
+This is example of user-material, coded separately.
+Double click on folder to find umat.f file.
+If should be replaced before compilation of CCX.
+(this model is provided with existing version of Launcher) 
+See also Mohr Coulomb soil - Slope Stability
+https://youtu.be/qo3vOXnDeSs
+

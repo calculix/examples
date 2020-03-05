@@ -1,0 +1,37 @@
+**Static with S8R shells (1)
+**This example of face load on structure
+** CCX *DLOAD card is applied. Pressure values are stored in surf_0.dlo file in the same folder.
+
+
+*INCLUDE, INPUT=allinone3.inp
+
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.9000E+07,0.3
+*DENSITY
+7.3500E-04
+
+
+*SHELL SECTION,MATERIAL=Steel,ELSET=Eall,,OFFSET=0.0000E+00
+5.0000E-01
+
+*BOUNDARY
+fix_y,2,2,0
+
+*BOUNDARY
+fix_z,3,3,0
+
+*BOUNDARY
+fix_x,1,1,0
+
+*STEP
+*STATIC
+*AMPLITUDE,NAME=force_surf
+0.,1
+*DLOAD,AMPLITUDE=force_surf
+*INCLUDE, INPUT=surf_0.dlo
+  *NODE FILE 
+U,
+  *EL FILE
+S,
+*END STEP

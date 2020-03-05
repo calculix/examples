@@ -1,0 +1,47 @@
+**Frequency of string (PERTURBATION)
+** Steel string with using PERTURBATION option
+** Theoretical solution is given below:
+** 
+** f = (1/(2*L)*(N/(ro*A))^0.5=
+**=(1/(2*6))*(10000/(7850*3.1416*0.003^2/4))^0.5
+**=35.4 hz
+
+*INCLUDE, INPUT=string_OUT.inp
+
+*MATERIAL,NAME=steel
+*ELASTIC
+2e11,0.3
+*DENSITY
+7850
+
+** beam section card for beam elements
+*BEAM SECTION,MATERIAL=steel,ELSET=ln1,OFFSET1=0,SECTION=CIRC
+0.003,0.003
+
+
+
+*BOUNDARY
+1,1,3,0
+2,2,3,0
+
+*STEP 
+*STATIC 
+
+*CLOAD
+2,1,1e4
+
+  *NODE FILE 
+U, 
+  *EL FILE 
+S, 
+*END STEP 
+
+
+*STEP, PERTURBATION 
+*FREQUENCY 
+6
+*NODE FILE 
+U 
+*EL FILE 
+S 
+*END STEP

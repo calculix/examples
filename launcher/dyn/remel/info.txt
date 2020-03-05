@@ -1,0 +1,4 @@
+Removal Of Bulding Support
+This example uses *EQUATION card with 'remove' option.
+First step is static linear (energy should be stored in results).
+Second step is dynamic.

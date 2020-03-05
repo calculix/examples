@@ -1,0 +1,55 @@
+**Iron Pan Steady-state
+** Comparison with other software is provided
+** http://www.agros2d.org/
+** https://www.csc.fi/web/elmer
+** Model is created in Salome-Platform.
+**Double click on folder to find hdf and a2d files.
+** Example with Elmer-FEM is in pan-elmer-fem folder.
+**<img src="pan.jpg">
+
+*INCLUDE, INPUT=Mesh_1_OUT.inp
+*INCLUDE, INPUT=food.nam
+*INCLUDE, INPUT=air.nam
+*INCLUDE, INPUT=heat.nam
+
+
+*MATERIAL,NAME=iron
+*CONDUCTIVITY
+50
+
+
+*SOLID SECTION,MATERIAL=iron,ELSET=Eall
+
+
+*STEP
+*HEAT TRANSFER,STEADY STATE
+
+
+
+*FILM
+*INCLUDE, INPUT=air.flm
+
+*FILM
+*INCLUDE, INPUT=food.flm
+
+
+*DFLUX
+*INCLUDE, INPUT=heat.dfl
+
+
+
+
+
+**_______________
+** Set-up output
+**_______________
+
+
+
+*NODE FILE
+NT
+
+*EL FILE
+HFL
+
+*END STEP

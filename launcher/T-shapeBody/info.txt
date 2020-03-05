@@ -1,0 +1,6 @@
+Body Elements (misc problems)
+For illuctration of volumetric finite elements in CCX
+Models are created in Salome-Platform. Double-click on folder to see hdf files:
+Also see the links below:
+http://www.salome-platform.org/
+http://calculixforwin.blogspot.com/2015/12/salome-platform-and-salome-meca.html

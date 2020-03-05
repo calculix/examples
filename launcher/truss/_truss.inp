@@ -1,0 +1,58 @@
+** Truss (T3D2 elements)
+** This sample works with CCX2.9 and older 
+** Test objective: T3D2 elements.
+** Comparison is provided with using calc4fem program.
+**This is LibreOffice spreadsheet with macros,FEA of 2d beam and truss elements.
+**Open folder by double-click to see files.
+**<img src="truss.png">
+
+*NODE,NSET=Nall
+1,	0,	0,
+2,	3,	0,
+3,	6,	0,
+4,	9,	0,
+5,	12,	0,
+6,	3,	1.5,
+7,	9,	1.5,
+
+
+
+*ELEMENT,TYPE=T3D2,ELSET=EAll
+1,	1,	2
+2,	2,	3
+3,	3,	4
+4,	4,	5
+5,	6,	7
+6,	1,	6
+7,	2,	6
+8,	6,	3
+9,	3,	7
+10,	4,	7
+11,	7,	5
+
+*BOUNDARY
+1,1,3
+5,2,2
+Nall,3,3
+
+
+*MATERIAL,NAME=STEEL
+*ELASTIC
+2e11,.3
+*SOLID SECTION,ELSET=EAll,MATERIAL=STEEL
+1e-2
+
+*STEP
+*STATIC
+*CLOAD
+2,2,-1e5
+3,2,-1e5
+4,2,-1e5
+
+*EL PRINT,ELSET=Eall
+S
+*NODE FILE,OUTPUT=3D
+U
+*EL FILE
+S
+*END STEP

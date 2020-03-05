@@ -10,5 +10,6 @@ ccx_2.16.test	| CrunchiX test examples
 cgx_2.16.examples | GraphiX examples
 cgx-jet-engine-model | [http://www.calculix.de/fw05.html](http://www.calculix.de/fw05.html)
 elements | FE models consisting of only 1 single element
-mkraska | M.Kraska's final static models (see [full project](https://github.com/mkraska/CalculiX-Examples))
+launcher | examples taken from [CalculiX Launcher](http://www.calculixforwin.com/) v3.4
+mkraska_static | M.Kraska's final static models for CCX only (see [full project](https://github.com/mkraska/CalculiX-Examples))
 other | user models

@@ -1,0 +1,35 @@
+**Stamp
+** Limit pressure for stamp
+** Target = (2+pi)*c
+** calculated as reaction of prescribed displacement
+**<img src="stamp.png">
+
+*INCLUDE, INPUT=Mesh_1_OUT.inp
+
+
+*SOLID SECTION,ELSET=eall,MATERIAL=ABAQUSMCWD
+*MATERIAL,NAME=ABAQUSMCWD
+*USER MATERIAL, CONSTANTS=5
+257140,0.29,100,1e-5,1e-5
+
+*nset, nset=disp
+2,252,25,253,26,254,27
+
+*BOUNDARY
+ux,1,1
+uxy,1,2
+
+
+*STEP,NLGEOM
+*STATIC
+
+*BOUNDARY
+disp,2,2,-0.125
+
+*NODE FILE
+U
+*EL FILE,Output=3d
+S
+*NODE PRINT,nset=disp
+RF
+*END STEP

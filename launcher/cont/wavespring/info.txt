@@ -1,0 +1,4 @@
+Wavesping with contact
+Model is imported from step file and prepared in Salome-Platform.
+Double click on folder to see hdf file
+https://youtu.be/F4TmM82z8b4

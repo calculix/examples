@@ -1,0 +1,35 @@
+**Pressure Vessel
+**Example for *STATIC card.
+**Comparison between different programs is provided in pdf files 
+**(click by folder to open and see it)
+
+*INCLUDE, INPUT=allinone3.inp
+
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.0000E+05,0.3
+*DENSITY
+7.8500E-09
+
+*SOLID SECTION,MATERIAL=Steel,ELSET=Eall
+
+
+
+*BOUNDARY
+fix,1,1,0
+fix,2,2,0
+fix,3,3,0
+
+
+
+*STEP
+*STATIC
+*AMPLITUDE,NAME=pressure_load
+0.,1
+*DLOAD,AMPLITUDE=pressure_load
+*INCLUDE, INPUT=load_0.dlo
+  *NODE FILE 
+U,
+  *EL FILE
+S,
+*END STEP

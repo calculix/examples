@@ -1,0 +1,64 @@
+**Steel Tank for S8R type
+**This is example for S8R type of shell elements.
+**S8R type have support for composite shell with many layers and integration points.
+** It gives ability to use this type with *PLASTIC card and nonlinear problems.
+**Comparison between different programs is provided in pdf files 
+**(click by folder to open and see it)
+**<img src="ovaltank.png">
+
+*INCLUDE, INPUT=allinone4.inp
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.9000E+07,0.3
+*DENSITY
+7.3500E-04
+
+*SHELL SECTION,MATERIAL=Steel,ELSET=Eall,,OFFSET=0.0000E+00
+3.7500E-01
+
+*BOUNDARY
+CURVE1,1,1,0
+CURVE1,2,2,0
+CURVE1,3,3,0
+
+*BOUNDARY
+CURVE2,1,1,0
+CURVE2,2,2,0
+CURVE2,3,3,0
+
+*BOUNDARY
+CURVE3,1,1,0
+CURVE3,2,2,0
+CURVE3,3,3,0
+
+*BOUNDARY
+CURVE4,1,1,0
+CURVE4,2,2,0
+CURVE4,3,3,0
+
+*STEP
+*STATIC
+*AMPLITUDE,NAME=pressure_SURFACE2
+0.,1
+*DLOAD,AMPLITUDE=pressure_SURFACE2
+*INCLUDE, INPUT=SURFACE2_01.dlo
+
+*AMPLITUDE,NAME=pressure_SURFACE3
+0.,1
+*DLOAD,AMPLITUDE=pressure_SURFACE3
+*INCLUDE, INPUT=SURFACE3_11.dlo
+
+*AMPLITUDE,NAME=pressure_SURFACE4
+0.,1
+*DLOAD,AMPLITUDE=pressure_SURFACE4
+*INCLUDE, INPUT=SURFACE4_21.dlo
+
+*AMPLITUDE,NAME=pressure_SURFACE5
+0.,1
+*DLOAD,AMPLITUDE=pressure_SURFACE5
+*INCLUDE, INPUT=SURFACE5_31.dlo
+  *NODE FILE 
+U,
+  *EL FILE
+S,
+*END STEP

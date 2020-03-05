@@ -1,0 +1,62 @@
+**Steel link with bolted ends
+** Static problem with CCX Transform card
+** Comparison with other software is provided.
+** Parametric model is created in Salome-Platform 
+** Double click by folder and look at pictures and py file for Salome.
+
+*INCLUDE, INPUT=Mesh_CCX_OUT.inp
+
+
+** We are using imperial units (the model is scaled in inches, pressure in psi)
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.9000E+07,0.3
+*DENSITY
+7.3500E-04
+
+*SOLID SECTION,ELSET=C3D10,MATERIAL=Steel,
+
+
+
+** Apply Transform card to the nodal groups 'hole1' and 'hole2'
+** We will use cylindrical coordinates for BC 
+** http://en.wikipedia.org/wiki/Cylindrical_coordinate_system
+** hole1 is located at 0,0,0
+** hole 2 is located at 0,24,0
+
+*TRANSFORM,TYPE=C,NSET=hole1
+
+0,0,0,0,0,1,
+
+*TRANSFORM,TYPE=C,NSET=hole2
+
+0,24,0,0,24,1,
+
+*BOUNDARY
+hole1,1,1,0
+hole1,3,3,0
+hole2,1,1,0
+hole2,3,3,0
+
+
+
+*STEP
+*STATIC
+
+** Define amplitude called 'stepping'
+*AMPLITUDE,NAME=stepping
+0.,1
+
+** Apply pressure from .dlo files
+** TOTAL force = 2400 lb is distributed to the area=1*24=24 square inches
+*DLOAD,AMPLITUDE=stepping
+*INCLUDE, INPUT=load.dlo
+
+
+** define results for postprocessing (displacements and stress to show)
+
+*NODE FILE 
+U,
+*EL FILE
+S,
+*END STEP

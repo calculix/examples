@@ -1,0 +1,53 @@
+**Cold bridge
+** Example for architectural problem
+** Comparison with other software is provided
+** http://www.agros2d.org/
+** Model is created in Salome-Platform.
+**Double click on folder to find hdf and a2d files.
+**<img src="coldbridge.jpg">
+
+*INCLUDE, INPUT=Mesh_1_OUT.inp
+
+*MATERIAL,NAME=steel
+*CONDUCTIVITY
+54,0.
+
+*MATERIAL,NAME=wall
+*CONDUCTIVITY
+0.9,0.
+
+*SOLID SECTION,MATERIAL=Steel,ELSET=steel
+*SOLID SECTION,MATERIAL=wall,ELSET=wall
+
+
+*INITIAL CONDITIONS,TYPE=TEMPERATURE
+Nall,0
+
+*STEP
+*HEAT TRANSFER,STEADY STATE
+
+**_______________
+**  Sink temperature and Heat transfer (Film) coefficient 
+**  CGX cards to write .flm files
+**   send sindoor abq film 293.15 5
+**   send soutdoor abq film 253.15 25
+**  (sindoor and soutdoor are groups of faces after conversion)
+**_______________
+*FILM
+*INCLUDE, INPUT=soutdoor.flm
+*INCLUDE, INPUT=sindoor.flm
+
+**_______________
+** Set-up output
+**_______________
+
+*NODE PRINT,NSET=outdoor
+RFL
+
+*NODE FILE
+NT
+
+*EL FILE
+HFL
+
+*END STEP

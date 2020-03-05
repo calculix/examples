@@ -1,0 +1,2 @@
+Cable Elements
+This folder has spreadsheets and examples for cables and guy ropes. Open folder by double-click to see Libre-Office spreadsheets with engineering calculations.

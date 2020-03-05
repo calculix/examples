@@ -1,0 +1,94 @@
+Header
+  CHECK KEYWORDS Warn
+  Mesh DB "." "."
+  Include Path ""
+  Results Directory ""
+End
+
+Simulation
+  Max Output Level = 5
+  Coordinate System = Axi Symmetric
+  Coordinate Mapping(3) = 1 2 3
+  Simulation Type = Steady state
+  Steady State Max Iterations = 1
+  Output Intervals = 1
+  Timestepping Method = BDF
+  BDF Order = 2
+  Solver Input File = case.sif
+  Post File = case.ep
+End
+
+Constants
+  Gravity(4) = 0 -1 0 9.82
+  Stefan Boltzmann = 5.67e-08
+  Permittivity of Vacuum = 8.8542e-12
+  Boltzmann Constant = 1.3807e-23
+  Unit Charge = 1.602e-19
+End
+
+Body 1
+  Target Bodies(1) = 2
+  Name = "Body 1"
+  Equation = 1
+  Material = 1
+End
+
+Solver 1
+  Equation = Result Output
+  Procedure = "ResultOutputSolve" "ResultOutputSolver"
+  Output File Name = case
+  Output Format = Gmsh
+  Binary Output = False
+  Scalar Field 1 = Temperature
+  Exec Solver = Always
+End
+
+Solver 2
+  Equation = Heat Equation
+  Variable = Temperature
+  Procedure = "HeatSolve" "HeatSolver"
+  Exec Solver = Always
+  Stabilize = True
+  Bubbles = False
+  Lumped Mass Matrix = False
+  Optimize Bandwidth = True
+  Steady State Convergence Tolerance = 1.0e-5
+  Nonlinear System Convergence Tolerance = 1.0e-7
+  Nonlinear System Max Iterations = 20
+  Nonlinear System Newton After Iterations = 3
+  Nonlinear System Newton After Tolerance = 1.0e-3
+  Nonlinear System Relaxation Factor = 1
+  Linear System Solver = Direct
+  Linear System Direct Method = Umfpack
+End
+
+Equation 1
+  Name = "Equation 1"
+  Active Solvers(2) = 1 2
+End
+
+Material 1
+  Name = "CastIron"
+  Heat Conductivity = 50
+End
+
+Boundary Condition 1
+  Target Boundaries(1) = 4 
+  Name = "food_convection"
+  Heat Transfer Coefficient = 150
+  External Temperature = 293.15
+End
+
+Boundary Condition 2
+  Target Boundaries(3) = 1 2 3 
+  Name = "air_convection"
+  Heat Transfer Coefficient = 10
+  External Temperature = 293.15
+End
+
+Boundary Condition 3
+  Target Boundaries(1) = 5 
+  Name = "BoundaryCondition 3"
+  Heat Flux = 31500
+  External Temperature = 293.15
+End

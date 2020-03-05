@@ -1,0 +1,38 @@
+**Buckling for S6 shells
+**Linear buckling problem using S6 type of shells
+
+
+*INCLUDE, INPUT=allinone2.inp
+
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.9000E+07,0.3
+*DENSITY
+7.3500E-04
+
+*SHELL SECTION,MATERIAL=Steel,ELSET=Eall,,OFFSET=0.0000E+00
+5.0000E-01
+
+
+*BOUNDARY
+fix_y,2,2,0
+
+*BOUNDARY
+fix_x,1,1,0
+
+*BOUNDARY
+fix_z,3,3,0
+
+*STEP
+*BUCKLE
+3
+
+** concentrated load on node (compression)
+*CLOAD
+10,1,8000
+
+  *NODE FILE 
+U,
+  *EL FILE
+S,
+*END STEP

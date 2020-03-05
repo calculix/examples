@@ -1,0 +1,3 @@
+Link elements
+Link elements with tension and compression only.
+Can be used to calculate truss structures.

@@ -1,0 +1,69 @@
+**Iron Pan transient
+** Full time = 360 seconds (see under *STEP card)
+** Comparison with other software is provided
+** http://www.agros2d.org/
+** https://www.csc.fi/web/elmer
+** Model is created in Salome-Platform.
+**Double click on folder to find hdf and a2d files.
+** Example with Elmer-FEM is in pan-elmer-fem folder.
+**<img src="pan.jpg">
+
+*INCLUDE, INPUT=Mesh_1_OUT.inp
+*INCLUDE, INPUT=food.nam
+*INCLUDE, INPUT=air.nam
+*INCLUDE, INPUT=heat.nam
+
+
+*MATERIAL,NAME=iron
+*CONDUCTIVITY
+50
+*SPECIFIC HEAT
+460
+*DENSITY
+7000
+
+
+*SOLID SECTION,MATERIAL=iron,ELSET=Eall
+
+
+
+*INITIAL CONDITIONS,TYPE=TEMPERATURE
+Nall,293.15
+
+
+** heating and cooling 
+
+*TIME POINTS,NAME=T1,GENERATE
+0.,360,40
+
+
+*STEP
+*HEAT TRANSFER
+10,360
+
+*FILM
+*INCLUDE, INPUT=air.flm
+
+*FILM
+*INCLUDE, INPUT=food.flm
+
+*AMPLITUDE,NAME=heating_and_cooling
+0,0,120,1,
+121,0,360,0
+
+
+*DFLUX,AMPLITUDE=heating_and_cooling
+*INCLUDE, INPUT=heat.dfl
+
+**_______________
+** Set-up output
+**_______________
+
+*NODE FILE,TIME POINTS=T1
+NT
+
+*EL FILE,TIME POINTS=T1
+HFL
+
+*END STEP
+

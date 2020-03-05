@@ -1,0 +1,9 @@
+Plate Loading and Unloading
+Nonlinear problems for composite shells (S8R)
+and body elements (C3D20).
+This kind on problem with plastic cross bending requires many integration points with *PLASTIC CARD.
+For linear problem one element per thickness give good reults.
+
+Look at this pictures below.
+http://calculixforwin.blogspot.com/2015/10/calculix-nonlinear-problem-loading-and.html
+

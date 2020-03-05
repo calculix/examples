@@ -1,0 +1,47 @@
+** Wooden Frame
+** Buckling Problem for SECTION=RECT type
+** Mesh is created with GMSH. 
+**Open folder by double-click and study gmsh-frame.geo
+** text file with parametric geometry.
+**<img src="woodframe.png">
+
+*INCLUDE, INPUT=frame_OUT.inp
+
+
+*MATERIAL,NAME=wood
+*ELASTIC
+0.700E+10,0.49
+
+
+** beam section card for beam elements
+*BEAM SECTION,MATERIAL=wood,ELSET=ln1,OFFSET1=0,SECTION=RECT
+0.1,0.18
+
+*BEAM SECTION,MATERIAL=wood,ELSET=ln2,OFFSET1=0,SECTION=RECT
+0.1,0.25
+
+*BEAM SECTION,MATERIAL=wood,ELSET=ln3,OFFSET1=0,SECTION=RECT
+0.1,0.18
+
+*BOUNDARY
+1,1,3,0
+4,1,3,0
+2,3,3,0
+3,3,3,0
+12,3,3,0
+
+*STEP
+*BUCKLE 
+3
+
+**Misc. Load applied
+
+*CLOAD
+2,2,-1e5
+
+
+*EL FILE,OUTPUT=3D
+S
+*NODE FILE
+U 
+*END STEP   

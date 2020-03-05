@@ -1,0 +1,6 @@
+Special Types of BC
+The main advantage of CalculiX is the ability to apply boundary conditions of different types, to solve practical problems.
+Many FEA programs provide only simple BC, such as value of nodal displacement, pressure and force.
+CalculiX has many useful card, like *TRANSFORM, *COUPLING, *EQUATION and etc.
+
+ 

@@ -1,0 +1,3 @@
+Body Elements VS Shells
+Simple example with objective to compare capacity of shell and body elements of different types. 
+Comparison between different programs is provided in pdf files (click by folder to open and see it)

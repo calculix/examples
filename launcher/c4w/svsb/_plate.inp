@@ -1,0 +1,37 @@
+**Solid Elements
+** Plate calulated with using body elements
+
+*INCLUDE, INPUT=allinone1.inp
+
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.9000E+07,0.3
+*DENSITY
+7.3500E-04
+
+*SOLID SECTION,MATERIAL=Steel,ELSET=Eall
+
+
+*BOUNDARY
+fix_y,2,2,0
+
+*BOUNDARY
+fix_z,3,3,0
+
+*BOUNDARY
+fix_x,1,1,0
+
+*STEP
+*STATIC
+
+
+*AMPLITUDE,NAME=force_Load
+0.,1
+*DLOAD,AMPLITUDE=force_Load
+*INCLUDE, INPUT=Load_1.dlo
+
+  *NODE FILE 
+U,
+  *EL FILE
+S,
+*END STEP

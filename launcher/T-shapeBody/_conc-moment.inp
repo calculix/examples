@@ -1,0 +1,56 @@
+** Concentrated Moment
+** Example with *RIGID BODY card
+
+
+
+*INCLUDE, INPUT=mixed_extruded_mesh_OUT.inp
+
+
+
+** INPUT FOR ELASTIC MATERIAL
+** SI UNITS ARE USED
+
+*MATERIAL,NAME=Steel
+*ELASTIC
+2e11,0.3
+*DENSITY
+7850
+
+** "SOLID SECTION" IS TO APPLY MATERIAL TO BODY ELSETS
+
+*SOLID SECTION,MATERIAL=Steel,ELSET=C3D15
+*SOLID SECTION,MATERIAL=Steel,ELSET=C3D20
+
+**This sample is for rigid body used to apply concentrated
+**moment to the section (nodal set 'load')
+** extra dummy node #1000002 is determined  
+
+*node
+1000002,0,0,0
+
+*RIGID BODY,nset=load,,ROT NODE=1000002
+
+
+
+** THESE CARDS IS TO DEFINE STATIC CALCULATION AND OUTPUT
+
+*STEP
+*STATIC
+
+** FIX THE END OF THE BEAM
+*BOUNDARY
+ux,1,1,0
+uy,2,2,0
+fixed,3,3,0
+
+**APPLY CONCENTRATED MOMENT AROUND 'X' VIA RIGID BODY
+*CLOAD
+1000002,1,3e6
+
+** OUTPUT
+*NODE FILE
+U
+*EL FILE
+S
+*END STEP
+

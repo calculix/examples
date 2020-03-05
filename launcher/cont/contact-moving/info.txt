@@ -1,0 +1,5 @@
+Contact with moving
+Model is created in Salome-Platform
+Double-click on folder to see hdf file
+Moving Contact (with friction and scuffing) FEA
+https://youtu.be/JG2TMv5yf1Q

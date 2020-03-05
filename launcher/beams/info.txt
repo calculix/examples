@@ -1,0 +1,3 @@
+Beam Elements
+This folder have examples created for illustration of beam elements in CalculiX. CalculiX is general purpose FEA program with main orientation for mechanical engineering (shells and body elements) but it is also have support for beam elements. Read CCX help for more information.
+Note: when using beam elements FE mesh should be well discretized.

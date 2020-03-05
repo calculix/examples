@@ -1,0 +1,43 @@
+**Z-shape beam
+**Static problem for shell elements.
+**Comparison between different programs is provided in pdf files 
+**(click by folder to open and see it)
+
+*INCLUDE, INPUT=allinone1.inp
+
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.9000E+07,0.3
+*DENSITY
+7.3500E-04
+
+*SHELL SECTION,MATERIAL=Steel,ELSET=Eall,,OFFSET=0.0000E+00
+3.7500E-01
+
+*BOUNDARY
+base,3,3,0
+
+*BOUNDARY
+base,2,2,0
+
+*BOUNDARY
+wall,2,2,0
+
+*BOUNDARY
+wall,1,1,0
+
+
+*BOUNDARY
+top,2,2,0
+
+*STEP
+*STATIC
+*AMPLITUDE,NAME=force_SURFACE3
+0.,1
+*DLOAD,AMPLITUDE=force_SURFACE3
+*INCLUDE, INPUT=SURFACE3_0.dlo
+  *NODE FILE 
+U,
+  *EL FILE
+S,
+*END STEP

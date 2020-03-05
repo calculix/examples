@@ -1,0 +1,39 @@
+**Steel Cupola for S8R type
+**This is example for S8R type of shell elements.
+**S8R type have support for composite shell with many layers and integration points.
+** It gives ability to use this type with *PLASTIC card and nonlinear problems.
+**Comparison between different programs is provided in pdf files 
+**(click by folder to open and see it)
+
+*INCLUDE, INPUT=allinone6.inp
+
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.9000E+07,0.3
+*DENSITY
+7.3500E-04
+
+*SHELL SECTION,MATERIAL=Steel,ELSET=Eall,,OFFSET=0.0000E+00
+1.0000E+00
+
+*BOUNDARY
+CURVE1,1,1,0
+CURVE1,2,2,0
+CURVE1,3,3,0
+
+*BOUNDARY
+CURVE5,1,1,0
+CURVE5,2,2,0
+CURVE5,3,3,0
+
+*STEP
+*STATIC
+*AMPLITUDE,NAME=force_SURFACE2
+0.,1
+*DLOAD,AMPLITUDE=force_SURFACE2
+*INCLUDE, INPUT=SURFACE2_03.dlo
+  *NODE FILE 
+U,
+  *EL FILE
+S,
+*END STEP

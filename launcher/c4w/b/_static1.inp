@@ -1,0 +1,31 @@
+**Cantilever Static
+**Concentrated load is applied to nodes at the end of beam.
+**Comparison between different programs is provided in pdf files 
+**(click by folder to open and see it)
+
+*INCLUDE, INPUT=allinone1.inp
+
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.9000E+07,0.3
+*DENSITY
+7.3500E-04
+
+*SOLID SECTION,MATERIAL=Steel,ELSET=Eall
+
+*BOUNDARY
+BC35111,1,1,0
+BC35111,2,2,0
+BC35111,3,3,0
+
+
+*STEP
+*STATIC
+*CLOAD
+BC122222,2,-2.0000E+01
+
+  *NODE FILE 
+U,
+  *EL FILE
+S,
+*END STEP

@@ -1,0 +1,35 @@
+**Joint for Static
+**Comparison between different programs is provided in pdf files 
+**(click by folder to open and see it)
+
+
+*INCLUDE, INPUT=allinonej.inp
+**Imperial Units -inch, lb
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.9000E+07,0.3
+*DENSITY
+7.3500E-04
+
+*SOLID SECTION,MATERIAL=Steel,ELSET=Eall
+
+*BOUNDARY
+BC9,1,1,0
+BC9,2,2,0
+BC9,3,3,0
+
+*NODE
+1000002,0,0,0
+*RIGID BODY,NSET=BC20,,ROT NODE=1000002
+
+
+*STEP
+*STATIC
+**The moment applied to the node via rigid body
+*CLOAD
+1000002,1,3.0000E+04
+  *NODE FILE 
+U,
+  *EL FILE
+S,
+*END STEP

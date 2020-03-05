@@ -1,0 +1,43 @@
+** Steel Frame
+** Example for static boundary conditions and *STATIC card
+**Comparison between different programs is provided in pdf files 
+**(click by folder to open and see it)
+
+*INCLUDE, INPUT=allinone2.inp
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.9000E+07,0.3
+*DENSITY
+7.3500E-04
+
+*SOLID SECTION,MATERIAL=Steel,ELSET=Eall
+
+*BOUNDARY
+BC25222,1,1,0
+BC25222,2,2,0
+BC25222,3,3,0
+
+*BOUNDARY
+BC27222,1,1,0
+BC27222,2,2,0
+BC27222,3,3,0
+
+*BOUNDARY
+BC5222,1,1,0
+BC5222,2,2,0
+BC5222,3,3,0
+
+*BOUNDARY
+BC72222,1,1,0
+BC72222,2,2,0
+BC72222,3,3,0
+
+*STEP
+*STATIC
+*CLOAD
+BC13111,2,-2.5078E+00
+  *NODE FILE 
+U,
+  *EL FILE
+S,
+*END STEP

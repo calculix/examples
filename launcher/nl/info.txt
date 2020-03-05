@@ -1,0 +1,6 @@
+Nonlinear Problems
+CalculiX has very strong nonlinear capabilities.
+Practical nonlinear problems may take long time to solve and powerful PC.
+Look at this article below, if you have limited abilities to solve complex problems.
+http://calculixforwin.blogspot.com/2017/06/running-calculix-on-amazon-ec2-cloud.html
+

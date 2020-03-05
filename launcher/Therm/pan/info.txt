@@ -1,0 +1,7 @@
+Iron Pan
+Examples for steady-state and transient calculation
+Comparison With Agros2D and Elmer-FEM is provided
+Double-click on folder to see all files.
+https://youtu.be/cgxDMrL1myc
+https://youtu.be/o8DmOudw-4c
+

@@ -1,0 +1,4 @@
+Dring calculation
+Model is imported from STEP and prepared in Salome-MECA.
+Double click on folder to find hdf file
+https://youtu.be/DA1qMg2x1yM

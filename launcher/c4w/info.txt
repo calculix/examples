@@ -1,0 +1,6 @@
+CalculixForWin
+Miscellaneous examples, created for Calculixforwin project.
+http://www.calculixforwin.com/
+This project has been replaced by CalculiX Launcher.
+Comparison between different programs is provided in pdf files (click by folder to open and see it)
+

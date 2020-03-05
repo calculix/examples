@@ -1,0 +1,40 @@
+**Steel Frame - Buckling
+**Comparison between different programs is provided in pdf files 
+**(click by folder to open and see it)
+
+*INCLUDE, INPUT=allinone2.inp
+
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.9000E+07,0.3
+*DENSITY
+7.3500E-04
+
+*SHELL SECTION,MATERIAL=Steel,ELSET=Eall,,OFFSET=0.0000E+00
+3.7500E-01
+
+*BOUNDARY
+fix,1,1,0
+fix,2,2,0
+fix,3,3,0
+
+*BOUNDARY
+fixz,3,3,0
+
+
+
+*STEP
+*BUCKLE
+3
+
+** Load was applied before adding mid-nodes
+*CLOAD
+load,2,-8.9928E+01
+
+*NODE FILE 
+U,
+*END STEP
+
+
+
+

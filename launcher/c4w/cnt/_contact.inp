@@ -1,0 +1,52 @@
+**Contact problem
+** This sample works with CCX2.8
+**Comparison with other software is provided.
+**(click by folder to open and see picture)
+
+*INCLUDE, INPUT=all.msh
+*INCLUDE, INPUT=dy.nam
+*INCLUDE, INPUT=fixx.nam
+*INCLUDE, INPUT=fixy.nam
+*INCLUDE, INPUT=fixz.nam
+*INCLUDE, INPUT=sslave.sur
+*INCLUDE, INPUT=smaster.sur
+
+*MATERIAL,NAME=Steel
+*ELASTIC
+2e5,0.3
+
+
+*SOLID SECTION,MATERIAL=Steel,ELSET=Eall
+
+*BOUNDARY
+fixz,3,3
+fixx,1,1
+fixy,2,2
+dy,2,2,-0.00006
+
+
+*SURFACE INTERACTION,NAME=SI1
+
+*SURFACE BEHAVIOR,PRESSURE-OVERCLOSURE=LINEAR
+1e10
+
+*CONTACT PAIR,INTERACTION=SI1,
+sslave,smaster
+
+
+
+*STEP
+*STATIC
+
+  *NODE FILE 
+U,
+  *EL FILE
+S,
+*CONTACT FILE,
+CDIS,CSTR
+
+*NODE PRINT,NSET=dy
+RF
+
+
+*END STEP
