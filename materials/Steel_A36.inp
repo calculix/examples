@@ -1,0 +1,13 @@
+** Structural_Steel
+** Units SI
+*MATERIAL, NAME=Steel_A36
+    *ELASTIC
+        2.00E+011, 0.28
+    *DENSITY
+        7850
+    *CONDUCTIVITY
+        46
+    *SPECIFIC HEAT
+        440
+    *EXPANSION
+        1.30E-005

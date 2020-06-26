@@ -1,0 +1,12 @@
+** Units SI
+*MATERIAL, NAME=Bronze_aluminum_alloy
+    *ELASTIC
+        1.10E+011, 0.3
+    *DENSITY
+        7400
+    *CONDUCTIVITY
+        56
+    *SPECIFIC HEAT
+        380
+    *EXPANSION
+        1.70E-005

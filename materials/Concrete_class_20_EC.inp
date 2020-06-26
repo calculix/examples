@@ -1,0 +1,12 @@
+** Units SI
+*MATERIAL, NAME=Concrete_class_20_EC
+    *ELASTIC
+        3.00E+010, 0.2
+    *DENSITY
+        2400
+    *CONDUCTIVITY
+        0.8
+    *SPECIFIC HEAT
+        750
+    *EXPANSION
+        10E-006

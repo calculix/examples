@@ -1,0 +1,10 @@
+** Units SI
+*MATERIAL, NAME=Plastic_PLA
+    *ELASTIC
+        3.5E+009, 0.27
+    *DENSITY
+        1300
+    *CONDUCTIVITY
+        0.13
+    *SPECIFIC HEAT
+        1800

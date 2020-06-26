@@ -1,0 +1,10 @@
+** Units SI
+*MATERIAL, NAME=Epoxy
+    *ELASTIC
+        2.41E+009, 0.35
+    *DENSITY
+        1100
+    *CONDUCTIVITY
+        0.19
+    *SPECIFIC HEAT
+        1500

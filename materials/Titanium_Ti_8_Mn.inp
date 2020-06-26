@@ -1,0 +1,12 @@
+** Units SI
+*MATERIAL, NAME=Titanium_Ti_8_Mn
+    *ELASTIC
+        1.20E+011, 0.33
+    *DENSITY
+        4730
+    *CONDUCTIVITY
+        10.9
+    *SPECIFIC HEAT
+        495
+    *EXPANSION
+        9.00E-006

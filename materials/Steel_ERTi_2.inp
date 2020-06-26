@@ -1,0 +1,78 @@
+*MATERIAL, NAME=Steel_ERTi_2
+    *DENSITY
+        ** (kg/mm3)
+        4.50E-6, 25
+        4.45E-6, 407
+        4.39E-6, 871
+        4.11E-6, 1660
+    *CONDUCTIVITY, TYPE=ISOTROPIC
+        ** (J/s-mm-degC)
+        0.0208, 25
+        0.0184, 319
+        0.0187, 407
+        0.0212, 807
+        0.0243, 1207
+        0.0260, 1660
+        ** Enhanced above liquidus temperature (degC)
+        0.0520, 1710
+    *SPECIFIC HEAT
+        ** (J/kg-degC)
+        524, 25
+        567, 207
+        646, 607
+        670, 660
+        710, 800
+        740, 870
+        680, 934
+        619, 1007
+        751, 1607
+        901, 2000
+    *ELASTIC, TYPE=ISOTROPIC
+        **** Materials Properties Handbook of Titanium Alloys
+        **** Page 178
+        109.4E+3, 0.34, 25
+        90.0E+3, 0.34, 200
+        79.0E+3, 0.34, 300
+        ****
+        69.0E+3, 0.36, 400
+        53.0E+3, 0.36, 600
+        39.0E+3, 0.36, 800
+        20.7E+3, 0.36, 1000
+        2.0E+3, 0.38, 1660
+    *PLASTIC, HARDENING=KINEMATIC
+        **** Materials Properties Handbook of Titanium Alloys
+        **** Page 241 - Figures 2 and 3
+        ****
+        275.80, 0.00, 25
+        344.75, 0.06, 25
+        ****
+        180.000, 0.00, 150
+        310.333, 0.06, 150
+        ****
+        132.190, 0.00, 327
+        190.094, 0.06, 327
+        ****
+        85.987, 0.00, 427
+        151.937, 0.06, 427
+        ****
+        68.020, 0.00, 627
+        121.765, 0.06, 627
+        ****
+        26.951, 0.00, 877
+        30.032, 0.06, 877
+        ****
+        1.000, 0.00, 1660
+        1.000, 0.50, 1660
+    *EXPANSION, ZERO=25
+        ** Materials Properties Handbook of Titanium Alloys
+        ** Page 221 - Table 3
+        8.60E-6, 25
+        9.20E-6, 315
+        10.10E-6, 815
+        **** Liquid
+        10.10E-6, 1660
+        8.36E-6, 2000
+        6.67E-6, 2500
+        5.55E-6, 3000
+        4.75E-6, 3500
+        4.15E-6, 4000

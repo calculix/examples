@@ -1,0 +1,12 @@
+** Units SI
+*MATERIAL, NAME=Glass
+    *ELASTIC
+        7.20E+010, 0.23
+    *DENSITY
+        2500
+    *CONDUCTIVITY
+        0.937
+    *SPECIFIC HEAT
+        880
+    *EXPANSION
+        8.30E-006

@@ -1,0 +1,8 @@
+** Units SI
+*MATERIAL, NAME=AIR
+    *FLUID CONSTANTS
+        1.,1.
+    *SPECIFIC GAS CONSTANT
+        0.285714286
+    *CONDUCTIVITY
+        1.

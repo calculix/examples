@@ -1,0 +1,12 @@
+** Units SI
+*MATERIAL, NAME=Wood_pine_dry
+    *ELASTIC
+        1.00E+010, 0.49
+    *DENSITY
+        850
+    *CONDUCTIVITY
+        0.15
+    *SPECIFIC HEAT
+        1700
+    *EXPANSION
+        5E-006

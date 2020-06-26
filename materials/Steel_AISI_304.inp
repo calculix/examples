@@ -1,0 +1,13 @@
+** Nuclear Reactor Stainless Steel
+** Units SI
+*MATERIAL, NAME=Steel_AISI_304
+    *ELASTIC
+        1.93E+011, 0.29
+    *DENSITY
+        8000
+    *CONDUCTIVITY
+        16.2
+    *SPECIFIC HEAT
+        500
+    *EXPANSION
+        1.10E-005

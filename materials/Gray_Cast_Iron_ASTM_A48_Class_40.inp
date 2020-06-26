@@ -1,0 +1,12 @@
+** Units SI
+*MATERIAL, NAME=Gray_Cast_Iron_ASTM_A48_Class_40 
+    *ELASTIC
+        6.60E+010, 0.27
+    *DENSITY
+        7200
+    *CONDUCTIVITY
+        46
+    *SPECIFIC HEAT
+        510
+    *EXPANSION
+        1.20E-005

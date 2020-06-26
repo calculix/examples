@@ -1,0 +1,10 @@
+** Units SI
+*MATERIAL, NAME=Plastic_ABS
+    *ELASTIC
+        2.00E+009, 0.39
+    *DENSITY
+        1050
+    *CONDUCTIVITY
+        0.23
+    *SPECIFIC HEAT
+        1390

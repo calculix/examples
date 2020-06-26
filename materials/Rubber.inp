@@ -1,0 +1,6 @@
+** Units SI
+*MATERIAL, NAME=Rubber
+    *ELASTIC
+        1000.0, 0.3
+    *DENSITY
+        2.5e-09, 

@@ -1,0 +1,12 @@
+** Units SI
+*MATERIAL, NAME=Aluminium_6061_T6
+    *ELASTIC
+        6.89E+010, 0.33
+    *DENSITY
+        2700
+    *CONDUCTIVITY
+        167
+    *SPECIFIC HEAT
+        896
+    *EXPANSION
+        2.34E-005
