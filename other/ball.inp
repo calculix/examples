@@ -15795,10 +15795,6 @@
   4053, S4
   3708, S4
   3891, S4
-** Surfaces based on C3D10
-*SURFACE, NAME=C3D10
-** Surfaces based on plate
-*SURFACE, NAME=plate
 ** Surfaces based on all
 *SURFACE, NAME=all
   2029, S3
@@ -18090,7 +18086,6 @@
   2870, S1
   2381, S1
 ** Surfaces based on ball
-*SURFACE, NAME=ball
 *MATERIAL,NAME=steel
   *ELASTIC
     2.0000E+11,0.28
