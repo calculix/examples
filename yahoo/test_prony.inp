@@ -1,0 +1,115 @@
+*Heading
+
+
+*Node
+      1,           0.01,           0.01,           0.01
+      2,           0.01,           0.,             0.01
+      3,           0.01,           0.01,           0.
+      4,           0.01,           0.,             0.
+      5,           0.,             0.01,           0.01
+      6,           0.,             0.,             0.01
+      7,           0.,             0.01,           0.
+      8,           0.,             0.,             0.
+*Element, type=C3D8
+1, 5, 6, 8, 7, 1, 2, 4, 3
+
+**             7------------------------3
+**            /|                       /|
+**           / |                      / |
+**          /  |                     /  | 
+**         /   |                    /   |
+**        /    |                   /    |
+**       5-----+------------------1     |
+**       |     |                  |  UP |
+**       | BASE|                  |     |
+**       |     8------------------+-----4
+**       |    /                   |    /
+**       |   /                    |   /
+**       |  /                     |  /                    Y
+**       | /                      | /                     |
+**       |/                       |/                      |
+**       6------------------------2                       |----- X
+**                                                       /
+**                                                      /
+**                                                     Z
+                                                         
+*NSET, NSET=up, generate
+ 1,  4,  1
+*NSET, NSET=base, generate
+ 5,  8,  1
+*Elset, elset=el-1
+ 1,
+
+
+
+** 
+** MATERIALS
+** 
+*SOLID SECTION, elset=el-1, MATERIAL=PRONY
+
+*MATERIAL, NAME=PRONY
+*USER MATERIAL,CONSTANTS=6
+ 2.d+010, 0.3,  0.1, 3.d10,  10., 10.
+*DEPVAR
+ 24
+*DENSITY
+100.
+
+*MATERIAL, NAME=LIN
+*ELASTIC
+ 2.d10,0.3
+*DENSITY
+100.
+
+*AMPLITUDE, NAME=incremental_LOAD
+0.,0.,
+0.1,1.
+1.,1.
+
+**-------------------------------------------------------------
+** 
+** STEP: load
+** 
+
+** *STEP,NLGEOM
+*STEP
+** maximum number of increments
+
+*STATIC,solver=ITERATIVE CHOLESKY
+0.001,1.
+
+
+
+
+** *DYNAMIC,ALPHA=-0.05,SOLVER=ITERATIVE CHOLESKY
+** 1.E-7,0.001,1.E-7,1.E-5
+** increment initial, durée totale, increment minimum (si DIRECT non spécifié), increment maximum(idem)
+
+** *DLOAD,AMPLITUDE=incremental_LOAD
+** el-1,P2,-1.d10
+
+** BOUNDARY CONDITIONS
+** 
+** CREEP TEST
+** Encastrement
+*BOUNDARY
+base, 1, 3
+
+** RELAXATION TEST
+*BOUNDARY,AMPLITUDE=incremental_LOAD
+ up, 1, 1,0.005
+
+
+
+** OUTPUT REQUESTS
+*NODE OUTPUT,NSET=up
+U
+*NODE FILE,NSET=up
+U
+*NODE PRINT,NSET=up
+U
+
+*EL FILE
+S,E
+*END STEP
+

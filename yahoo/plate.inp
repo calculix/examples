@@ -1,0 +1,52 @@
+**
+**   Structure: plate.
+**   Test objective: S8R elements
+**
+*NODE, NSET=Nall
+       1,  0.00000e+00,  0.00000e+00,  0.00000e+00 
+       2,  1.00000e+00,  0.00000e+00,  0.00000e+00 
+       3,  1.00000e+00,  1.00000e+00,  0.00000e+00 
+       4,  0.00000e+00,  1.00000e+00,  0.00000e+00 
+       5,  5.00000e-01,  0.00000e+00,  0.00000e+00 
+       6,  1.00000e+00,  5.00000e-01,  0.00000e+00 
+       7,  5.00000e-01,  1.00000e+00,  0.00000e+00 
+       8,  0.000000e+00, 5.00000e-01,  0.00000e+00 
+*ELEMENT, TYPE=S8R, ELSET=Eall
+     1,      1,      2,      3,      4,      5,      6,      7,      8
+*NSET,NSET=Nfixx 
+1, 
+4, 
+8,  
+*BOUNDARY
+Nfixx,1,6
+*MATERIAL,NAME=EL
+*ELASTIC
+210000.,.3
+*DENSITY
+7.8E-9
+*SHELL SECTION,ELSET=Eall,MATERIAL=EL
+0.1
+*STEP
+*STATIC
+*CLOAD
+2,2,10.
+*NODE PRINT,NSET=Nall
+U,RF
+*NODE FILE,NSET=Nall
+U,RF
+*EL PRINT,ELSET=Eall
+S
+*EL FILE,ELSET=Eall
+S
+*END STEP
+
+
+
+
+
+
+
+
+
+
+

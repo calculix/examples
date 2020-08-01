@@ -1,0 +1,31 @@
+*NODE,NSET=Nall
+1,0,2,-4
+2,4,4,0
+3,0,0,0
+*ELEMENT,TYPE=S3
+1,2,3,1
+*ELSET,ELSET=Default
+1
+*MATERIAL,NAME=Material
+*ELASTIC,TYPE=ISOTROPIC
+210000000000,0.3
+*SHELL SECTION,ELSET=Default,MATERIAL=Material
+0.00125
+
+
+** Reinstate this transform to make it work correctly.
+**TRANSFORM,NSET=Nall,TYPE=R
+**4,4,0,0,2,-4
+
+
+
+*BOUNDARY
+2,1,6,0
+3,1,6,0
+*STEP
+*STATIC
+*DLOAD
+1,P,0.001
+*NODE FILE
+U
+*END STEP

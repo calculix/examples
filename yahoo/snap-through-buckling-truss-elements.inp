@@ -1,0 +1,55 @@
+****
+**** Structure: conical shell
+**** Test objective: snap-through buckling with shell elements
+****
+
+*HEADING
+Model: Structure: conical shell
+
+*NODE, NSET=NALL
+1, 0.0, 0.0,0.0
+2,13.0,-0.5,0.0
+3,26.0, 0.0,0.0
+
+*NSET, NSET=Ncontrol
+1,3
+
+*NSET, NSET=Nmonitor
+2
+
+*ELEMENT, TYPE=SPRINGA, ELSET=EALL
+1,1,2
+2,2,3
+
+*MATERIAL, NAME=Steel
+*ELASTIC
+210000,0.3
+
+*SOLID SECTION, ELSET=EALL, MATERIAL=Steel
+0.183
+
+*STEP, NLGEOM
+
+*STATIC
+0.01,1,0.00001,0.1
+
+*BOUNDARY
+1,1,3,0
+2,3,3,0
+3,1,3,0
+
+2,2,2,1
+
+*NODE FILE
+U
+
+*EL FILE
+S
+
+*NODE PRINT, NSET=Ncontrol, totals=only 
+RF 
+
+*NODE PRINT, NSET=Nmonitor
+U 
+
+*END STEP

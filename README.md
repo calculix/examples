@@ -13,4 +13,5 @@ elements | FE models consisting of only 1 single element
 launcher | examples taken from [CalculiX Launcher](http://www.calculixforwin.com/) v3.4
 materials | material library in INP format
 mkraska_static | M.Kraska's final static models for CCX only (see [full project](https://github.com/mkraska/CalculiX-Examples))
-other | user models
+other | other user models
+yahoo | some models from [CalculiX Yahoo Group](https://groups.yahoo.com/neo/groups/CALCULIX)

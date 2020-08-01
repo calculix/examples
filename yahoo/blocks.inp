@@ -1,0 +1,95 @@
+*Node
+      1,           0.,   1.00999999
+      2,           1.,   1.00999999
+      3,           1.,   2.00999999
+      4,           0.,   2.00999999
+      5,           0.,           0.
+      6,           1.,           0.
+      7,           1.,           1.
+      8,           0.,           1.
+*Element, type=CPE4R
+1, 1, 2, 3, 4
+2, 5, 6, 7, 8
+*Nset, nset=boxes-1_Set-1, generate
+ 1,  8,  1
+*Elset, elset=boxes-1_Set-1
+ 1, 2
+** Section: Section-1
+*Solid Section, elset=boxes-1_Set-1, material=Material-1
+,
+*Nset, nset=Set-1
+ 5, 6
+*Elset, elset=Set-1
+ 2,
+*Nset, nset=Set-2
+ 2, 3
+*Elset, elset=Set-2
+ 1,
+*Nset, nset=Set-4
+ 3, 4
+*Elset, elset=Set-4
+ 1,
+*Elset, elset=_Surf-1_S3
+ 1,
+*Surface, type=ELEMENT, name=Surf-1
+_Surf-1_S3, S3
+*Elset, elset=_m_Surf-2_S3
+ 2,
+*Surface, type=ELEMENT, name=m_Surf-2
+_m_Surf-2_S3, S3
+*Elset, elset=_s_Surf-2_S1
+ 1,
+*Surface, type=ELEMENT, name=s_Surf-2
+_s_Surf-2_S1, S1
+** 
+** MATERIALS
+** 
+*Material, name=Material-1
+*Elastic
+ 1e+07, 0.3
+** 
+** INTERACTION PROPERTIES
+** 
+ *surface interaction, name = fric
+ *friction
+ 0.2, 1.e6
+ *surface behavior, pressure-overclosure = linear
+ 1.e7
+** 
+** BOUNDARY CONDITIONS
+** 
+** Name: BC-1 Type: Symmetry/Antisymmetry/Encastre
+*Boundary
+Set-1, 1,6
+** Name: BC-2 Type: Displacement/Rotation
+*Boundary
+Set-2, 1, 1
+Set-2, 6, 6
+** 
+** INTERACTIONS
+** 
+** Interaction: Int-1
+*Contact Pair, interaction=fric, type=SURFACE TO SURFACE, adjust=.05
+s_Surf-2, m_Surf-2
+** ----------------------------------------------------------------
+** 
+** STEP: Step-1
+** 
+*Step,nlgeom=YES
+*Static
+0.1, 1., 1e-05, 1.
+** 
+** BOUNDARY CONDITIONS
+** 
+** Name: BC-2 Type: Displacement/Rotation
+*Boundary
+Set-2, 1, 1, -0.25
+** Name: BC-3 Type: Displacement/Rotation
+*Boundary
+Set-4, 2, 2, -0.1
+*node file, output=2d, global = no
+u
+*el file, output=2d, global = no
+ s, e
+** 
+*End Step

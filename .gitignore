@@ -1,6 +1,8 @@
 .vscode
 __pycache__
-/*.py
+*.py
+*.vtu
+*.frd
 /mkraska
 /TODO.md
 /abaqus

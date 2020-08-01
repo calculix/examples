@@ -1,0 +1,69 @@
+**calculix version
+*node, nset=nall
+ 1, 0.0
+ 2, 1.0
+ 3, 1., 1.
+ 4, 0., 1.
+ 5, 0., 0., 1.
+ 6, 1., 0., 1.
+ 7, 1., 1., 1.
+ 8, 0., 1., 1.
+ 9, 0., 0., -1.
+*nset, nset=tip
+ 1,
+*element, type=springa, elset=s1
+ 1, 9, 1
+*spring, elset=s1
+
+16.,
+*element, elset=gap1, type=gapuni
+ 2, 9, 1
+*GAP,ELSET=gap1
+.02, 0.,0.,1.
+*element, elset=block, type=c3d8
+ 3, 1,2,3,4,  5,6,7,8
+*solid section, elset=block, material=block
+*material, name=block
+*elastic
+ 1e5, 0.
+*density
+ 20.0
+*nset, nset=x0
+ 1,4,5,8
+*nset, nset=y0
+ 1,2,5,6
+*step
+*static
+** initial displacement for dynamic step
+*boundary
+ 1,3,3, .1
+  9, 1,3, 0.0
+  x0, 1,1, 0.0
+ y0, 2,2, 0.0
+*node print, nset=nall
+ u
+*el file, elset=block
+ener
+*end step
+*step
+*frequency
+ 1,
+*boundary, op=new
+ 9, 1,3, 0.0
+ x0, 1,1, 0.0
+ y0, 2,2, 0.0
+*node print, nset=nall
+ u
+*end step
+*step, inc=1000, nlgeom
+*dynamic, direct
+.1, 25.0, 1.e-5
+*cload, op=new
+**2, 1, 10.
+*boundary
+ 9, 1,3, 0.0, op=new
+ x0, 1,1, 0.0
+ y0, 2,2, 0.0
+*node print, nset=tip
+ U
+*end step
