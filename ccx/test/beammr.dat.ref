@@ -1045,7 +1045,7 @@
         32   7 -3.412914E-03 -4.304722E-03 -1.821995E-03 -3.541522E-03 -1.206056E-02 -2.258570E-03
         32   8 -1.860458E-02  1.686475E-02  1.371586E-03  2.520150E-04 -8.615843E-03  9.043373E-03
 
- internal energy density (elem, integ.pnt.,eneset EALL and time  0.1000000E+01
+ internal energy density (elem, integ.pnt.,energy) for set EALL and time  0.1000000E+01
 
          1   1  2.269835E+01
          1   2  1.946031E+01

@@ -522,7 +522,7 @@
         32   7  2.464805E+01 -1.119303E+02  9.018911E+00 -9.263035E-01 -4.277299E+00 -7.927757E-01
         32   8  2.086708E+01 -1.083439E+02 -1.401690E+01 -1.376532E+01 -3.035730E+00  1.069094E+01
 
- internal energy density (elem, integ.pnt.,eneset EALL and time  0.2500000E+00
+ internal energy density (elem, integ.pnt.,energy) for set EALL and time  0.2500000E+00
 
          1   1  9.062764E+00
          1   2  8.588837E+00
@@ -1304,7 +1304,7 @@
         32   7  4.996194E+01 -2.266420E+02  1.848724E+01 -2.372712E+00 -8.857475E+00  4.643779E+00
         32   8  4.200991E+01 -2.180949E+02 -2.965792E+01 -2.799710E+01 -5.059957E+00  2.612069E+01
 
- internal energy density (elem, integ.pnt.,eneset EALL and time  0.5000000E+00
+ internal energy density (elem, integ.pnt.,energy) for set EALL and time  0.5000000E+00
 
          1   1  3.634623E+01
          1   2  3.428429E+01
@@ -2086,7 +2086,7 @@
         32   7  7.589308E+01 -3.434375E+02  2.789336E+01 -4.336059E+00 -1.369230E+01  1.669005E+01
         32   8  6.338241E+01 -3.286180E+02 -4.729814E+01 -4.260423E+01 -6.016738E+00  4.643049E+01
 
- internal energy density (elem, integ.pnt.,eneset EALL and time  0.7500000E+00
+ internal energy density (elem, integ.pnt.,energy) for set EALL and time  0.7500000E+00
 
          1   1  8.195550E+01
          1   2  7.693842E+01
@@ -2868,7 +2868,7 @@
         32   7  1.024030E+02 -4.615636E+02  3.667598E+01 -6.852365E+00 -1.875211E+01  3.566694E+01
         32   8  8.494417E+01 -4.393008E+02 -6.733054E+01 -5.751292E+01 -5.852911E+00  7.171201E+01
 
- internal energy density (elem, integ.pnt.,eneset EALL and time  0.1000000E+01
+ internal energy density (elem, integ.pnt.,energy) for set EALL and time  0.1000000E+01
 
          1   1  1.459365E+02
          1   2  1.363393E+02

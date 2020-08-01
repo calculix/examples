@@ -47,6 +47,7 @@
         2.285724E-04
 
  contact print energy (slave element+face,energy)for all contact elements and time 0.1000000E+01
+
          2          3  1.125006E-06
          2          3  6.296991E-07
          2          3  6.296991E-07

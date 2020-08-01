@@ -10,7 +10,7 @@
 
  statistics for slave set SSLAV, master set SMAST and time  0.1000000E+01
 
-   total surface force (fx,fy,fz) and moment about the origin(mx,my,mz)
+   total surface force (fx,fy,fz) and moment about the origin (mx,my,mz)
 
     3.026943E-01  6.054093E-01  2.500000E+01  1.209191E+01 -1.229596E+01  1.513575E-01
 
@@ -20,7 +20,7 @@
 
    moment about the center of gravity(mx,my,mz)
 
-    1.981246E-01 -9.905948E-02  1.115591E-10
+    1.981246E-01 -9.905948E-02  1.115592E-10
 
    area,  normal force (+ = tension) and shear force (size)
 

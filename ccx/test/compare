@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export OMP_NUM_THREADS=1
+
 rm -f error.*
 
 tempfile=temp.$$
@@ -11,6 +13,24 @@ for i in *.inp; do
         echo "example ${i%.inp}"
         echo " "
 
+#
+#       take out some .inp files created by running the examples
+#
+	if [ $i = circ10pcent.rfn.inp ]
+	then
+	    continue
+	fi
+	
+	if [ $i = circ10p.rfn.inp ]
+	then
+	    continue
+	fi
+	
+	if [ $i = segmentsmooth.rfn.inp ]
+	then
+	    continue
+	fi
+	
 #
 #       removing the old .dat and .frd file, if any
 #
@@ -100,6 +120,7 @@ for i in *.inp; do
 
 done
 
+rm -f *.rfn.inp
 rm -f $tempfile
 echo "check the existence of file $errorfile"
 echo "if this file does not exist, the present results"

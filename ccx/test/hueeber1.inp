@@ -1,6 +1,6 @@
 **
 **   Structure: two cubes on top of each other.
-**   Test objective: Mortar contact (hard)
+**   Test objective: face-to-face penalty contact (hard)
 **        Ph.D. Thesis Stefan Hüeber, example p 44
 **
 *NODE, NSET=Nall
