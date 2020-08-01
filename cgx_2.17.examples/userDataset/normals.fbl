@@ -1,0 +1,73 @@
+# Example: Calculate normals of all free surfaces
+# and write them to a new dataset
+#
+# read geo and mesh
+read ../geometry.fbd
+elty all he8i
+mesh all
+#
+# get the number of surface nodes
+seta n f all
+comp n do
+stack on
+prnt se n
+stack off
+valu sum_nods pop
+# calculate the normals
+# and write all face-nodes to the stack (it writes them in inverse order)
+stack on
+norm n
+stack off
+#
+# store the node numbers and values in array's (nod1 to nod<sum_nods>)
+val n sum_nods
+while n > 0
+  valu cur_nod & nod n
+  valu cur_val1 & val1_nod n
+  valu cur_val2 & val2_nod n
+  valu cur_val3 & val3_nod n
+  val cur_nod pop
+  val cur_val1 pop
+  val cur_val2 pop
+  val cur_val3 pop
+  valu n - n 1
+  valu n int n
+endwhile
+#
+# create a new dataset
+ds g NORMAL 3 
+#
+# use the 'node' command to write data to the new dataset
+# REMARK: 'n' has to be masked ('\') since is is already defined as a value
+val \n sum_nods
+while n > 0
+  valu cur_nod & nod n
+  valu cur_val1 & val1_nod n
+  valu cur_val2 & val2_nod n
+  valu cur_val3 & val3_nod n
+  # code for cgx_2.16
+  val \cur_nod cur_nod
+  val \cur_val1 cur_val1
+  val \cur_val2 cur_val2
+  val \cur_val3 cur_val3
+  # code for cgx_2.15:
+  #val \cur_nod + cur_nod 0
+  #val \cur_val1 + cur_val1 0
+  #val \cur_val2 + cur_val2 0
+  #val \cur_val3 + cur_val3 0
+  valu cur_nod int cur_nod
+  # node cur_nod v cur_val1 cur_val2 cur_val3
+  node cur_nod v cur_val1 cur_val2 cur_val3
+  valu n - n 1
+  valu n int n
+endwhile
+# set entity parameters
+ds e nx 1 2 1
+ds e ny 2 2 2
+ds e nz 3 2 3
+# finish the dataset
+ds f
+# show it
+ds 1 e 4
+plot fv all
+view vec

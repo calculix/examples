@@ -1,0 +1,3 @@
+del me
+mesh all block
+send all isaac WALL profil FARFIELD far EXTRAPOLATE out

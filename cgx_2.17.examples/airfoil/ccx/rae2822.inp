@@ -1,0 +1,50 @@
+** m, kg, s
+** dyn_visc(nu)=kin_visc*rho
+** cp=R/(1-1/kappa)
+** cp-cv=R
+** Pr=nu*cp/lamda
+**
+*include, input=all.msh
+*include, input=profil.nam
+*include, input=in.nam
+*include, input=out.nam
+*include, input=wall.nam
+** equations force flow in direction of the profil
+*include, input=profil.equ
+*MATERIAL,NAME=AIR
+*CONDUCTIVITY
+0.0256
+*FLUID CONSTANTS
+**1004.85,1.786e-5,288.
+** Necessary for stability reasons:
+** w/o viscosity for inviscid calc.
+1004.85,0,288.
+*SPECIFIC GAS CONSTANT
+287.1
+*SOLID SECTION,ELSET=Eall,MATERIAL=AIR
+*PHYSICAL CONSTANTS,ABSOLUTE ZERO=0.
+*INITIAL CONDITIONS,TYPE=FLUID VELOCITY
+Nall,1,248.
+Nall,2,0.
+Nall,3,0.
+*INITIAL CONDITIONS,TYPE=PRESSURE
+Nall,1.e5
+*INITIAL CONDITIONS,TYPE=TEMPERATURE
+Nall,288.
+*VALUES AT INFINITY
+288.,248.,1.e5,1.2,.25
+**
+*STEP,INCF=50000,SHOCK SMOOTHING=0.1
+***CFD,FEM,COMPRESSIBLE,STEADY STATE
+*CFD,FEM,COMPRESSIBLE
+1.,1.
+*DFLUX
+*include, input=profil.dfl
+*BOUNDARY
+Nin,11,11,288.
+Nin,1,1,248.
+Nin,2,3,0.
+Nout,8,8,1.e5
+*NODE FILE,FREQUENCYF=1000
+VF,PSF,PTF,TSF,TTF,MACH,CP
+*END STEP

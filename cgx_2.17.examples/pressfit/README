@@ -1,0 +1,11 @@
+PURPOSE:
+Example of a flange with pressfit connection and a bolt connection.
+
+Do the following:
+
+cgx -b send.fbl
+ccx flange
+cgx flange.frd flange.inp
+ 
+Animate the displacements (toggle real disp) to see the effects.
+ 

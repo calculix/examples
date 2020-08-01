@@ -1,0 +1,45 @@
+FoamFile
+{
+    version 2.0;
+    format ascii;
+
+    root "..";
+    case ".";
+    instance "constant";
+    local "polyMesh";
+
+    class polyBoundaryMesh;
+    object boundary;
+}
+
+4
+(
+  SYMP3
+  {
+    type empty;
+    nFaces 320;
+    startFace 276;
+  }
+
+  in
+  {
+    type cyclic;
+    nFaces 80;
+    startFace 596;
+  }
+
+  wall
+  {
+    type wall;
+    nFaces 4;
+    startFace 676;
+  }
+
+  slip
+  {
+    type wall;
+    nFaces 4;
+    startFace 680;
+  }
+
+)

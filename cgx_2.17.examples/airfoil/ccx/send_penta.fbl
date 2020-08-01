@@ -1,0 +1,45 @@
+read rae2822_penta.fbd
+div wall mult 2
+div in mult 2
+div out mult 2
+elty all tr3u 0.6
+comp s1 do
+comp in do
+comp out do
+comp profil do
+comp wall do
+# mesh all
+seto new
+mesh all
+swep s1 s2 tra 0 0 0.1 1 append
+setc
+elty all pe6f
+setr s1 e new
+comp s1 do
+comp s2 do
+comp in do
+comp out do
+comp profil do
+comp wall do
+seta lines l all
+comp lines do
+comp lines do
+
+setr s1 f lines
+setr s2 f lines
+setr in f lines
+setr out f lines
+setr profil f lines
+setr wall f lines
+
+setr s1 f s2 wall in out profil
+send in abq nam
+send out abq nam
+send profil abq surf
+send wall abq nam
+send profil abq slide s
+send profil abq dflux 0.
+send all abq
+plot e all
+view ed off
+view elem on

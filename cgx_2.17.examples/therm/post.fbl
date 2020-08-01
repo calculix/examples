@@ -1,0 +1,27 @@
+read latimtrans.frd
+# send the full rated temps for later use
+send all abq ds20
+# generate a postscript page with 6 frames
+view sh
+plot fv all
+rot y
+lc 1 e 1
+max 1140 e l
+min 293 e l
+hcpy ps
+rot r 10
+lc 5 e 1
+hcpy ps
+rot r 10
+lc 9 e 1
+hcpy ps
+rot r 10
+lc 13 e 1
+hcpy ps
+rot r 10
+lc 17 e 1
+hcpy ps
+rot r 10
+lc 20 e 1
+hcpy ps
+hcpy make

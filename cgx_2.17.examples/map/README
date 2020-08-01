@@ -1,0 +1,12 @@
+#Purpose:
+#Demonstrates mapping of pressures from a cfd calculation to the struct-mesh.
+#ATTENTION: Run the example ../therm before
+
+#Do the following:
+
+cgx -b map3D.fbl
+cgx -b map2D.fbl
+
+#The file faces_ds1e1.dlo with the mapped pressures will be written.
+
+#Please continue with "turbine"

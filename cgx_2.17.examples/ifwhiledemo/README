@@ -1,0 +1,3 @@
+generates some points in a while loop
+
+cgx -b ifwhiledemo.fbl

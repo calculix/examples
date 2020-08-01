@@ -1,0 +1,9 @@
+Purpose:
+Demonstrates the use of cyclic symmetry boundary conditions for
+frequency calculations
+
+Do the following:
+
+cgx -b send.fbl
+ccx lavffcyc
+cgx lavffcyc.frd lavffcyc.inp

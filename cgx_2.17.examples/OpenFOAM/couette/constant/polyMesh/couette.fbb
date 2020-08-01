@@ -1,0 +1,122 @@
+ PNT p0       0.00000        0.00000        0.01000 
+ PNT p1       0.00000        0.00000        0.02000 
+ PNT D001     0.00000        0.00000        0.00000 
+ PNT D002     0.00174        0.00000        0.00985 
+ PNT D003     0.00347        0.00000        0.01970 
+ PNT D004     0.00000        0.00000        0.00000 
+ PNT D005     0.00000        0.00000        0.00000 
+ PNT D006     0.00000        0.00100        0.01000 
+ PNT D007     0.00000        0.00100        0.02000 
+ PNT D008     0.00000        0.00100        0.00000 
+ PNT D009     0.00174        0.00100        0.00985 
+ PNT D00A     0.00347        0.00100        0.01970 
+ PNT D00B     0.00000        0.00100        0.00000 
+ PNT D00C     0.00000        0.00100        0.00000 
+ LINE L001 p0 p1 180
+ LINE L002 D002 D003 180
+ LINE L003 p0 D002 D004 108
+ LINE L004 p1 D003 D005 108
+ LINE L005 D006 D007 180
+ LINE L006 D009 D00A 180
+ LINE L007 D006 D009 D00B 108
+ LINE L008 D007 D00A D00C 108
+ LINE L009 p0 D006 101
+ LINE L00A p1 D007 101
+ LINE L00B D001 D008 101
+ LINE L00C D002 D009 101
+ LINE L00D D003 D00A 101
+ LINE L00E D004 D00B 101
+ LINE L00F D005 D00C 101
+ GSUR A001 + BLEND - L001 + L003 + L002 - L004 
+ GSUR A002 + BLEND - L005 + L007 + L006 - L008 
+ GSUR A003 + BLEND - L001 + L009 + L005 - L00A 
+ GSUR A004 + BLEND - L002 + L00C + L006 - L00D 
+ GSUR A005 + BLEND - L003 + L009 + L007 - L00C 
+ GSUR A006 + BLEND - L004 + L00A + L008 - L00D 
+ GBOD B001 NORM + A001 - A002 + A004 - A006 - A003 + A005 
+ SETA l1 l L001 
+ SETA l1 l L005 
+ SETA l1 s A003 
+ SETA l2 p D002 
+ SETA l2 p D003 
+ SETA l2 p D009 
+ SETA l2 p D00A 
+ SETA l2 l L002 
+ SETA l2 l L006 
+ SETA l2 l L00C 
+ SETA l2 l L00D 
+ SETA l2 s A004 
+ SETA in p p0 
+ SETA in p p1 
+ SETA in p D006 
+ SETA in p D007 
+ SETA in l L001 
+ SETA in l L005 
+ SETA in l L009 
+ SETA in l L00A 
+ SETA in s A003 
+ SETA out p D002 
+ SETA out p D003 
+ SETA out p D009 
+ SETA out p D00A 
+ SETA out l L002 
+ SETA out l L006 
+ SETA out l L00C 
+ SETA out l L00D 
+ SETA out s A004 
+ SETA wall p p0 
+ SETA wall p D002 
+ SETA wall p D004 
+ SETA wall p D006 
+ SETA wall p D009 
+ SETA wall p D00B 
+ SETA wall l L003 
+ SETA wall l L007 
+ SETA wall l L009 
+ SETA wall l L00C 
+ SETA wall s A005 
+ SETA slip p p1 
+ SETA slip p D003 
+ SETA slip p D005 
+ SETA slip p D007 
+ SETA slip p D00A 
+ SETA slip p D00C 
+ SETA slip l L004 
+ SETA slip l L008 
+ SETA slip l L00A 
+ SETA slip l L00D 
+ SETA slip s A006 
+ SETA s1 p p0 
+ SETA s1 p p1 
+ SETA s1 p D001 
+ SETA s1 p D002 
+ SETA s1 p D003 
+ SETA s1 p D004 
+ SETA s1 p D005 
+ SETA s1 l L001 
+ SETA s1 l L002 
+ SETA s1 l L003 
+ SETA s1 l L004 
+ SETA s1 s A001 
+ SETA s2 p D006 
+ SETA s2 p D007 
+ SETA s2 p D008 
+ SETA s2 p D009 
+ SETA s2 p D00A 
+ SETA s2 p D00B 
+ SETA s2 p D00C 
+ SETA s2 l L005 
+ SETA s2 l L006 
+ SETA s2 l L007 
+ SETA s2 l L008 
+ SETA s2 s A002 
+ SETA SYMP3 p D001 
+ SETA SYMP3 p D008 
+ SETA SYMP3 s A001 
+ SETA SYMP3 s A002 
+ ELTY all HE8  
+ plot p all b
+ plus l all k
+ plus s all m
+ plus b all g
+

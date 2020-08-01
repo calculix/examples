@@ -1,0 +1,3 @@
+rm */*.gif */*.gnu */*.out */*.sta */*.cvg */*.dat */*.frd */*.equ */*.bou */*.nam */*.sur */*.msh */*.dlo */*.flm */*.rad */*.ps */*~ */tets.inp */spooles.out */TriMasterCyclicSymmetryModel1 */mesh.ned */mesh.stl
+rm */*/isaac.grd */*/*.sur */*/*.dfl */*/*.sta */*/*.dat */*/*.frd */*/*.equ */*/*.bou  */*/*.nam */*/*.msh
+

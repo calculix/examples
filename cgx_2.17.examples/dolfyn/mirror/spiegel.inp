@@ -1,0 +1,7 @@
+*HEADING
+spiegel.fbd surface definitions
+*INCLUDE,INPUT=ingang.sur
+*INCLUDE,INPUT=spiegel.sur
+*INCLUDE,INPUT=tunnel.sur
+*INCLUDE,INPUT=uitgang.sur
+*INCLUDE,INPUT=vloer.sur

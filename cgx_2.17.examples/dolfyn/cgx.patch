@@ -1,0 +1,377 @@
+diff -rupN dolfyn-cfd/src/cgx.f90 test/dolfyn-cfd/src/cgx.f90
+--- dolfyn-cfd/src/cgx.f90	1970-01-01 01:00:00.000000000 +0100
++++ test/dolfyn-cfd/src/cgx.f90	2011-11-10 18:53:08.000000000 +0100
+@@ -0,0 +1,282 @@
++!
++! Copyright 2004-2009 Henk Krus, Cyclone Fluid Dynamics BV
++! All Rights Reserved.
++!
++! Licensed under the Apache License, Version 2.0 (the "License");
++! you may not use this file except in compliance with the License.
++! You may obtain a copy of the License at
++!
++! http://www.dolfyn.net/license.html
++!
++! Unless required by applicable law or agreed to in writing, software
++! distributed under the License is distributed on an
++! "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
++! either express or implied. See the License for the specific
++! language governing permissions and limitations under the License.
++!
++! This is cgx.f90, the cgx interface
++!
++subroutine dolfyn2cgx
++
++    use constants
++    use geometry
++    use variables
++    use scalars
++    use particles
++    
++    integer              :: indx(8)
++    
++    integer             :: datum(8)
++    character (len=12)  :: clock(3)
++    character (len=10)  :: datestring
++    
++    real, allocatable    :: NodalData1(:)     ! array of data at vertices
++    real, allocatable    :: NodalData2(:)
++    real, allocatable    :: NodalData3(:)
++    
++    integer, allocatable :: NodalCounter(:)
++    
++    allocate( NodalData1(Nvrt),stat=istat)
++    allocate( NodalCounter(Nvrt),stat=istat)
++    call TrackMemory(istat,2*Nvrt,'Work arrays for NodalData allocated')
++    
++    call date_and_time(clock(1),clock(2),clock(3),datum)
++    write(datestring,'(i2.2,''/'',i2.2,''/'',i4)') datum(3),datum(2),datum(1)
++    
++    write(IOdef,*)       'Writing cgx data file...'
++    write(IOdbg,*)       'Writing cgx data file...'
++    write(IOdbg,'(A,A)') ' Case:  ',casename(1:lens(casename))
++    write(IOdbg,'(A,A)') ' Title: ',title(1:lens(title))
++    write(IOdbg,'(A,A)') ' Date : ',datestring
++    
++    if( Transient )then
++        write(IOdef,*) 'Transient step'
++        call openfile(IOpst,casename,'.frd','FORMATTED', &
++                      'APPEND','UNKNOWN',debug)
++    else
++        write(IOdef,*) 'First step'
++        call openfile(IOpst,casename,'.frd','FORMATTED', &
++                      'SEQUENTIAL','UNKNOWN',debug)
++        !
++        ! Header
++        !
++        write(IOpst,'(A)')     '    1C'
++        write(IOpst,'(A,A)')   '    1UCASE              ',casename(1:lens(casename))
++        write(IOpst,'(A,A)')   '    1UTITLE             ',title(1:lens(title))
++        write(IOpst,'(A,A)')   '    1UDATE              ',datestring
++        write(IOpst,'(A)')     '    1UPGM               Dolfyn'
++        !
++        ! Vertices : Long format
++        !
++        write(IOpst,'(A)')     '    2C                                                                   1'
++        do i=1,Nvrt
++            write(IOpst,'(A,I10,3(1pE12.5))') ' -1', i, Vert(i,:)
++        end do
++        write(IOpst,'(A)')     '-3'
++        !
++        ! Cells : Long format
++        !
++        !    6 hexaeder:  1,2,3,4 5,6,7,8
++        !    5 pentaeder: 1,2,3,3 5,6,7,7
++        !    5 pyramid:   1,2,3,4 5,5,5,5
++        !    4 tetraeder: 1,2,3,3 4,4,4,4
++        !    1 quad:      1,2,3,4
++        !    1 triangle:  1,2,3,3
++        !
++        write(IOpst,'(A)')     '    3C                                                                   1'
++        
++        call openfile(IOcel,casename,'.cel','FORMATTED', &
++                      'SEQUENTIAL','OLD',debug)
++        
++        rewind(IOcel)
++        
++        do i=1,Ncel
++            read(IOcel,*) idummy,(indx(j),j=1,8)
++            i1 = indx(1); i2 = indx(2)
++            i3 = indx(3); i4 = indx(4)
++            i5 = indx(5); i6 = indx(6)
++            i7 = indx(7); i8 = indx(8)
++            
++            if( i7 /= 0 )then
++                if( i7 /= i8 )then
++                    ! He8
++                    write(IOpst,'(A3,I10,3I5)') ' -1', i, 1, 1, 1
++                    write(IOpst,'(A3,8I10)') ' -2', i1, i2, i3, i4, i5, i6, i7, i8
++                else if( i5 /= i6 )then
++                    ! Pe6
++                    write(IOpst,'(A2,I10,3I5)') ' -1', i, 2, 1, 1
++                    write(IOpst,'(A3,6I10)') ' -2', i1, i2, i3, i5, i6, i7
++                else if( i3 == i4 .and. i5 == i6 )then
++                    ! Tet4
++                    write(IOpst,'(A2,I10,3I5)') ' -1', i, 3, 1, 1
++                    write(IOpst,'(A3,4I10)') ' -2', i1, i2, i3, i5
++                else
++                 write(*,*)'Unknown cgx shape, cell ',i,' : ',i1,i2,i3,i4,' ...'
++                endif
++            else
++                !
++                ! Reserved for baffles
++                !
++                write(*,*)'Error: Unsuppported feature'
++            endif
++        end do
++        ! 
++        ! End elements
++        !
++        write(IOpst,'(A)')     '-3'
++    endif
++    
++    CLOSE(IOcel)
++    
++    ! 
++    ! velocity results
++    !
++    if( PostV(VarU) .or. PostV(VarV) .or. PostV(VarW) ) then
++        if( Debug > 2 ) write(*,*)'Writing vectors on nodes'
++        
++        write(IOpst,'(A,A66)')      '    1P', 'STEP'
++        write(IOpst,'(A,A6,E12.5,I12,A20,I2,I5,A10,I2)') '  100C', '0', Time, Nvrt, ' ', 1, Iter, ' ', 1
++        write(IOpst,'(A,A8,2I5)')      ' -4  ', 'VELOCITY', 4, 1
++        write(IOpst,'(A,A8,5I5,A8)')  ' -5  ', 'DU      ', 1, 2, 1, 0, 0, ' '
++        write(IOpst,'(A,A8,5I5,A8)')  ' -5  ', 'DV      ', 1, 2, 2, 0, 0, ' '
++        write(IOpst,'(A,A8,5I5,A8)')  ' -5  ', 'DW      ', 1, 2, 3, 0, 0, ' '
++        write(IOpst,'(A,A8,5I5,A8)')  ' -5  ', 'ALL     ', 1, 2, 0, 0, 1, 'ALL     '
++        
++        allocate( NodalData2(Nvrt),stat=istat)
++        allocate( NodalData3(Nvrt),stat=istat)
++        call TrackMemory(istat,2*Nvrt,'Work arrays for extra NodalData allocated')
++     
++        call InterpolateData(0,VarU,U,dUdX,NodalData1,NodalCounter)
++        call InterpolateData(0,VarV,V,dVdX,NodalData2,NodalCounter)
++        call InterpolateData(0,VarW,W,dWdX,NodalData3,NodalCounter)
++
++        do i=1,Nvrt
++            if( abs(Nodaldata1(i)) < Small ) Nodaldata1(i) = 0.0
++            if( abs(Nodaldata2(i)) < Small ) Nodaldata2(i) = 0.0
++            if( abs(Nodaldata3(i)) < Small ) Nodaldata3(i) = 0.0
++            write(IOpst,'(A,I10,3E12.5)')  ' -1', i, Nodaldata1(i), NodalData2(i), NodalData3(i)
++        end do
++        
++        write(IOpst,'(A)')     '-3'
++    end if
++    
++    ! 
++    ! pressure results
++    !
++    if( PostV(VarP) ) then
++        if( Debug > 2 ) write(*,*)'Writing pressure on nodes'
++        
++        write(IOpst,'(A,A66)')      '    1P', 'STEP'
++        write(IOpst,'(A,A6,E12.5,I12,A20,I2,I5,A10,I2)') '  100C', '0', Time, Nvrt, ' ', 1, Iter, ' ', 1
++        write(IOpst,'(A,A8,2I5)')      ' -4  ', 'PRESSURE', 1, 1
++        write(IOpst,'(A,A8,5I5,A8)')  ' -5  ', 'P       ', 1, 1, 1, 1, 0, ' '
++        
++        call InterpolateData(0,VarP,P,dPdX,NodalData1,NodalCounter)
++
++        do i=1,Nvrt
++            write(IOpst,'(A,I10,E12.5)')  ' -1', i, Nodaldata1(i)
++        end do
++        
++        write(IOpst,'(A)')     '-3'
++    END IF
++    
++    if ( SolveEnthalpy ) then
++        if( PostV(VarT) )then
++            if( Debug > 2 ) write(*,*)'Writing nodal temperature ',Tref
++            
++            write(IOpst,'(A,A66)')      '    1P', 'STEP'
++            write(IOpst,'(A,A6,E12.5,I12,A20,I2,I5,A10,I2)') '  100C', '0', Time, Nvrt, ' ', 1, Iter, ' ', 1
++            write(IOpst,'(A,A8,2I5)')      ' -4  ', 'TEMP    ', 1, 1
++            write(IOpst,'(A,A8,5I5,A8)')  ' -5  ', 'T       ', 1, 1, 1, 1, 0, ' '
++            
++            call InterpolateData(0,VarT,T,dPdX,NodalData1,NodalCounter)
++            
++            do i=1,Nvrt
++                write(IOpst,'(A,I10,E12.5)')  ' -1', i, (Nodaldata1(i)-Tref)
++            end do
++            
++            write(IOpst,'(A)')     '-3'
++        END IF
++    END IF
++    
++    if( SolveTurb )then
++        if( PostV(VarTE) )then
++            if( Debug > 2 ) write(*,*)'Writing nodal turbulent kinetic energy'
++            
++            write(IOpst,'(A,A66)')      '    1P', 'STEP'
++            write(IOpst,'(A,A6,E12.5,I12,A20,I2,I5,A10,I2)') '  100C', '0', Time, Nvrt, ' ', 1, Iter, ' ', 1
++            write(IOpst,'(A,A8,2I5)')      ' -4  ', 'TURB    ', 1, 1
++            write(IOpst,'(A,A8,5I5,A8)')  ' -5  ', 'TE      ', 1, 1, 1, 1, 0, ' '
++            
++            call InterpolateData(0,VarTE,TE,dPdX,NodalData1,NodalCounter)
++            
++            do i=1,Nvrt
++                write(IOpst,'(A,I10,E12.5)')  ' -1', i, max(0.0,Nodaldata1(i))
++            end do
++            
++            write(IOpst,'(A)')     '-3'
++        END IF
++        
++        if( PostV(VarED) )then
++            if( Debug > 2 ) write(*,*)'Writing nodal turbulent dissipation'
++        
++            write(IOpst,'(A,A66)')      '    1P', 'STEP'
++            write(IOpst,'(A,A6,E12.5,I12,A20,I2,I5,A10,I2)') '  100C', '0', Time, Nvrt, ' ', 1, Iter, ' ', 1
++            write(IOpst,'(A,A8,2I5)')      ' -4  ', 'DISS    ', 1, 1
++            write(IOpst,'(A,A8,5I5,A8)')  ' -5  ', 'ED      ', 1, 1, 1, 1, 0, ' '
++            
++            call InterpolateData(0,VarED,ED,dPdX,NodalData1,NodalCounter)
++            
++            do i=1,Nvrt
++                write(IOpst,'(A,I10,E12.5)')  ' -1', i, max(0.0,Nodaldata1(i))
++            end do
++            
++            write(IOpst,'(A)')     '-3'
++        END IF
++        
++        IF( PostV(VarVis) )then
++            if( Debug > 2 ) write(*,*)'Writing nodal turbulent viscosity'
++            
++            write(IOpst,'(A,A66)')      '    1P', 'STEP'
++            write(IOpst,'(A,A6,E12.5,I12,A20,I2,I5,A10,I2)') '  100C', '0', Time, Nvrt, ' ', 1, Iter, ' ', 1
++            write(IOpst,'(A,A8,2I5)')      ' -4  ', 'VISC    ', 1, 1
++            write(IOpst,'(A,A8,5I5,A8)')  ' -5  ', 'VIS     ', 1, 1, 1, 1, 0, ' '
++            
++            call InterpolateData(0,VarVis,VisEff,dPdX,NodalData1,NodalCounter)
++            
++            do i=1,Nvrt
++                write(IOpst,'(A,I10,E12.5)')  ' -1', i, max(0.0,Nodaldata1(i) - VisLam)
++            end do
++            
++            write(IOpst,'(A)')     '-3'
++        END IF
++    END IF
++    
++    if ( SolveScalars ) then
++        if( PostV(VarSC) )then
++            if( Debug > 2 ) write(*,*)'Writing scalar(s) nodal values'
++            
++            do is=1,NScal
++                write(IOpst,'(A,A66)')      '    1P', 'STEP'
++                write(IOpst,'(A,A6,E12.5,I12,A20,I2,I5,A10,I2)') '  100C', '0', Time, Nvrt, ' ', 1, Iter, ' ', 1
++                write(IOpst,'(A,A8,I4,2I5)')      ' -4  ', 'SCAL', is, 1, 1
++                write(IOpst,'(A,A8,5I5,A8)')  ' -5  ', 'S       ', 1, 1, 1, 1, 0, ' '
++                
++                call InterpolateData(0,VarS(is),SC(1,IS),dPdX,NodalData1,NodalCounter)
++                
++                do i=1,Nvrt
++                    write(IOpst,'(A,I10,E12.5)')  ' -1', i, max(0.0,Nodaldata1(i))
++                end do
++            end do
++            
++            write(IOpst,'(A)')     '-3'
++        END IF
++    END IF
++    
++    write(IOpst,'(A)')     ' 9999'
++     
++    close(IOpst)
++    
++    if( Debug > 2 ) write(*,*)'Done'
++   
++end subroutine dolfyn2cgx
+\ No newline at end of file
+diff -rupN dolfyn-cfd/src/dolfyn.f90 test/dolfyn-cfd/src/dolfyn.f90
+--- dolfyn-cfd/src/dolfyn.f90	2011-11-10 18:46:45.821149000 +0100
++++ test/dolfyn-cfd/src/dolfyn.f90	2011-11-10 18:56:22.025870933 +0100
+@@ -297,6 +297,7 @@ program dolfyn
+      if( mod(Iter,NOutput) == 0 .and. Iter /= IterStart+Niter )then
+        write(IOdef,*)'Writing postprocessing file(s)'
+        if( UseOpenDX  ) call dolfyn2opendx( Divergence )
++       if( UseCGX     ) call dolfyn2cgx
+        if( UseVTK     ) call dolfyn2vtk
+        if( UseTECPLOT ) call dolfyn2tecplt(0)
+        if( UseGMV     ) call dolfyn2gmv
+@@ -306,6 +307,7 @@ program dolfyn
+      if( Iter == IOutput)then
+        write(IOdef,*)'Writing postprocessing file(s) at iteration ',Iter
+        if( UseOpenDX  ) call dolfyn2opendx( Divergence )
++       if( UseCGX     ) call dolfyn2cgx
+        if( UseVTK     ) call dolfyn2vtk
+        if( UseTECPLOT ) call dolfyn2tecplt(0)
+        if( UseGMV     ) call dolfyn2gmv
+@@ -315,6 +317,7 @@ program dolfyn
+      if( TOutput /= -1. .and. Time >= TOutput .and. .not. TOutputDone )then
+        write(IOdef,*)'Writing postprocessing file(s) at time ',Time
+        if( UseOpenDX  ) call dolfyn2opendx( Divergence )
++       if( UseCGX     ) call dolfyn2cgx
+        if( UseVTK     ) call dolfyn2vtk
+        if( UseTECPLOT ) call dolfyn2tecplt(0)
+        if( UseGMV     ) call dolfyn2gmv
+@@ -431,6 +434,7 @@ program dolfyn
+ 
+ 
+    if( UseOpenDX  ) call dolfyn2opendx( Divergence )
++   if( UseCGX     ) call dolfyn2cgx
+    if( UseVTK     ) call dolfyn2vtk
+    if( UseTECPLOT ) call dolfyn2tecplt(1)
+    if( UseGMV     ) call dolfyn2gmv
+diff -rupN dolfyn-cfd/src/Makefile test/dolfyn-cfd/src/Makefile
+--- dolfyn-cfd/src/Makefile	2011-11-10 18:46:45.821149000 +0100
++++ test/dolfyn-cfd/src/Makefile	2011-11-10 19:00:25.731216929 +0100
+@@ -10,8 +10,8 @@ F90FLAGS = -O2   # -ffast-math -funroll-
+ F90DP = gfortran -fdefault-real-8
+ 
+ F77FILES = \
+-  solver_sparsekit2.f\
+-  lapacks.f  
++  solver_sparsekit2.f
++#  lapacks.f  
+ # solver_bcg2.f
+ # solver_ma27.f
+ 
+@@ -32,6 +32,7 @@ F90FILES=\
+  tools.f90\
+  opendx.f90\
+  vtk.f90\
++ cgx.f90\
+  tecplt.f90\
+  gmv.f90\
+  gmsh.f90\
+@@ -68,7 +69,7 @@ gmsh2dolfyn: gmsh2dolfyn.f90
+ 
+ dolfyn:	${F90OBJS} ${F77OBJS}
+ 	@echo  "Linking" $@ "... "
+-	${F90} ${F90OBJS} ${F77OBJS} ${LFLAGS} ${INCS} -o ../bin/dolfyn 
++	${F90} ${F90OBJS} ${F77OBJS} ${LFLAGS} ${INCS} -lblas -llapack -o ../bin/dolfyn 
+ 
+ clean:
+ 	@rm *.o *.mod
+diff -rupN dolfyn-cfd/src/modules.f90 test/dolfyn-cfd/src/modules.f90
+--- dolfyn-cfd/src/modules.f90	2011-11-10 18:46:45.821149000 +0100
++++ test/dolfyn-cfd/src/modules.f90	2011-11-10 18:58:00.538670675 +0100
+@@ -493,6 +493,8 @@ module constants
+    logical   :: UseArtificialComp   = .false.
+    logical   :: UseGMV              = .false.
+ 
++   logical   :: UseCGX              = .false.
++   
+    logical   :: UseVTK              = .false.
+    logical   :: UseVTKwalls         = .true.
+    logical   :: UseVTKbinary        = .true.
+diff -rupN dolfyn-cfd/src/readcontrolfile1.f90 test/dolfyn-cfd/src/readcontrolfile1.f90
+--- dolfyn-cfd/src/readcontrolfile1.f90	2011-11-10 18:46:45.821149000 +0100
++++ test/dolfyn-cfd/src/readcontrolfile1.f90	2011-11-10 18:59:19.858240251 +0100
+@@ -901,6 +901,8 @@ subroutine ReadControlFile
+                case default
+                  write(*,'(1x,A,A)')'+ use,artif: unknown key: ',key3(1:3)
+              end select
++           case ('cgx')
++             UseCGX = .true.
+            case ('vtk')
+              UseVTK = .true.
+              key3 = keys(3)

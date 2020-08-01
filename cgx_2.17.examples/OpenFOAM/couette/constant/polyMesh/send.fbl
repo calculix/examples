@@ -1,0 +1,28 @@
+read couette.fbd
+#move all scal 0.1
+#move all scal 1000.
+del me
+div all div 2
+#bia all 1
+seta s1 se all
+swep s1 s2 tra 0 .001 0 1 append
+comp s2 do
+seta SYMP3 se s1 s2
+comp in do
+comp out do
+comp wall do
+comp slip do
+elty all
+elty all he8f
+mesh all
+# remove unwanted faces (bug)
+setr SYMP3 se in
+setr SYMP3 se out
+setr SYMP3 se wall
+setr SYMP3 se slip
+send all foam empty SYMP3 cyclic in out cy wall wall wall slip
+view ed off
+view el on
+rot y
+plus f all
+#quit

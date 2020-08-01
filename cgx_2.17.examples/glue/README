@@ -1,0 +1,11 @@
+Purpose:
+Demonstrates how to connect independend meshes with equations. 
+The shape is the same as in
+../examples/turbine/latim.fbd
+Compare the results.
+
+Do the following:
+
+cgx -b send.fbl
+ccx latjm
+cgx latjm.frd latjm.inp

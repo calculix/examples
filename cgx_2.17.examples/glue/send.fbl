@@ -1,0 +1,12 @@
+read latjm.fbd
+del me
+elty all
+elty all he20r
+mesh all
+send SPC abq spc 23
+send CYC1 abq nam
+send CYC2 abq nam
+send DEP IND abq areampc 123 c
+send DEP2 IND2 abq areampc 123 c
+send all abq
+quit

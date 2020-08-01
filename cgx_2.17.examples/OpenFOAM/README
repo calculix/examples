@@ -1,0 +1,15 @@
+Purpose:
+This is a OpenFOAM example. It includes the cgx input as well as the cfd-
+results. It describes a circular swirl caused by two walls who rotate relative
+to each other.
+
+To create the mesh goto:
+couette/constant/polyMesh
+
+cgx -b send.fbl
+
+There is no need to run OpenFOAM since the results are provided.
+
+Post-processing with:
+cgx -foam couette
+

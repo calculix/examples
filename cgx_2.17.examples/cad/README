@@ -1,0 +1,25 @@
+Purpose:
+Demonstrates how to generate a tet mesh:
+('ng_vol' from the netgen pakage must be available)
+
+either use the vda2fbd converter or use the available fbd file
+(vda2fbd halter.vda > halter.fbd)
+or use the cad2fbd converter for the conversion of the step or iges files
+
+use -a for automatic mode:
+cgx -a halter.fbd
+
+# generate and export a tet mesh, type:
+body ! all
+elty all te10
+mesh all
+send all abq
+
+# or do first a surface meshing with manipulations and separate tet-meshing:
+elty all
+elty all tr6u
+mesh all
+(optionally use 'qmsh' for mesh-adjustments)
+mesh all tet
+(optionally use 'mesh all tet 4.' were '4.' is the target-size for the tet-
+ elements)

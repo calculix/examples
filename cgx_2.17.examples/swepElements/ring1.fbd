@@ -1,0 +1,96 @@
+ PNT a0       0.95000        0.1000        0.00000 
+ PNT b0       0.95000        0.0500        0.00000 
+ PNT b1       0.95000        0.0000        0.00000 
+ PNT a2       1.05000        0.1000        0.00000 
+ PNT b2       1.00000        0.1000        0.00000 
+ PNT b4       1.00000        0.0000        0.00000 
+ PNT b5       1.05000        0.0000        0.00000 
+ PNT b6       1.05000        0.0500        0.00000 
+ PNT a10      1.15000        0.1000        0.00000 
+ PNT b10      1.10000        0.1000        0.00000 
+ PNT b12      1.10000        0.0000        0.00000 
+ PNT b13      1.15000        0.0000        0.00000 
+ PNT b14      1.15000        0.0500        0.00000 
+ LINE l0 a0 b0 101
+ LINE l1 b0 b1 101
+ LINE l2 a2 b2 101
+ LINE l3 b2 a0 101
+ LINE l4 b1 b4 101
+ LINE l5 b4 b5 101
+ LINE l6 b5 b6 101
+ LINE l7 b6 a2 101
+ LINE l8 a2 b6 101
+ LINE l9 b6 b5 101
+ LINE l10 a10 b10 101
+ LINE l11 b10 a2 101
+ LINE l12 b5 b12 101
+ LINE l13 b12 b13 101
+ LINE l14 b13 b14 101
+ LINE l15 b14 a10 101
+ LCMB C001  - l1 - l0 
+ LCMB C002  - l3 - l2 
+ LCMB C003  + l8 + l9 
+ LCMB C004  - l5 - l4 
+ LCMB C005  - l11 - l10 
+ LCMB C006  - l15 - l14 
+ LCMB C007  - l13 - l12 
+ GSUR A001 - BLEND + C001 + C002 + C003 + C004 
+ GSUR A002 - BLEND - C003 + C005 + C006 + C007 
+ SETA UP p a2 
+ SETA UP p b5 
+ SETA N1 p a0 
+ SETA N1 p b0 
+ SETA N1 p b1 
+ SETA N1 p a2 
+ SETA N1 p b2 
+ SETA N1 p b4 
+ SETA N1 p b5 
+ SETA N1 p b6 
+ SETA N1 l l0 
+ SETA N1 l l1 
+ SETA N1 l l2 
+ SETA N1 l l3 
+ SETA N1 l l4 
+ SETA N1 l l5 
+ SETA N1 l l8 
+ SETA N1 l l9 
+ SETA N1 c C001 
+ SETA N1 c C002 
+ SETA N1 c C003 
+ SETA N1 c C004 
+ SETA N1 s A001 
+ SETA N2 p a2 
+ SETA N2 p b5 
+ SETA N2 p b6 
+ SETA N2 p a10 
+ SETA N2 p b10 
+ SETA N2 p b12 
+ SETA N2 p b13 
+ SETA N2 p b14 
+ SETA N2 l l8 
+ SETA N2 l l9 
+ SETA N2 l l10 
+ SETA N2 l l11 
+ SETA N2 l l12 
+ SETA N2 l l13 
+ SETA N2 l l14 
+ SETA N2 l l15 
+ SETA N2 c C003 
+ SETA N2 c C005 
+ SETA N2 c C006 
+ SETA N2 c C007 
+ SETA N2 s A002 
+ SETA slave s A002 
+ SETA master p a0 
+ SETA master p a2 
+ SETA master p b2 
+ SETA master l l2 
+ SETA master l l3 
+ SETA master c C002 
+ SETA SPC p b0 
+ SETA SPC p b14 
+ plot p all b
+ plus l all k
+ plus s all m
+ plus b all g
+

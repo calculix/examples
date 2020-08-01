@@ -1,0 +1,31 @@
+sys rm -f *.flm *.rad *.msh *.bou *.equ
+read ../turbine/latim.fbd
+read ../turbine/mesh.fbl
+#
+send CYC1 abq nam
+send CYC2 abq nam
+setr CYC2 se CYC1
+send CYC1 CYC2 abq cycmpc tx
+send SPC abq spc 23
+send all abq
+** prg duns dir platte Ttot-rot
+send SFS1 abq film  1173.8 .400
+send SFS2 abq film  1173.8 .280
+send SFS3 abq film  1173.8 .210
+send SFS4 abq film  1173.8 .180
+send SFP1 abq film  1173.8 .400
+send SFP2 abq film  1173.8 .280
+send SFP3 abq film  1173.8 .210
+send SFP4 abq film  1173.8 .180
+send LE abq film  1173. 2.
+send TE abq film  1173. .170
+send SSO abq film 1173. .4 
+send BACK abq film 1173. .2
+send BACK abq radiate 900. 0.7 
+send TIT2 abq film  1173.8 .02 
+send SSO abq radiate 800. 0.7
+send SPCT abq spc t 1.
+sys cat *.flm >| all.flm
+sys cat *.rad >| all.rad
+
+

@@ -1,0 +1,892 @@
+ PNT P088     0.11200       -5.35539        0.00000 
+ PNT P01F     0.39300       -5.39192        0.00000 
+ PNT P01H     0.38977       -5.39163        0.00000 
+ PNT P01I     0.38621       -5.39135        0.00000 
+ PNT P01J     0.38229       -5.39110        0.00000 
+ PNT P01K     0.37802       -5.39087        0.00000 
+ PNT P01L     0.37333       -5.39070        0.00000 
+ PNT P01M     0.36826       -5.39059        0.00000 
+ PNT P01N     0.36271       -5.39054        0.00000 
+ PNT P01P     0.35675       -5.39059        0.00000 
+ PNT P01Q     0.35028       -5.39070        0.00000 
+ PNT P01R     0.34336       -5.39090        0.00000 
+ PNT P01S     0.33592       -5.39121        0.00000 
+ PNT P01T     0.32799       -5.39162        0.00000 
+ PNT P01U     0.31960       -5.39213        0.00000 
+ PNT P01V     0.31065       -5.39276        0.00000 
+ PNT P01X     0.30124       -5.39350        0.00000 
+ PNT P01Y     0.29139       -5.39434        0.00000 
+ PNT P020     0.28103       -5.39527        0.00000 
+ PNT P022     0.27024       -5.39629        0.00000 
+ PNT P024     0.25916       -5.39736        0.00000 
+ PNT P026     0.24799       -5.39842        0.00000 
+ PNT P028     0.23709       -5.39945        0.00000 
+ PNT P029     0.22649       -5.40041        0.00000 
+ PNT P02B     0.21594       -5.40128        0.00000 
+ PNT P02D     0.20561       -5.40207        0.00000 
+ PNT P02E     0.19517       -5.40275        0.00000 
+ PNT P02F     0.18433       -5.40330        0.00000 
+ PNT P02G     0.17257       -5.40369        0.00000 
+ PNT P02I     0.15999       -5.40379        0.00000 
+ PNT P02J     0.14717       -5.40357        0.00000 
+ PNT P02K     0.13447       -5.40300        0.00000 
+ PNT P02L     0.12207       -5.40215        0.00000 
+ PNT P02M     0.11042       -5.40110        0.00000 
+ PNT P02O     0.09926       -5.39990        0.00000 
+ PNT P02Q     0.08826       -5.39856        0.00000 
+ PNT P02R     0.07788       -5.39715        0.00000 
+ PNT P02T     0.06811       -5.39568        0.00000 
+ PNT P02U     0.05926       -5.39421        0.00000 
+ PNT P02V     0.05127       -5.39276        0.00000 
+ PNT P02W     0.04409       -5.39132        0.00000 
+ PNT P02Y     0.03768       -5.38992        0.00000 
+ PNT P02Z     0.03198       -5.38857        0.00000 
+ PNT P030     0.02695       -5.38727        0.00000 
+ PNT P031     0.02253       -5.38603        0.00000 
+ PNT P032     0.01874       -5.38485        0.00000 
+ PNT P033     0.01564       -5.38379        0.00000 
+ PNT P034     0.01304       -5.38284        0.00000 
+ PNT P036     0.01092       -5.38197        0.00000 
+ PNT P037     0.00910       -5.38116        0.00000 
+ PNT P039     0.00764       -5.38046        0.00000 
+ PNT P03A     0.00652       -5.37988        0.00000 
+ PNT P03B     0.00555       -5.37933        0.00000 
+ PNT P03C     0.00475       -5.37884        0.00000 
+ PNT P03E     0.00410       -5.37841        0.00000 
+ PNT P03F     0.00356       -5.37803        0.00000 
+ PNT P03G     0.00311       -5.37769        0.00000 
+ PNT P03H     0.00272       -5.37737        0.00000 
+ PNT P03I     0.00238       -5.37708        0.00000 
+ PNT P03J     0.00209       -5.37682        0.00000 
+ PNT P03K     0.00185       -5.37657        0.00000 
+ PNT P03M     0.00163       -5.37635        0.00000 
+ PNT P03N     0.00144       -5.37614        0.00000 
+ PNT P03O     0.00128       -5.37595        0.00000 
+ PNT P03P     0.00113       -5.37576        0.00000 
+ PNT P03R     0.00100       -5.37559        0.00000 
+ PNT P03S     0.00089       -5.37543        0.00000 
+ PNT P03U     0.00079       -5.37528        0.00000 
+ PNT P03V     0.00070       -5.37513        0.00000 
+ PNT P03W     0.00062       -5.37499        0.00000 
+ PNT P03X     0.00056       -5.37486        0.00000 
+ PNT P03Z     0.00049       -5.37474        0.00000 
+ PNT P040     0.00044       -5.37461        0.00000 
+ PNT P041     0.00038       -5.37449        0.00000 
+ PNT P043     0.00034       -5.37438        0.00000 
+ PNT P044     0.00030       -5.37427        0.00000 
+ PNT P045     0.00027       -5.37415        0.00000 
+ PNT P046     0.00023       -5.37405        0.00000 
+ PNT P048     0.00020       -5.37394        0.00000 
+ PNT P049     0.00019       -5.37384        0.00000 
+ PNT P04B     0.00016       -5.37374        0.00000 
+ PNT P04C     0.00015       -5.37363        0.00000 
+ PNT P04D     0.00013       -5.37353        0.00000 
+ PNT P04E     0.00011       -5.37344        0.00000 
+ PNT P04G     0.00011       -5.37334        0.00000 
+ PNT P04H     0.00010       -5.37323        0.00000 
+ PNT P04I     0.00011       -5.37313        0.00000 
+ PNT P04J     0.00010       -5.37303        0.00000 
+ PNT P04L     0.00011       -5.37293        0.00000 
+ PNT P04M     0.00011       -5.37282        0.00000 
+ PNT P04N     0.00013       -5.37273        0.00000 
+ PNT P04P     0.00014       -5.37263        0.00000 
+ PNT P04Q     0.00016       -5.37252        0.00000 
+ PNT P04R     0.00018       -5.37241        0.00000 
+ PNT P04T     0.00020       -5.37230        0.00000 
+ PNT P04V     0.00024       -5.37219        0.00000 
+ PNT P04W     0.00026       -5.37207        0.00000 
+ PNT P04X     0.00030       -5.37195        0.00000 
+ PNT P04Z     0.00034       -5.37183        0.00000 
+ PNT P050     0.00040       -5.37171        0.00000 
+ PNT P052     0.00046       -5.37159        0.00000 
+ PNT P054     0.00051       -5.37145        0.00000 
+ PNT P056     0.00059       -5.37132        0.00000 
+ PNT P058     0.00067       -5.37116        0.00000 
+ PNT P059     0.00076       -5.37100        0.00000 
+ PNT P05A     0.00088       -5.37084        0.00000 
+ PNT P05C     0.00101       -5.37067        0.00000 
+ PNT P05D     0.00118       -5.37045        0.00000 
+ PNT P05F     0.00139       -5.37022        0.00000 
+ PNT P05G     0.00166       -5.36995        0.00000 
+ PNT P05H     0.00201       -5.36962        0.00000 
+ PNT P05I     0.00247       -5.36926        0.00000 
+ PNT P05J     0.00307       -5.36882        0.00000 
+ PNT P05L     0.00384       -5.36835        0.00000 
+ PNT P05M     0.00475       -5.36785        0.00000 
+ PNT P05N     0.00584       -5.36731        0.00000 
+ PNT P05P     0.00714       -5.36674        0.00000 
+ PNT P05R     0.00869       -5.36616        0.00000 
+ PNT P05S     0.01049       -5.36554        0.00000 
+ PNT P05T     0.01261       -5.36490        0.00000 
+ PNT P05V     0.01507       -5.36422        0.00000 
+ PNT P05W     0.01793       -5.36352        0.00000 
+ PNT P05Y     0.02120       -5.36281        0.00000 
+ PNT P05Z     0.02494       -5.36208        0.00000 
+ PNT P060     0.02919       -5.36134        0.00000 
+ PNT P062     0.03401       -5.36059        0.00000 
+ PNT P064     0.03945       -5.35984        0.00000 
+ PNT P066     0.04554       -5.35910        0.00000 
+ PNT P068     0.05234       -5.35839        0.00000 
+ PNT P069     0.05990       -5.35770        0.00000 
+ PNT P06B     0.06830       -5.35707        0.00000 
+ PNT P06C     0.07728       -5.35651        0.00000 
+ PNT P06D     0.08660       -5.35607        0.00000 
+ PNT P06F     0.09609       -5.35572        0.00000 
+ PNT P06H     0.10571       -5.35548        0.00000 
+ PNT P06I     0.11538       -5.35535        0.00000 
+ PNT P06J     0.12505       -5.35532        0.00000 
+ PNT P06L     0.13466       -5.35537        0.00000 
+ PNT P06M     0.14416       -5.35551        0.00000 
+ PNT P06N     0.15351       -5.35574        0.00000 
+ PNT P06P     0.16263       -5.35604        0.00000 
+ PNT P06R     0.17148       -5.35641        0.00000 
+ PNT P06S     0.18007       -5.35684        0.00000 
+ PNT P06U     0.18835       -5.35731        0.00000 
+ PNT P06V     0.19629       -5.35785        0.00000 
+ PNT P06W     0.20382       -5.35842        0.00000 
+ PNT P06Y     0.21101       -5.35903        0.00000 
+ PNT P06Z     0.21781       -5.35966        0.00000 
+ PNT P070     0.22418       -5.36031        0.00000 
+ PNT P072     0.23020       -5.36096        0.00000 
+ PNT P074     0.23577       -5.36161        0.00000 
+ PNT P075     0.24098       -5.36226        0.00000 
+ PNT P076     0.24617       -5.36291        0.00000 
+ PNT P078     0.25179       -5.36367        0.00000 
+ PNT P079     0.25791       -5.36453        0.00000 
+ PNT P07B     0.26458       -5.36550        0.00000 
+ PNT P07D     0.27177       -5.36661        0.00000 
+ PNT P07F     0.27963       -5.36787        0.00000 
+ PNT P07H     0.28811       -5.36929        0.00000 
+ PNT P07I     0.29723       -5.37089        0.00000 
+ PNT P07J     0.30652       -5.37257        0.00000 
+ PNT P07L     0.31538       -5.37425        0.00000 
+ PNT P07M     0.32380       -5.37590        0.00000 
+ PNT P07O     0.33170       -5.37750        0.00000 
+ PNT P07P     0.33914       -5.37904        0.00000 
+ PNT P07Q     0.34613       -5.38053        0.00000 
+ PNT P07R     0.35264       -5.38195        0.00000 
+ PNT P07S     0.35873       -5.38329        0.00000 
+ PNT P07U     0.36434       -5.38456        0.00000 
+ PNT P07V     0.36958       -5.38576        0.00000 
+ PNT P07W     0.37438       -5.38688        0.00000 
+ PNT P07Y     0.37883       -5.38794        0.00000 
+ PNT P080     0.38290       -5.38892        0.00000 
+ PNT P081     0.38664       -5.38986        0.00000 
+ PNT P082     0.38996       -5.39069        0.00000 
+ PNT P083     0.39308       -5.39147        0.00000 
+ PNT P089     0.10818       -5.40087        0.00000 
+ PNT P001     0.39595       -5.39220        0.00000 
+ PNT P002    -1.59445       -8.06670        0.00000 
+ PNT P003     2.38705       -8.06670        0.00000 
+ PNT P004     2.38705       -2.68890        0.00000 
+ PNT P005    -1.59445       -2.68890        0.00000 
+ PNT P006     0.00005       -5.36310        0.00000 
+ PNT P007    -0.02391       -4.96718        0.00000 
+ PNT P008     0.00955       -5.35669        0.00000 
+ PNT P009    -0.17355       -5.08634        0.00000 
+ PNT P00A     0.04583       -5.34782        0.00000 
+ PNT P00C     0.07339       -5.34467        0.00000 
+ PNT P00E    -0.28439       -5.35236        0.00000 
+ PNT P00G     0.17483       -5.34379        0.00000 
+ PNT P00I     0.27540       -5.35164        0.00000 
+ PNT P00J     0.35498       -5.36562        0.00000 
+ PNT P00K    -0.14138       -5.72313        0.00000 
+ PNT P00L    -0.00406       -5.36887        0.00000 
+ PNT P00N    -0.00205       -5.38240        0.00000 
+ PNT P00O    -0.02888       -5.79552        0.00000 
+ PNT P00P     0.00634       -5.38933        0.00000 
+ PNT P00R     0.04545       -5.40523        0.00000 
+ PNT P00S     0.07604       -5.41201        0.00000 
+ PNT P00T     0.41424       -4.91579        0.00000 
+ PNT P00V     0.23344       -5.41811        0.00000 
+ PNT P00W     0.27629       -5.41372        0.00000 
+ PNT P00X     0.34624       -5.40934        0.00000 
+ PNT P00Z     0.39733       -5.86742        0.00000 
+ PNT P010     0.11187       -5.34205        0.00000 
+ PNT P011     0.10752       -5.41638        0.00000 
+ PNT P012     0.39783       -5.37260        0.00000 
+ PNT P013     0.39696       -5.40933        0.00000 
+ PNT P014     0.41602       -2.68890        0.00000 
+ PNT P015     0.40597       -8.06670        0.00000 
+ PNT P016     2.38705       -5.91854        0.00000 
+ PNT P017     2.38705       -4.91483        0.00000 
+ PNT P019     2.38705       -5.28618        0.00000 
+ PNT P01A     2.38705       -5.46204        0.00000 
+ PNT P01B     2.38705       -5.38124        0.00000 
+ PNT P01C     0.02377       -5.35212        0.00000 
+ PNT P01D     0.01893       -5.39561        0.00000 
+ PNT P086    -1.18890       -5.37780        0.00000 
+ PNT P087     1.98150       -5.37780        0.00000 
+ PNT P08A    -0.22343       -5.15561        0.00000 
+ PNT P08B    -0.23510       -5.61378        0.00000 
+ PNT P08D    -1.59445       -6.63423        0.00000 
+ PNT P08F    -1.59445       -4.05684        0.00000 
+ PNT P08G     0.00041       -5.37456        0.00000 
+ PNT P08H    -0.00499       -5.37658        0.00000 
+ PNT P01E     0.09946       -5.23911        0.00000 
+ PNT P085     0.06370       -5.62400        0.00000 
+ PNT P08I     0.30044       -5.37146        0.00000 
+ PNT P08J     0.30863       -5.35687        0.00000 
+ PNT P08K     0.18986       -5.40304        0.00000 
+ PNT P08M     0.19146       -5.41986        0.00000 
+ PNT P08N     0.14337       -5.41987        0.00000 
+ PNT p0       0.10000       -5.37780        0.00000 
+ PNT pz       0.10000       -5.37780       -1.00000 
+ PNT P08O     0.22113       -5.35999        0.00000 
+ PNT P08P     0.22118       -5.34640        0.00000 
+ PNT P08Q    -0.11416       -2.68890        0.00000 
+ PNT P08R    -0.05850       -8.06670        0.00000 
+ PNT P08S     0.19088       -4.91316        0.00000 
+ PNT P08T     0.09359       -5.84321        0.00000 
+ PNT P08U    -0.77680       -4.22863        0.00000 
+ PNT P08W    -0.67897       -6.40886        0.00000 
+ PNT P08Y    -1.59445       -5.34319        0.00000 
+ SEQA S005     pnt  P010 P00C P00A P01C
+ SEQA S006     pnt  P01D P00R P00S P011
+ SEQA S00K     pnt  P00O P00K P08B
+ SEQA S00V     pnt  P08M P08N P011
+ SEQA S00A     pnt  P088 P06H P06F P06D P06C P06B P069 P068 P066 P064
+ SEQA S00A END pnt  P062 P060
+ SEQA S00E     pnt  P089 P02O P02Q P02R P02T P02U P02V P02W P02Y P02Z
+ SEQA S00E END pnt  P030 P031
+ SEQA S00P     pnt  P01C P008 P006 P00L P08H
+ SEQA S00N     pnt  P060 P05Z P05Y P05W P05V P05T P05S P05R P05P P05N
+ SEQA S00N END pnt  P05M P05L P05J P05I P05H P05G P05F P05D P05C P05A
+ SEQA S00N END pnt  P059 P058 P056 P054 P052 P050 P04Z P04X P04W P04V
+ SEQA S00N END pnt  P04T P04R P04Q P04P P04N P04M P04L P04J P04I P04H
+ SEQA S00N END pnt  P04G P04E P04D P04C P04B P049 P048 P046 P045 P044
+ SEQA S00N END pnt  P043 P041 P08G
+ SEQA S00J     pnt  P08A P009 P007
+ SEQA S00L     pnt  P08B P00E P08A
+ SEQA S00O     pnt  P08G P040 P03Z P03X P03W P03V P03U P03S P03R P03P
+ SEQA S00O END pnt  P03O P03N P03M P03K P03J P03I P03H P03G P03F P03E
+ SEQA S00O END pnt  P03C P03B P03A P039 P037 P036 P034 P033 P032 P031
+ SEQA S00R     pnt  P08H P00N P00P P01D
+ SEQA S001     pnt  P007 P01E P010
+ SEQA S004     pnt  P011 P085 P00O
+ SEQA S007     pnt  P001 P083 P082 P081 P080 P07Y P07W P07V P07U P07S
+ SEQA S007 END pnt  P07R P07Q P07P P07O P07M P07L P07J P08I
+ SEQA S00G     pnt  P08J P00J P012
+ SEQA S00S     pnt  P013 P00X P00W P00V P08M
+ SEQA S002     pnt  P001 P01F P01H P01I P01J P01K P01L P01M P01N P01P
+ SEQA S002 END pnt  P01Q P01R P01S P01T P01U P01V P01X P01Y P020 P022
+ SEQA S002 END pnt  P024 P026 P028 P029 P02B P02D P02E P08K
+ SEQA S00I     pnt  P08K P02F P02G P02I P02J P02K P02L P02M P089
+ SEQA S00T     pnt  P08M P011
+ SEQA S00W     pnt  P010 P00G P08P
+ SEQA S003     pnt  P08I P07I P07H P07F P07D P07B P079 P078 P076 P075
+ SEQA S003 END pnt  P074 P072 P070 P08O
+ SEQA S00C     pnt  P08O P06Z P06Y P06W P06V P06U P06S P06R P06P P06N
+ SEQA S00C END pnt  P06M P06L P06J P06I P088
+ SEQA S00X     pnt  P08P P00I P08J
+ SEQA S008     pnt  P007 P08S P00T
+ SEQA S009     pnt  P00O P08T P00Z
+ SEQA S00Z     pnt  P007 P08U P08F
+ SEQA S010     pnt  P08D P08W P00O
+ LINE L01S P005 P08F -40012
+ LINE L002 P003 P016 -512
+ LINE L003 P016 P01A -620
+ LINE L022 P00O P08R 812
+ LINE L005 P001 P012 299050
+ LINE L006 P013 P001 -299050
+ LINE L007 P01A P01B -250
+ LINE L00A P01B P019 250
+ LINE L008 P014 P08Q 190
+ LINE L00G P007 P010 S001 -30020
+ LINE L00I P011 P00O S004 20020
+ LINE L00E P08Q P005 10010
+ LINE L01N P00O P08B S00K 230
+ LINE L00L P007 P00T S008 190
+ LINE L00N P00O P00Z S009 180
+ LINE L00O P00Z P013 -40020
+ LINE L00P P012 P00T 40020
+ LINE L00R P004 P014 -80025
+ LINE L00K P08Q P007 -812
+ LINE L00T P015 P003 80025
+ LINE L00V P012 P019 80025
+ LINE L00W P017 P004 512
+ LINE L00X P019 P017 620
+ LINE L00Z P013 P01A 80025
+ LINE L010 P001 P01B 80025
+ LINE L011 P017 P00T -80025
+ LINE L012 P00T P014 512
+ LINE L013 P016 P00Z -80025
+ LINE L014 P00Z P015 512
+ LINE L015 P010 P01C S005 120
+ LINE L016 P01D P011 S006 320
+ LINE L017 P086 P087 80025
+ LINE L01F P088 P010 999050
+ LINE L01J P089 P011 999050
+ LINE L01E P088 P060 S00A 120
+ LINE L01B P013 P08M S00S -460
+ LINE L01I P089 P031 S00E -320
+ LINE L01X P01C P08H S00P -528
+ LINE L01U P060 P08G S00N -30028
+ LINE L01M P08A P007 S00J -430
+ LINE L01P P08B P08A S00L 136
+ LINE L01R P08D P002 40012
+ LINE L01V P08G P031 S00O 30028
+ LINE L01Y P08H P01D S00R 528
+ LINE L001 P001 P08I S007 116
+ LINE L01H P010 P08P S00W -440
+ LINE L019 P08J P012 S00G 116
+ LINE L009 P001 P08K S002 -460
+ LINE L01A P08K P089 S00I 520
+ LINE L01C P08M P011 S00V 520
+ LINE L00C P08I P08O S003 -434
+ LINE L01D P08O P088 S00C 440
+ LINE L01K P08P P08J S00X 434
+ LINE L00S P007 P08F S00Z 610
+ LINE L01L P08D P00O S010 -610
+ LINE L01Q P002 P08R -10010
+ LINE L020 P08R P015 180
+ LINE L004 P08F P08Y -848
+ LINE L00J P08Y P08D 848
+ LCMB C001  + L015 + L01X + L01Y + L016 
+ LCMB C002  + L01N + L01P + L01M 
+ LCMB C003  + L01S + L004 + L00J + L01R 
+ LCMB C004  + L01U + L01V 
+ LCMB C005  + L01X + L01Y 
+ LCMB C006  + L01I - L01V - L01U - L01E 
+ LCMB C007  + L001 + L00C + L01D 
+ LCMB C008  + L01H + L01K + L019 
+ LCMB C009  + L009 + L01A 
+ LCMB C00A  + L01B + L01C 
+ LCMB C00C  + L004 + L00J 
+ GSUR A001 + BLEND - L006 + L00Z + L007 - L010 
+ GSUR A002 + BLEND + L010 + L00A - L00V - L005 
+ GSUR A003 + BLEND - L00G - C002 - L00I - C001 
+ GSUR A004 + BLEND + C00C + L01L + C002 + L00S 
+ GSUR A005 + BLEND + L01R + L01Q - L022 - L01L 
+ GSUR A006 + BLEND + L014 + L00T + L002 + L013 
+ GSUR A007 + BLEND + L01S - L00S - L00K + L00E 
+ GSUR A008 + BLEND - L012 - L011 + L00W + L00R 
+ GSUR A009 + BLEND + L00G + C008 + L00P - L00L 
+ GSUR A00A + BLEND + L00I + L00N + L00O + C00A 
+ GSUR A00C + BLEND - L00P + L00V + L00X + L011 
+ GSUR A00E + BLEND - L00O - L013 + L003 - L00Z 
+ GSUR A00G + BLEND + L01F + C001 - L01J + C006 
+ GSUR A00K + BLEND - C007 + L005 - C008 - L01F 
+ GSUR A00L + BLEND - C00A + L006 + C009 + L01J 
+ GSUR A00I + BLEND + L00K + L00L + L012 + L008 
+ GSUR A00J + BLEND + L022 + L020 - L014 - L00N 
+ SETA profil p P088 
+ SETA profil p P01F 
+ SETA profil p P01H 
+ SETA profil p P01I 
+ SETA profil p P01J 
+ SETA profil p P01K 
+ SETA profil p P01L 
+ SETA profil p P01M 
+ SETA profil p P01N 
+ SETA profil p P01P 
+ SETA profil p P01Q 
+ SETA profil p P01R 
+ SETA profil p P01S 
+ SETA profil p P01T 
+ SETA profil p P01U 
+ SETA profil p P01V 
+ SETA profil p P01X 
+ SETA profil p P01Y 
+ SETA profil p P020 
+ SETA profil p P022 
+ SETA profil p P024 
+ SETA profil p P026 
+ SETA profil p P028 
+ SETA profil p P029 
+ SETA profil p P02B 
+ SETA profil p P02D 
+ SETA profil p P02E 
+ SETA profil p P02F 
+ SETA profil p P02G 
+ SETA profil p P02I 
+ SETA profil p P02J 
+ SETA profil p P02K 
+ SETA profil p P02L 
+ SETA profil p P02M 
+ SETA profil p P02O 
+ SETA profil p P02Q 
+ SETA profil p P02R 
+ SETA profil p P02T 
+ SETA profil p P02U 
+ SETA profil p P02V 
+ SETA profil p P02W 
+ SETA profil p P02Y 
+ SETA profil p P02Z 
+ SETA profil p P030 
+ SETA profil p P031 
+ SETA profil p P032 
+ SETA profil p P033 
+ SETA profil p P034 
+ SETA profil p P036 
+ SETA profil p P037 
+ SETA profil p P039 
+ SETA profil p P03A 
+ SETA profil p P03B 
+ SETA profil p P03C 
+ SETA profil p P03E 
+ SETA profil p P03F 
+ SETA profil p P03G 
+ SETA profil p P03H 
+ SETA profil p P03I 
+ SETA profil p P03J 
+ SETA profil p P03K 
+ SETA profil p P03M 
+ SETA profil p P03N 
+ SETA profil p P03O 
+ SETA profil p P03P 
+ SETA profil p P03R 
+ SETA profil p P03S 
+ SETA profil p P03U 
+ SETA profil p P03V 
+ SETA profil p P03W 
+ SETA profil p P03X 
+ SETA profil p P03Z 
+ SETA profil p P040 
+ SETA profil p P041 
+ SETA profil p P043 
+ SETA profil p P044 
+ SETA profil p P045 
+ SETA profil p P046 
+ SETA profil p P048 
+ SETA profil p P049 
+ SETA profil p P04B 
+ SETA profil p P04C 
+ SETA profil p P04D 
+ SETA profil p P04E 
+ SETA profil p P04G 
+ SETA profil p P04H 
+ SETA profil p P04I 
+ SETA profil p P04J 
+ SETA profil p P04L 
+ SETA profil p P04M 
+ SETA profil p P04N 
+ SETA profil p P04P 
+ SETA profil p P04Q 
+ SETA profil p P04R 
+ SETA profil p P04T 
+ SETA profil p P04V 
+ SETA profil p P04W 
+ SETA profil p P04X 
+ SETA profil p P04Z 
+ SETA profil p P050 
+ SETA profil p P052 
+ SETA profil p P054 
+ SETA profil p P056 
+ SETA profil p P058 
+ SETA profil p P059 
+ SETA profil p P05A 
+ SETA profil p P05C 
+ SETA profil p P05D 
+ SETA profil p P05F 
+ SETA profil p P05G 
+ SETA profil p P05H 
+ SETA profil p P05I 
+ SETA profil p P05J 
+ SETA profil p P05L 
+ SETA profil p P05M 
+ SETA profil p P05N 
+ SETA profil p P05P 
+ SETA profil p P05R 
+ SETA profil p P05S 
+ SETA profil p P05T 
+ SETA profil p P05V 
+ SETA profil p P05W 
+ SETA profil p P05Y 
+ SETA profil p P05Z 
+ SETA profil p P060 
+ SETA profil p P062 
+ SETA profil p P064 
+ SETA profil p P066 
+ SETA profil p P068 
+ SETA profil p P069 
+ SETA profil p P06B 
+ SETA profil p P06C 
+ SETA profil p P06D 
+ SETA profil p P06F 
+ SETA profil p P06H 
+ SETA profil p P06I 
+ SETA profil p P06J 
+ SETA profil p P06L 
+ SETA profil p P06M 
+ SETA profil p P06N 
+ SETA profil p P06P 
+ SETA profil p P06R 
+ SETA profil p P06S 
+ SETA profil p P06U 
+ SETA profil p P06V 
+ SETA profil p P06W 
+ SETA profil p P06Y 
+ SETA profil p P06Z 
+ SETA profil p P070 
+ SETA profil p P072 
+ SETA profil p P074 
+ SETA profil p P075 
+ SETA profil p P076 
+ SETA profil p P078 
+ SETA profil p P079 
+ SETA profil p P07B 
+ SETA profil p P07D 
+ SETA profil p P07F 
+ SETA profil p P07H 
+ SETA profil p P07I 
+ SETA profil p P07J 
+ SETA profil p P07L 
+ SETA profil p P07M 
+ SETA profil p P07O 
+ SETA profil p P07P 
+ SETA profil p P07Q 
+ SETA profil p P07R 
+ SETA profil p P07S 
+ SETA profil p P07U 
+ SETA profil p P07V 
+ SETA profil p P07W 
+ SETA profil p P07Y 
+ SETA profil p P080 
+ SETA profil p P081 
+ SETA profil p P082 
+ SETA profil p P083 
+ SETA profil p P089 
+ SETA profil p P001 
+ SETA profil p P08G 
+ SETA profil p P08I 
+ SETA profil p P08K 
+ SETA profil p P08O 
+ SETA profil l L01E 
+ SETA profil l L01I 
+ SETA profil l L01U 
+ SETA profil l L01V 
+ SETA profil l L001 
+ SETA profil l L009 
+ SETA profil l L01A 
+ SETA profil l L00C 
+ SETA profil l L01D 
+ SETA profil c C004 
+ SETA profil c C006 
+ SETA profil c C007 
+ SETA profil c C009 
+ SETA wall p P002 
+ SETA wall p P003 
+ SETA wall p P004 
+ SETA wall p P005 
+ SETA wall p P014 
+ SETA wall p P015 
+ SETA wall p P08Q 
+ SETA wall p P08R 
+ SETA wall l L008 
+ SETA wall l L00E 
+ SETA wall l L00R 
+ SETA wall l L00T 
+ SETA wall l L01Q 
+ SETA wall l L020 
+ SETA in p P002 
+ SETA in p P005 
+ SETA in p P08D 
+ SETA in p P08F 
+ SETA in p P08Y 
+ SETA in l L01S 
+ SETA in l L01R 
+ SETA in l L004 
+ SETA in l L00J 
+ SETA in c C003 
+ SETA in c C00C 
+ SETA out p P003 
+ SETA out p P004 
+ SETA out p P016 
+ SETA out p P017 
+ SETA out p P019 
+ SETA out p P01A 
+ SETA out p P01B 
+ SETA out l L002 
+ SETA out l L003 
+ SETA out l L007 
+ SETA out l L00A 
+ SETA out l L00W 
+ SETA out l L00X 
+ SETA l l L01F 
+ SETA l l L01J 
+ SETA ll p P001 
+ SETA ll p P007 
+ SETA ll p P00O 
+ SETA ll p P010 
+ SETA ll p P011 
+ SETA ll p P012 
+ SETA ll p P013 
+ SETA ll p P01C 
+ SETA ll p P01D 
+ SETA ll p P086 
+ SETA ll p P087 
+ SETA ll l L00G 
+ SETA ll l L00I 
+ SETA ll l L015 
+ SETA ll l L016 
+ SETA ll l L017 
+ SETA w1 p P004 
+ SETA w1 p P005 
+ SETA w1 p P014 
+ SETA w2 p P002 
+ SETA w2 p P003 
+ SETA w2 p P015 
+ SETA rot p P088 
+ SETA rot p P01F 
+ SETA rot p P01H 
+ SETA rot p P01I 
+ SETA rot p P01J 
+ SETA rot p P01K 
+ SETA rot p P01L 
+ SETA rot p P01M 
+ SETA rot p P01N 
+ SETA rot p P01P 
+ SETA rot p P01Q 
+ SETA rot p P01R 
+ SETA rot p P01S 
+ SETA rot p P01T 
+ SETA rot p P01U 
+ SETA rot p P01V 
+ SETA rot p P01X 
+ SETA rot p P01Y 
+ SETA rot p P020 
+ SETA rot p P022 
+ SETA rot p P024 
+ SETA rot p P026 
+ SETA rot p P028 
+ SETA rot p P029 
+ SETA rot p P02B 
+ SETA rot p P02D 
+ SETA rot p P02E 
+ SETA rot p P02F 
+ SETA rot p P02G 
+ SETA rot p P02I 
+ SETA rot p P02J 
+ SETA rot p P02K 
+ SETA rot p P02L 
+ SETA rot p P02M 
+ SETA rot p P02O 
+ SETA rot p P02Q 
+ SETA rot p P02R 
+ SETA rot p P02T 
+ SETA rot p P02U 
+ SETA rot p P02V 
+ SETA rot p P02W 
+ SETA rot p P02Y 
+ SETA rot p P02Z 
+ SETA rot p P030 
+ SETA rot p P031 
+ SETA rot p P032 
+ SETA rot p P033 
+ SETA rot p P034 
+ SETA rot p P036 
+ SETA rot p P037 
+ SETA rot p P039 
+ SETA rot p P03A 
+ SETA rot p P03B 
+ SETA rot p P03C 
+ SETA rot p P03E 
+ SETA rot p P03F 
+ SETA rot p P03G 
+ SETA rot p P03H 
+ SETA rot p P03I 
+ SETA rot p P03J 
+ SETA rot p P03K 
+ SETA rot p P03M 
+ SETA rot p P03N 
+ SETA rot p P03O 
+ SETA rot p P03P 
+ SETA rot p P03R 
+ SETA rot p P03S 
+ SETA rot p P03U 
+ SETA rot p P03V 
+ SETA rot p P03W 
+ SETA rot p P03X 
+ SETA rot p P03Z 
+ SETA rot p P040 
+ SETA rot p P041 
+ SETA rot p P043 
+ SETA rot p P044 
+ SETA rot p P045 
+ SETA rot p P046 
+ SETA rot p P048 
+ SETA rot p P049 
+ SETA rot p P04B 
+ SETA rot p P04C 
+ SETA rot p P04D 
+ SETA rot p P04E 
+ SETA rot p P04G 
+ SETA rot p P04H 
+ SETA rot p P04I 
+ SETA rot p P04J 
+ SETA rot p P04L 
+ SETA rot p P04M 
+ SETA rot p P04N 
+ SETA rot p P04P 
+ SETA rot p P04Q 
+ SETA rot p P04R 
+ SETA rot p P04T 
+ SETA rot p P04V 
+ SETA rot p P04W 
+ SETA rot p P04X 
+ SETA rot p P04Z 
+ SETA rot p P050 
+ SETA rot p P052 
+ SETA rot p P054 
+ SETA rot p P056 
+ SETA rot p P058 
+ SETA rot p P059 
+ SETA rot p P05A 
+ SETA rot p P05C 
+ SETA rot p P05D 
+ SETA rot p P05F 
+ SETA rot p P05G 
+ SETA rot p P05H 
+ SETA rot p P05I 
+ SETA rot p P05J 
+ SETA rot p P05L 
+ SETA rot p P05M 
+ SETA rot p P05N 
+ SETA rot p P05P 
+ SETA rot p P05R 
+ SETA rot p P05S 
+ SETA rot p P05T 
+ SETA rot p P05V 
+ SETA rot p P05W 
+ SETA rot p P05Y 
+ SETA rot p P05Z 
+ SETA rot p P060 
+ SETA rot p P062 
+ SETA rot p P064 
+ SETA rot p P066 
+ SETA rot p P068 
+ SETA rot p P069 
+ SETA rot p P06B 
+ SETA rot p P06C 
+ SETA rot p P06D 
+ SETA rot p P06F 
+ SETA rot p P06H 
+ SETA rot p P06I 
+ SETA rot p P06J 
+ SETA rot p P06L 
+ SETA rot p P06M 
+ SETA rot p P06N 
+ SETA rot p P06P 
+ SETA rot p P06R 
+ SETA rot p P06S 
+ SETA rot p P06U 
+ SETA rot p P06V 
+ SETA rot p P06W 
+ SETA rot p P06Y 
+ SETA rot p P06Z 
+ SETA rot p P070 
+ SETA rot p P072 
+ SETA rot p P074 
+ SETA rot p P075 
+ SETA rot p P076 
+ SETA rot p P078 
+ SETA rot p P079 
+ SETA rot p P07B 
+ SETA rot p P07D 
+ SETA rot p P07F 
+ SETA rot p P07H 
+ SETA rot p P07I 
+ SETA rot p P07J 
+ SETA rot p P07L 
+ SETA rot p P07M 
+ SETA rot p P07O 
+ SETA rot p P07P 
+ SETA rot p P07Q 
+ SETA rot p P07R 
+ SETA rot p P07S 
+ SETA rot p P07U 
+ SETA rot p P07V 
+ SETA rot p P07W 
+ SETA rot p P07Y 
+ SETA rot p P080 
+ SETA rot p P081 
+ SETA rot p P082 
+ SETA rot p P083 
+ SETA rot p P089 
+ SETA rot p P001 
+ SETA rot p P006 
+ SETA rot p P008 
+ SETA rot p P00A 
+ SETA rot p P00C 
+ SETA rot p P00G 
+ SETA rot p P00I 
+ SETA rot p P00J 
+ SETA rot p P00L 
+ SETA rot p P00N 
+ SETA rot p P00P 
+ SETA rot p P00R 
+ SETA rot p P00S 
+ SETA rot p P00V 
+ SETA rot p P00W 
+ SETA rot p P00X 
+ SETA rot p P010 
+ SETA rot p P011 
+ SETA rot p P012 
+ SETA rot p P013 
+ SETA rot p P01C 
+ SETA rot p P01D 
+ SETA rot p P08G 
+ SETA rot p P08H 
+ SETA rot p P08I 
+ SETA rot p P08J 
+ SETA rot p P08K 
+ SETA rot p P08M 
+ SETA rot p P08N 
+ SETA rot p P08O 
+ SETA rot p P08P 
+ SETA p1 p P08F 
+ SETA p2 p P08D 
+ SETA far p P002 
+ SETA far p P003 
+ SETA far p P004 
+ SETA far p P005 
+ SETA far p P014 
+ SETA far p P015 
+ SETA far p P08D 
+ SETA far p P08F 
+ SETA far p P08Q 
+ SETA far p P08R 
+ SETA far p P08Y 
+ SETA far l L01S 
+ SETA far l L008 
+ SETA far l L00E 
+ SETA far l L00R 
+ SETA far l L00T 
+ SETA far l L01R 
+ SETA far l L01Q 
+ SETA far l L020 
+ SETA far l L004 
+ SETA far l L00J 
+ SETA far c C003 
+ SETA far c C00C 
+ SETA bl l L005 
+ SETA bl l L006 
+ SETA bl l L007 
+ SETA bl l L00A 
+ SETA bl l L01F 
+ SETA bl l L01J 
+ SETA s1 s A001 
+ SETA s1 s A002 
+ SETA s1 s A003 
+ SETA s1 s A004 
+ SETA s1 s A005 
+ SETA s1 s A006 
+ SETA s1 s A007 
+ SETA s1 s A008 
+ SETA s1 s A009 
+ SETA s1 s A00A 
+ SETA s1 s A00C 
+ SETA s1 s A00E 
+ SETA s1 s A00G 
+ SETA s1 s A00K 
+ SETA s1 s A00L 
+ SETA s1 s A00I 
+ SETA s1 s A00J 
+ ELTY all QU4
+ plot p all b
+ plus l all k
+ plus s all m
+ plus b all g
+ plus la l k
+

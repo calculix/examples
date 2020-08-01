@@ -1,0 +1,23 @@
+#Purpose:
+#Segment of a turbo-charger turbine rotor with 12 blades
+#under cenrtifugal, thermal and pressure load.
+
+#Do the following:
+
+goto ../therm and run the example to generate the temperature field
+goto ../map and run the example to map the pressure and temperature
+        to the mesh specified in mesh.fbl
+
+cgx -b send.fbl
+ccx latim
+cgx latim.frd latim.inp
+
+#In cgx type:
+
+copy all b2 rot x 30
+
+#REMARK:
+#you may change the element type in mesh.fbl:
+#from he20r to he8 ( or te4 or te10, but requires netgen installed) 
+
+#The file mesh.fbl is also used in ../map and ../therm

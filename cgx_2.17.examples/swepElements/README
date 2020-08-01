@@ -1,0 +1,5 @@
+demonstrates the sweeping of shel elements, generation of a line as a basis
+for a 2d plot and the recording of a movie wit a given nr of frames.
+
+cgx -b ring1.fbl
+firefox movie.gif
