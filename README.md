@@ -10,7 +10,7 @@ ccx | Official CalculiX CrunchiX examples
 &nbsp; └ &nbsp;&nbsp; test      | &nbsp; └ &nbsp;&nbsp; test examples
 cgx | Official CalculiX GraphiX examples
 cgx-jet-engine-model | [http://www.calculix.de/fw05.html](http://www.calculix.de/fw05.html)
-elements | FE models consisting of only 1 single element
+elements | FE models consisting of only 1 single element<br/>(for development purposes)
 launcher | examples taken from [CalculiX Launcher](http://www.calculixforwin.com/) v3.4
 materials | material library in INP format
 mkraska_final_ccx | M.Kraska's final models for CCX only (see [full project](https://github.com/mkraska/CalculiX-Examples))
