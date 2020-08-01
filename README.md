@@ -5,9 +5,9 @@ Official and user examples for CCX and CGX. All in one place.
 Folder | Description
 --- | ---
 ccx | Official CalculiX CrunchiX examples
-&nbsp; &nbsp; &nbsp; &nbsp; fluidtest | CrunchiX large fluid test examples
-&nbsp; &nbsp; &nbsp; &nbsp; structest | CrunchiX large structural test examples
-&nbsp; &nbsp; &nbsp; &nbsp; test | CrunchiX test examples
+&nbsp; ├ &nbsp;&nbsp; fluidtest | &nbsp; ├ &nbsp;&nbsp; large fluid test examples
+&nbsp; ├ &nbsp;&nbsp; structest | &nbsp; ├ &nbsp;&nbsp; large structural test examples
+&nbsp; └ &nbsp;&nbsp; test      | &nbsp; └ &nbsp;&nbsp; test examples
 cgx | Official CalculiX GraphiX examples
 cgx-jet-engine-model | [http://www.calculix.de/fw05.html](http://www.calculix.de/fw05.html)
 elements | FE models consisting of only 1 single element
