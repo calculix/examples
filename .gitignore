@@ -1,6 +1,6 @@
 .vscode
 __pycache__
-/mkraska.py
+/*.py
 /mkraska
 /TODO.md
 /abaqus
