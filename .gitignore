@@ -1,3 +1,4 @@
-*
+TODO.md
+/abaqus/*
+*.*
 !*.inp
-!README.md
