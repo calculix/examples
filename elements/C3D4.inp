@@ -1,0 +1,14 @@
+*Node
+    1, 0, 0, 1
+    2, 1.4, 1, 2
+    3, 1.4, 1, 0
+    4, 0, 2, 1
+*Element, Type=C3D4, Elset=ALL
+    1, 1, 2, 3, 4
+*MATERIAL, NAME=STEEL
+	*ELASTIC
+		2e+5, 0.3
+*Solid section, Elset=ALL, Material=STEEL
+*STEP
+	*NO ANALYSIS
+*End step
