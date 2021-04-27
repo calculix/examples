@@ -1,0 +1,80 @@
+** Load Case: loading plate applied on the top of cellular honey comb cube
+**            cube sits on top of same size of solid plate.
+
+** units: Kg, mm, ms
+** Solver: Calculix 2.16, 2.15
+
+** read mesh files
+*INCLUDE, INPUT=Mesh_HoneyCombCube_OUT.inp
+*INCLUDE, input=Mesh_Btm_OUT_ReID.inp
+*INCLUDE, input=Mesh_Top_OUT_ReID.inp
+
+** material section
+*MATERIAL,NAME=Steel
+*ELASTIC
+2.07e+02,0.26
+
+** optional for modal, gravity, etc
+*DENSITY
+7.83e-06
+
+
+
+** cube beam profile
+*BEAM SECTION,MATERIAL=Steel,ELSET=EPB,OFFSET1=0,OFFSET2=0,SECTION=RECT
+0.5,0.5
+0,1,0
+
+**for body elements, 2d plane stress and strain
+*SOLID SECTION,MATERIAL=Steel,ELSET=EBtm
+*SOLID SECTION,MATERIAL=Steel,ELSET=ETop
+
+** *TIE,NAME=TopCnt,POSITION TOLERANCE=0.00001
+** TopLoadSurf,Group_Inner_Cnt
+** *TIE,NAME=BtmCnt,POSITION TOLERANCE=0.00001
+** BtmFixedSurf,Group_Inner_Cnt_L
+
+** cellular cube contacts the top plate and bottom plate
+*CONTACT PAIR,INTERACTION=SI1,TYPE=NODE TO SURFACE
+TopLoadSurf,Group_Inner_Cnt
+*CONTACT PAIR,INTERACTION=SI1,TYPE=NODE TO SURFACE
+BtmFixedSurf,Group_Inner_Cnt_L
+*SURFACE INTERACTION,NAME=SI1
+*SURFACE BEHAVIOR,PRESSURE-OVERCLOSURE=Linear
+1.0e+3,0
+*FRICTION
+0.2,0.1
+
+** the top load plate controlled by an imposed displacement, only downward motion (negative Z-direction)
+*AMPLITUDE,NAME=Disp
+0,0,
+0.0004,-2.5
+** Define the output time points
+*TIME POINTS, NAME = OutputT, GENERATE
+0,4.0,0.1
+
+** steps, explicit solver
+*STEP, nlgeom, inc=1000000
+*dynamic, ALPHA = -0.33, EXPLICIT
+** 1.0e-8, 0.0004, 0.000000001 , 0.01
+1.0e-8, 0.4, 0.000000001 , 0.01
+** fixed bottom plate
+*BOUNDARY
+BtmSupportSurf,1,3,0
+** neg. z-dir moving top plate
+*BOUNDARY,AMPLITUDE=Disp
+NTop,1,1,0
+NTop,2,2,0
+NTop,3,3,1
+**Output (frd file)
+**Displacements
+**   *NODE FILE, TIME POINTS = OutputT
+*NODE FILE
+U
+*END STEP
+
+
+
+
+
+
