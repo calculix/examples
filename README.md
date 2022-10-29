@@ -16,3 +16,13 @@ materials | material library in INP format
 mkraska_final_ccx | M.Kraska's final models for CCX only (see [full project](https://github.com/mkraska/CalculiX-Examples))
 other | other user models
 yahoo | some models from [CalculiX Yahoo Group](https://groups.yahoo.com/neo/groups/CALCULIX)
+
+
+<br/><br/>
+
+
+
+# TODO
+
+Make units consistent - choose one of systems:  
+(m, kg, s, N, Pa) or (mm, t, s, N, MPa)

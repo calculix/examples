@@ -1,4 +1,4 @@
-*include,input=all.msh
+*include, input=all.msh
 *include, input=x0.nam
 *include, input=y0.nam
 *include, input=outer.nam
