@@ -1,6 +1,7 @@
 **
 **    Structure: heated beam between two fixed walls.
-**    Test objective: *EXPANSION.
+**    Test objective: 1) *EXPANSION.
+**                    2) selection of THE on *EL FILE
 **
 *HEADING
 Model: beam     Date: 10-Mar-1998
@@ -398,5 +399,7 @@ NALL,500.
 U
 *EL PRINT,ELSET=EALL
 S
+*EL FILE
+THE
 *END STEP
 

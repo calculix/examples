@@ -23,7 +23,7 @@ Balken
 4,  7,8,9
 5,  9,10,11
 *beam section, section=box, elset=elall, material=steel
-50.0, 50.0, 3.00, 3.00, 3.00, 3.00
+70.0, 50.0, 3.00, 3.00, 3.00, 3.00
 1.0, 0.0, 0.0
 *material, name=steel
 *elastic, type=iso

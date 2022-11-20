@@ -1,6 +1,6 @@
 **
 **   Structure: cantilever beam.
-**   Test objective: *COUPLING, *DISTRIBUTING for rotations.
+**   Test objective: *COUPLING, *DISTRIBUTING for axial force and torque.
 **                   (*CLOAD; no nlgeom)
 **
 *HEADING
@@ -365,8 +365,6 @@ FIX, 3
 *CLOAD
 262,3,7910.861
 262,6,131.4474
-*NODE PRINT,NSET=N1
-U
 *SECTION PRINT,SURFACE=S1,NAME=SP1
 SOF,SOM
 *END STEP

@@ -72,22 +72,42 @@ MODE NO.   X-COMPONENT     Y-COMPONENT     Z-COMPONENT     X-ROTATION      Y-ROT
     1          9          B
     1         10          B
 
- OBJECTIVE: EIGENFREQUENCY
+   #######################################          #########################
+   D E S I G N   R E S P O N S E                    I N F O R M A T I O N
 
-        0.9811697E+07
+   FUNCTION        VALUE            NAME                                                                            
+   #######################################          #########################
 
- OBJECTIVE: EIGENFREQUENCY
+   EIGENFREQUENCY   0.9811697E+07   FREQ_OBJ                                                                        
 
-        0.3474952E+08
+   #######################################          #########################
+   D E S I G N   R E S P O N S E                    I N F O R M A T I O N
 
- OBJECTIVE: EIGENFREQUENCY
+   FUNCTION        VALUE            NAME                                                                            
+   #######################################          #########################
 
-        0.1137507E+09
+   EIGENFREQUENCY   0.3474952E+08   FREQ_OBJ                                                                        
 
- OBJECTIVE: EIGENFREQUENCY
+   #######################################          #########################
+   D E S I G N   R E S P O N S E                    I N F O R M A T I O N
 
-        0.4592823E+09
+   FUNCTION        VALUE            NAME                                                                            
+   #######################################          #########################
 
- OBJECTIVE: EIGENFREQUENCY
+   EIGENFREQUENCY   0.1137507E+09   FREQ_OBJ                                                                        
 
-        0.7077502E+09
+   #######################################          #########################
+   D E S I G N   R E S P O N S E                    I N F O R M A T I O N
+
+   FUNCTION        VALUE            NAME                                                                            
+   #######################################          #########################
+
+   EIGENFREQUENCY   0.4592823E+09   FREQ_OBJ                                                                        
+
+   #######################################          #########################
+   D E S I G N   R E S P O N S E                    I N F O R M A T I O N
+
+   FUNCTION        VALUE            NAME                                                                            
+   #######################################          #########################
+
+   EIGENFREQUENCY   0.7077502E+09   FREQ_OBJ                                                                        

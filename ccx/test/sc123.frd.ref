@@ -1,12 +1,12 @@
     1C
     1UModel: beam     Date: 10-Mar-1998                                 
     1UUSER                                                              
-    1UDATE              23.july.2020                                    
-    1UTIME              21:59:14                                        
+    1UDATE              31.july.2022                                    
+    1UTIME              18:24:13                                        
     1UHOST                                                              
     1UPGM               CalculiX                                        
-    1UVERSION           Version 2.17                             
-    1UCOMPILETIME       Thu Jul 23 21:29:36 CEST 2020                    
+    1UVERSION           Version 2.20                             
+    1UCOMPILETIME       Fri Jul 29 13:52:46 CEST 2022                    
     1UDIR                                                               
     1UDBN                                                               
     1UMAT    1SINGLE_CRYSTAL                                            

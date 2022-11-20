@@ -15,7 +15,7 @@ comp slip do
 elty all
 elty all he8f
 mesh all
-# remove unwanted faces (bug)
+# remove unwanted faces
 setr SYMP3 se in
 setr SYMP3 se out
 setr SYMP3 se wall

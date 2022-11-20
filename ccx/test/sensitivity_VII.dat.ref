@@ -1,4 +1,8 @@
 
- OBJECTIVE: DISPLACEMENT
+   #######################################          #########################
+   D E S I G N   R E S P O N S E                    I N F O R M A T I O N
 
-        0.1562493E+01
+   FUNCTION        VALUE            NAME                                                                            
+   #######################################          #########################
+
+   ALL-DISP         0.1562493E+01   DISP_OBJ                                                                        

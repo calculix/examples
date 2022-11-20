@@ -1,6 +1,6 @@
 **
 **   Structure: hollow cylinder.
-**   Test objective: *COUPLING, *DISTRIBUTING for rotations.
+**   Test objective: *COUPLING, *KINEMATIC for rotations.
 **                   noncentral reference node
 **
 *NODE, NSET=Nall

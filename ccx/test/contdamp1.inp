@@ -95,4 +95,6 @@ DEP,INDEP
 U
 *NODE print,nset=nall,frequency=10
 V
+*EL FILE,NSET=nall
+ENER
 *END STEP

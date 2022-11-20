@@ -1,4 +1,8 @@
 
- OBJECTIVE: STRAIN ENERGY
+   #######################################          #########################
+   D E S I G N   R E S P O N S E                    I N F O R M A T I O N
 
-        0.2380952E-03
+   FUNCTION        VALUE            NAME                                                                            
+   #######################################          #########################
+
+   STRAINENERGY     0.2380952E-03   ENER_OBJ                                                                        

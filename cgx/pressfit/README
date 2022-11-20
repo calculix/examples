@@ -7,5 +7,7 @@ cgx -b send.fbl
 ccx flange
 cgx flange.frd flange.inp
  
-Animate the displacements (toggle real disp) to see the effects.
- 
+Animate the displacements (animate->toggle real disp) to see the effect.
+Then
+select "Viewing->Toggle Add-Displacement" to add the deformation to the
+node coordinates.

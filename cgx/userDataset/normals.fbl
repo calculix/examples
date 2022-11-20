@@ -1,6 +1,8 @@
 # Example: Calculate normals of all free surfaces
 # and write them to a new dataset
 #
+# switch on background mode (improves execution time)
+asgn bg on
 # read geo and mesh
 read ../geometry.fbd
 elty all he8i
@@ -67,6 +69,8 @@ ds e ny 2 2 2
 ds e nz 3 2 3
 # finish the dataset
 ds f
+# switch off background mode
+asgn bg off
 # show it
 ds 1 e 4
 plot fv all

@@ -18,9 +18,9 @@ Model: linear net 3 elements Dtype
 10, 5, 1, 0
 *ELEMENT, TYPE=D,ELSET=EGAS
 2, 2, 3, 4
+4,7,8,9
 1, 0, 1, 2
 3, 4, 5, 0
-4,7,8,9
 5,0,6,7
 6,9,10,0	
 *MATERIAL,NAME=GAS

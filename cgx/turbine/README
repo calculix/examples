@@ -4,7 +4,7 @@
 
 #Do the following:
 
-goto ../therm and run the example to generate the temperature field
+goto ../thermal and run the example to generate the temperature field
 goto ../map and run the example to map the pressure and temperature
         to the mesh specified in mesh.fbl
 
@@ -20,4 +20,4 @@ copy all b2 rot x 30
 #you may change the element type in mesh.fbl:
 #from he20r to he8 ( or te4 or te10, but requires netgen installed) 
 
-#The file mesh.fbl is also used in ../map and ../therm
+#The file mesh.fbl is also used in ../map and ../thermal

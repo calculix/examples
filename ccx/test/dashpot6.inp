@@ -74,4 +74,6 @@ NMASSA,2,3
 9,1,1.
 *NODE PRINT,nset=nall,frequency=10
 U
+*EL FILE,NSET=nall
+ENER
 *END STEP

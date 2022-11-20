@@ -1,12 +1,11 @@
 **
 **   Structure: fluid flow between two plates.
-**   Test objective: stationary compressible Couette
+**   Test objective: stationary incompressible Couette
 **                   with fixed wall temperature.
 **                   velocity:linear between 0. and 1.
 **                   temperature: maximum of 1.125
 **                   slanted mesh
-**                   UD,SIMPLE,STEADY STATE
-**                   solution not completely converged yet
+**                   CBS-Method
 **
 *NODE, NSET=Nall
        1,0.000000000000e+00,1.000000000000e+00,1.000000000000e-01
@@ -295,7 +294,7 @@
      284,5.500000000000e+00,0.000000000000e+00,1.000000000000e-01
      285,6.000000000000e+00,0.000000000000e+00,0.000000000000e+00
      286,6.000000000000e+00,0.000000000000e+00,1.000000000000e-01
-*ELEMENT, TYPE=F3D8R, ELSET=Eall
+*ELEMENT, TYPE=F3D8, ELSET=Eall
      1,     1,     2,     3,     4,     5,     6,     7,     8
      2,     4,     3,     9,    10,     8,     7,    11,    12
      3,     5,     6,     7,     8,    13,    14,    15,    16
@@ -416,349 +415,149 @@
    118,   276,   275,   277,   278,   280,   279,   281,   282
    119,   238,   237,   279,   280,   242,   241,   283,   284
    120,   280,   279,   281,   282,   284,   283,   285,   286
-** Surfaces based on left
-*SURFACE, NAME=Sleft
-19, S2
-20, S2
-39, S2
-40, S2
-59, S2
-60, S2
-79, S2
-80, S2
-99, S2
-100, S2
-119, S2
-120, S2
-** Surfaces based on right
-*SURFACE, NAME=Sright
-1, S1
-2, S1
-21, S1
-22, S1
-41, S1
-42, S1
-61, S1
-62, S1
-81, S1
-82, S1
-101, S1
-102, S1
-** Surfaces based on in
-*SURFACE, NAME=Sin
-1, S3
-3, S3
-5, S3
-7, S3
-9, S3
-11, S3
-13, S3
-15, S3
-17, S3
-19, S3
-** Surfaces based on out
-*SURFACE, NAME=Sout
-102, S5
-104, S5
-106, S5
-108, S5
-110, S5
-112, S5
-114, S5
-116, S5
-118, S5
-120, S5
-** Surfaces based on sliding
-*SURFACE, NAME=Ssliding
-1, S6
-1, S4
-2, S4
-2, S6
-3, S6
-3, S4
-4, S4
-4, S6
-21, S4
-21, S6
-23, S4
-23, S6
-5, S6
-5, S4
-6, S4
-6, S6
-25, S4
-25, S6
-7, S6
-7, S4
-8, S4
-8, S6
-27, S4
-27, S6
-9, S6
-9, S4
-10, S4
-10, S6
-29, S4
-29, S6
-11, S6
-11, S4
-12, S4
-12, S6
-31, S4
-31, S6
-13, S6
-13, S4
-14, S4
-14, S6
-33, S4
-33, S6
-15, S6
-15, S4
-16, S4
-16, S6
-35, S4
-35, S6
-17, S6
-17, S4
-18, S4
-18, S6
-37, S4
-37, S6
-19, S6
-19, S4
-20, S4
-20, S6
-39, S4
-39, S6
-22, S4
-22, S6
-24, S4
-24, S6
-41, S4
-41, S6
-43, S4
-43, S6
-26, S4
-26, S6
-45, S4
-45, S6
-28, S4
-28, S6
-47, S4
-47, S6
-30, S4
-30, S6
-49, S4
-49, S6
-32, S4
-32, S6
-51, S4
-51, S6
-34, S4
-34, S6
-53, S4
-53, S6
-36, S4
-36, S6
-55, S4
-55, S6
-38, S4
-38, S6
-57, S4
-57, S6
-40, S4
-40, S6
-59, S4
-59, S6
-42, S4
-42, S6
-44, S4
-44, S6
-61, S4
-61, S6
-63, S4
-63, S6
-46, S4
-46, S6
-65, S4
-65, S6
-48, S4
-48, S6
-67, S4
-67, S6
-50, S4
-50, S6
-69, S4
-69, S6
-52, S4
-52, S6
-71, S4
-71, S6
-54, S4
-54, S6
-73, S4
-73, S6
-56, S4
-56, S6
-75, S4
-75, S6
-58, S4
-58, S6
-77, S4
-77, S6
-60, S4
-60, S6
-79, S4
-79, S6
-62, S4
-62, S6
-64, S4
-64, S6
-81, S4
-81, S6
-83, S4
-83, S6
-66, S4
-66, S6
-85, S4
-85, S6
-68, S4
-68, S6
-87, S4
-87, S6
-70, S4
-70, S6
-89, S4
-89, S6
-72, S4
-72, S6
-91, S4
-91, S6
-74, S4
-74, S6
-93, S4
-93, S6
-76, S4
-76, S6
-95, S4
-95, S6
-78, S4
-78, S6
-97, S4
-97, S6
-80, S4
-80, S6
-99, S4
-99, S6
-82, S4
-82, S6
-84, S4
-84, S6
-101, S4
-101, S6
-103, S4
-103, S6
-86, S4
-86, S6
-105, S4
-105, S6
-88, S4
-88, S6
-107, S4
-107, S6
-90, S4
-90, S6
-109, S4
-109, S6
-92, S4
-92, S6
-111, S4
-111, S6
-94, S4
-94, S6
-113, S4
-113, S6
-96, S4
-96, S6
-115, S4
-115, S6
-98, S4
-98, S6
-117, S4
-117, S6
-100, S4
-100, S6
-119, S4
-119, S6
-102, S4
-102, S6
-104, S4
-104, S6
-106, S4
-106, S6
-108, S4
-108, S6
-110, S4
-110, S6
-112, S4
-112, S6
-114, S4
-114, S6
-116, S4
-116, S6
-118, S4
-118, S6
-120, S4
-120, S6
-*MATERIAL,NAME=AIR
+** Names based on in
+*NSET,NSET=Nin 
+5, 
+6, 
+13, 
+14, 
+19, 
+20, 
+25, 
+26, 
+31, 
+32, 
+37, 
+38, 
+43, 
+44, 
+49, 
+50, 
+55, 
+56, 
+** Names based on out
+*NSET,NSET=Nout 
+249, 
+250, 
+253, 
+254, 
+257, 
+258, 
+261, 
+262, 
+265, 
+266, 
+269, 
+270, 
+273, 
+274, 
+277, 
+278, 
+281, 
+282, 
+** Names based on wall
+*NSET,NSET=Nwall 
+61, 
+62, 
+63, 
+64, 
+65, 
+66, 
+107, 
+108, 
+109, 
+110, 
+151, 
+152, 
+153, 
+154, 
+195, 
+196, 
+197, 
+198, 
+239, 
+240, 
+241, 
+242, 
+283, 
+284, 
+285, 
+286, 
+** Names based on unitvel
+*NSET,NSET=Nunitvel 
+1, 
+2, 
+3, 
+4, 
+9, 
+10, 
+67, 
+68, 
+71, 
+72, 
+111, 
+112, 
+115, 
+116, 
+155, 
+156, 
+159, 
+160, 
+199, 
+200, 
+203, 
+204, 
+243, 
+244, 
+247, 
+248, 
+*MATERIAL,NAME=WATER
+*DENSITY
+1.
 *FLUID CONSTANTS
 1.,1.
-*SPECIFIC GAS CONSTANT
-0.285714286
 *CONDUCTIVITY
 1.
-*SOLID SECTION,ELSET=Eall,MATERIAL=AIR
+*SOLID SECTION,ELSET=Eall,MATERIAL=WATER
 *INITIAL CONDITIONS,TYPE=FLUID VELOCITY
-Nall,1,1.
+Nall,1,0.
 Nall,2,0.
 Nall,3,0.
 *INITIAL CONDITIONS,TYPE=PRESSURE
 Nall,1.
 *INITIAL CONDITIONS,TYPE=TEMPERATURE
-Nall,1.
-*STEP,INCF=500
-*CFD,STEADY STATE,COMPRESSIBLE,2D
-1.,1.,,,0.01
-*BOUNDARYF
-Sright,S,1,,1.
-Sright,S,2,3,0.
-Sright,S,11,,1.
-Sleft,S,1,3,0.
-Sleft,S,11,,1.
-Sin,S,2,3,0.
-Sin,S,8,,1.
-1,S3,1,,0.95
-3,S3,1,,0.85
-5,S3,1,,0.75
-7,S3,1,,0.65
-9,S3,1,,0.55
-11,S3,1,,0.45
-13,S3,1,,0.35
-15,S3,1,,0.25
-17,S3,1,,0.15
-19,S3,1,,0.05
-1,S3,11,,1.025
-3,S3,11,,1.065
-5,S3,11,,1.095
-7,S3,11,,1.115
-9,S3,11,,1.125
-11,S3,11,,1.125
-13,S3,11,,1.115
-15,S3,11,,1.095
-17,S3,11,,1.065
-19,S3,11,,1.025
-*MASSFLOW
-Ssliding,M,0.
-*NODE PRINT,FREQUENCYF=500,NSET=Nall
+Nall,0.
+*STEP,INCF=10000
+*CFD,STEADY STATE
+1.,1.,,
+*BOUNDARY
+Nall,3,3,0.
+Nwall,1,2,0.
+Nunitvel,1,1,1.
+Nunitvel,2,2,0.
+55,1,1,0.1
+56,1,1,0.1
+49,1,1,0.2
+50,1,1,0.2
+43,1,1,0.3
+44,1,1,0.3
+37,1,1,0.4
+38,1,1,0.4
+31,1,1,0.5
+32,1,1,0.5
+25,1,1,0.6
+26,1,1,0.6
+19,1,1,0.7
+20,1,1,0.7
+13,1,1,0.8
+14,1,1,0.8
+5,1,1,0.9
+6,1,1,0.9
+Nin,2,2,0.
+Nin,11,11,0.
+Nwall,11,11,0.
+Nunitvel,11,11,0.
+Nout,8,8,1.
+*NODE PRINT,FREQUENCYF=3000,NSET=Nall
 VF,PSF,TSF
 *END STEP

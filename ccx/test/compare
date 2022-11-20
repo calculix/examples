@@ -31,6 +31,11 @@ for i in *.inp; do
 	    continue
 	fi
 	
+	if [ $i = segmentsmooth2.rfn.inp ]
+	then
+	    continue
+	fi
+	
 #
 #       removing the old .dat and .frd file, if any
 #
@@ -86,7 +91,7 @@ for i in *.inp; do
 #
 #       check whether the .frd or the .frd.ref file exists
 #
-	if grep "^ -5" ${i%.inp}.frd  ||[ -f ${i%.inp}.frd.ref ] ; then
+	if grep "^ -5" ${i%.inp}.frd >| abc  ||[ -f ${i%.inp}.frd.ref ] ; then
 #
 #           check that both files exist
 #

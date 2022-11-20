@@ -1,6 +1,6 @@
 #Purpose:
 #Demonstrates mapping of pressures from a cfd calculation to the struct-mesh.
-#ATTENTION: Run the example ../therm before
+#ATTENTION: Run the example ../thermal before
 
 #Do the following:
 

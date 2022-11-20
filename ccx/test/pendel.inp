@@ -55,4 +55,6 @@ nall, 3, 0.0
 elall, grav, 9810.0, 0.0, 0.0, -1.0
 *nodefile
 u
+*EL FILE
+ENER
 *end step

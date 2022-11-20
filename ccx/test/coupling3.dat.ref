@@ -15,6 +15,6 @@
 
     8.572666E-14  2.840058E-14  1.438206E+01
 
-   area,  normal force (+ = tension) and shear force (size)
+   area, normal force (+ = tension), shear force (size), torque and bending moment (size)
 
-    1.000000E+00  4.111917E-13  4.457493E-13
+    1.000000E+00  4.111917E-13  4.457493E-13  1.438206E+01  7.460771E-14

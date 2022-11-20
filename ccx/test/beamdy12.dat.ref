@@ -56,160 +56,160 @@ MODE NO.   X-COMPONENT     Y-COMPONENT     Z-COMPONENT     X-ROTATION      Y-ROT
 
  displacements (vx,vy,vz) for set N1 and time  0.0000000E+00
 
-       100  6.490183E+00  1.304335E-16 -9.798056E-19
+       100  6.490183E+00  1.304331E-16 -9.799489E-19
 
  displacements (vx,vy,vz) for set N1 and time  0.2083333E-05
 
-       100  6.799959E+00  2.953753E-13 -2.376964E-15
+       100  6.799959E+00  2.953750E-13 -2.376840E-15
 
  displacements (vx,vy,vz) for set N1 and time  0.4166667E-05
 
-       100  6.823871E+00  5.822978E-13 -4.606062E-15
+       100  6.823871E+00  5.822977E-13 -4.606209E-15
 
  displacements (vx,vy,vz) for set N1 and time  0.6250000E-05
 
-       100  6.936900E+00  8.520851E-13 -8.318358E-15
+       100  6.936900E+00  8.520853E-13 -8.318393E-15
 
  displacements (vx,vy,vz) for set N1 and time  0.8333333E-05
 
-       100  6.820441E+00  1.101697E-12 -1.103000E-14
+       100  6.820441E+00  1.101698E-12 -1.102971E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.1041667E-04
 
-       100  6.532068E+00  1.324984E-12 -1.371185E-14
+       100  6.532068E+00  1.324984E-12 -1.371214E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.1250000E-04
 
-       100  6.026806E+00  1.517305E-12 -1.534101E-14
+       100  6.026806E+00  1.517305E-12 -1.534123E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.1458333E-04
 
-       100  5.155417E+00  1.672660E-12 -1.690054E-14
+       100  5.155417E+00  1.672660E-12 -1.690023E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.1666667E-04
 
-       100  4.334027E+00  1.785503E-12 -1.827025E-14
+       100  4.334027E+00  1.785503E-12 -1.827028E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.1875000E-04
 
-       100  3.342235E+00  1.853096E-12 -1.903549E-14
+       100  3.342235E+00  1.853096E-12 -1.903563E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.2083333E-04
 
-       100  2.444827E+00  1.875116E-12 -1.956890E-14
+       100  2.444827E+00  1.875116E-12 -1.956872E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.2291667E-04
 
-       100  1.474929E+00  1.853059E-12 -1.903543E-14
+       100  1.474929E+00  1.853058E-12 -1.903557E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.2500000E-04
 
-       100  3.035023E-01  1.785428E-12 -1.826863E-14
+       100  3.035023E-01  1.785428E-12 -1.826866E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.2708333E-04
 
-       100 -8.164961E-01  1.672547E-12 -1.689907E-14
+       100 -8.164961E-01  1.672547E-12 -1.689875E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.2916667E-04
 
-       100 -2.081313E+00  1.517162E-12 -1.533849E-14
+       100 -2.081313E+00  1.517162E-12 -1.533870E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.3125000E-04
 
-       100 -3.070527E+00  1.324814E-12 -1.370818E-14
+       100 -3.070527E+00  1.324814E-12 -1.370847E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.3333333E-04
 
-       100 -3.948491E+00  1.101504E-12 -1.102651E-14
+       100 -3.948491E+00  1.101504E-12 -1.102621E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.3541667E-04
 
-       100 -4.716606E+00  8.518707E-13 -8.313297E-15
+       100 -4.716606E+00  8.518709E-13 -8.313333E-15
 
  displacements (vx,vy,vz) for set N1 and time  0.3750000E-04
 
-       100 -5.331690E+00  5.820572E-13 -4.605511E-15
+       100 -5.331690E+00  5.820571E-13 -4.605658E-15
 
  displacements (vx,vy,vz) for set N1 and time  0.3958333E-04
 
-       100 -6.044985E+00  2.951202E-13 -2.376271E-15
+       100 -6.044985E+00  2.951199E-13 -2.376146E-15
 
  displacements (vx,vy,vz) for set N1 and time  0.4166667E-04
 
-       100 -6.490455E+00 -1.280271E-16  3.638169E-20
+       100 -6.490455E+00 -1.280267E-16  3.542433E-20
 
  displacements (vx,vy,vz) for set N1 and time  0.4375000E-04
 
-       100 -6.800657E+00 -2.953697E-13  2.376379E-15
+       100 -6.800657E+00 -2.953695E-13  2.376256E-15
 
  displacements (vx,vy,vz) for set N1 and time  0.4583333E-04
 
-       100 -6.824766E+00 -5.822868E-13  4.609570E-15
+       100 -6.824766E+00 -5.822867E-13  4.609717E-15
 
  displacements (vx,vy,vz) for set N1 and time  0.4791667E-04
 
-       100 -6.937077E+00 -8.520807E-13  8.319341E-15
+       100 -6.937077E+00 -8.520809E-13  8.319376E-15
 
  displacements (vx,vy,vz) for set N1 and time  0.5000000E-04
 
-       100 -6.820712E+00 -1.101700E-12  1.103064E-14
+       100 -6.820712E+00 -1.101700E-12  1.103035E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.5208333E-04
 
-       100 -6.531769E+00 -1.324995E-12  1.371041E-14
+       100 -6.531769E+00 -1.324995E-12  1.371070E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.5416667E-04
 
-       100 -6.026982E+00 -1.517322E-12  1.533849E-14
+       100 -6.026982E+00 -1.517322E-12  1.533870E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.5625000E-04
 
-       100 -5.155855E+00 -1.672673E-12  1.689925E-14
+       100 -5.155855E+00 -1.672673E-12  1.689893E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.5833333E-04
 
-       100 -4.334311E+00 -1.785512E-12  1.826891E-14
+       100 -4.334311E+00 -1.785512E-12  1.826894E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.6041667E-04
 
-       100 -3.342604E+00 -1.853102E-12  1.903586E-14
+       100 -3.342604E+00 -1.853102E-12  1.903600E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.6250000E-04
 
-       100 -2.444362E+00 -1.875122E-12  1.956916E-14
+       100 -2.444362E+00 -1.875122E-12  1.956898E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.6458333E-04
 
-       100 -1.474586E+00 -1.853065E-12  1.903390E-14
+       100 -1.474586E+00 -1.853065E-12  1.903404E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.6666667E-04
 
-       100 -3.031730E-01 -1.785433E-12  1.826764E-14
+       100 -3.031730E-01 -1.785434E-12  1.826767E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.6875000E-04
 
-       100  8.165146E-01 -1.672552E-12  1.689762E-14
+       100  8.165146E-01 -1.672552E-12  1.689730E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.7083333E-04
 
-       100  2.080800E+00 -1.517160E-12  1.533856E-14
+       100  2.080800E+00 -1.517159E-12  1.533878E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.7291667E-04
 
-       100  3.070563E+00 -1.324803E-12  1.371039E-14
+       100  3.070563E+00 -1.324803E-12  1.371067E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.7500000E-04
 
-       100  3.948437E+00 -1.101487E-12  1.102858E-14
+       100  3.948437E+00 -1.101487E-12  1.102829E-14
 
  displacements (vx,vy,vz) for set N1 and time  0.7708333E-04
 
-       100  4.717113E+00 -8.518521E-13  8.317072E-15
+       100  4.717113E+00 -8.518523E-13  8.317108E-15
 
  displacements (vx,vy,vz) for set N1 and time  0.7916667E-04
 
-       100  5.331945E+00 -5.820491E-13  4.604745E-15
+       100  5.331945E+00 -5.820490E-13  4.604892E-15
 
  displacements (vx,vy,vz) for set N1 and time  0.8125000E-04
 
-       100  6.044718E+00 -2.951175E-13  2.375237E-15
+       100  6.044718E+00 -2.951173E-13  2.375112E-15

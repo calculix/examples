@@ -1868,6 +1868,8 @@ ball, floor
 elall, grav, 9810.0, 0.0, 0.0, -1.0
 *node print, nset=nall, time points=times
 u
+*EL FILE,NSET=nall
+ENER
 *end step
 
 

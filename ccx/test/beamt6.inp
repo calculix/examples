@@ -2,7 +2,10 @@
 **   Structure: cantilever beam.
 **   Test objective: transfer of temperatures in a *STATIC
 **                   step to a *COMBINED TEMPERATURE-
-**                   DISPLACEMENT step 
+**                   DISPLACEMENT step;
+**                   displacements and stresses are zero at the
+**                   end of the calculation: can be used for a
+**                   solver accuracy check
 **
 *HEADING
 Model: beam     Date: 10-Mar-1998

@@ -287,6 +287,8 @@ Model: beam     Date: 10-Mar-1998
    277,0.5,1.5,6.
    278,0.5,1.5,7.
    279,0.5,1.5,8.
+   280,0.5,1.5,0.5
+   281,0.5,1.5,8.5
 *ELEMENT, TYPE=C3D20R   , ELSET=B1
      1,     1,    10,    95,    19,    61,   105,   222,   192,     9,    93,
            94,    20,   104,   220,   221,   193,    62,   103,   219,   190
@@ -361,6 +363,9 @@ Model: beam     Date: 10-Mar-1998
 38,268,277,269
 39,269,278,270
 40,270,279,271
+*ELEMENT, TYPE=D,ELSET=EIO
+41,0,280,263
+42,271,281,0
 *NSET, NSET=CN7
     97,    96,    95,    94,    93,    20,    19,    18,    17,    16,    15,
     14,    13,    12,    11,    10,     9,     4,     3,     2,     1
@@ -379,10 +384,9 @@ Model: beam     Date: 10-Mar-1998
 *MATERIAL,NAME=GAS
 *SPECIFIC HEAT
 1.E6
-***DENSITY
-**1.E-9
 *FLUID SECTION,ELSET=EGAS,MATERIAL=GAS,TYPE=GASPIPE FANNO ADIABATIC
 0.785,1.,8.,0.01,1
+*FLUID SECTION,ELSET=EIO,MATERIAL=GAS,TYPE=INOUT
 *NSET,NSET=GIBO
 5, 
 6, 
@@ -489,6 +493,8 @@ Nall,20.
 277,1,1,1.e-4
 278,1,1,1.e-4
 279,1,1,1.e-4
+280,1,1,1.e-4
+281,1,1,1.e-4
 *BOUNDARY
 Ntop,11,11,20.
 263,11,11,100.

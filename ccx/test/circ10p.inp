@@ -1,6 +1,7 @@
 **
 **   Structure: cantilever beam subject to point forces.
 **   Test objective: C3D10 elements. Stress based refinement.
+**                   change of SPC's from one step to the next
 **
 *NODE,NSET=NALL
        1,            1.,0,0.
@@ -178,7 +179,18 @@ LOAD,2,1.
 *NODE FILE
 U
 *EL FILE
-S
+S,NOE
 *REFINE MESH,LIMIT=50.
 S
+*END STEP
+*STEP
+*STATIC
+*BOUNDARY,FIXED
+47,2
+71,2
+*CLOAD
+LOAD,2,2.
+*NODE FILE
+U
+*EL FILE
 *END STEP

@@ -1,6 +1,6 @@
 **
 **   Structure: cube with convection boundary condition;
-**   Test objective: *FILM
+**   Test objective: AMPLITUDE=RAMP with film conditions
 **
 *NODE, NSET=Nall
        1,  1.00000e+00,  1.00000e+00,  0.00000e+00 

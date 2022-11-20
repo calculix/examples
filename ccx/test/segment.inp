@@ -1,11 +1,6 @@
 **
 **   Structure: disk segment
 **   Test objective: cyclic symmetry
-**                   output of two sectors
-**   The first four eigenfrequencies correspond to
-**   rigid body modes. They are small compared to
-**   the other eigenfrequencies, however, their values
-**   highly depend on the computer system
 **                   
 *HEADING
 Model: segment
@@ -1080,15 +1075,19 @@ Nleft
 Nright
 *TIE,CYCLIC SYMMETRY,POSITION TOLERANCE=1.,NAME=T1
 left,right
-*CYCLIC SYMMETRY MODEL,N=12,NGRAPH=12
+*CYCLIC SYMMETRY MODEL,N=12,NGRAPH=1
 0.,0.,0.,1.,0.,0.
 *INITIAL CONDITIONS,TYPE=TEMPERATURE
+*NSET,NSET=STRESSDOMAIN
+Nall
 *STEP
 *FREQUENCY
 10
-*SELECT CYCLIC SYMMETRY MODES,NMIN=1,NMAX=1
-*NODE FILE
-U,PU
+*SELECT CYCLIC SYMMETRY MODES,NMIN=2,NMAX=2
+***NODE FILE
+**U,PU
+***EL FILE
+**S,PHS,ENER,NOE,MAXS
 *EL FILE
-S,PHS,ENER,NOE
+MAXS
 *END STEP

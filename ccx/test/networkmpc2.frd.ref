@@ -1,12 +1,12 @@
     1C
     1UModel: linear net 3 elements Dtype                                
     1UUSER                                                              
-    1UDATE              23.july.2020                                    
-    1UTIME              21:58:47                                        
+    1UDATE              31.july.2022                                    
+    1UTIME              18:23:43                                        
     1UHOST                                                              
     1UPGM               CalculiX                                        
-    1UVERSION           Version 2.17                             
-    1UCOMPILETIME       Thu Jul 23 21:29:36 CEST 2020                    
+    1UVERSION           Version 2.20                             
+    1UCOMPILETIME       Fri Jul 29 13:52:46 CEST 2022                    
     1UDIR                                                               
     1UDBN                                                               
     1UMAT    1GAS                                                       

@@ -30,7 +30,6 @@ Model: linear net 3 elements Dtype
 22,22, 0, 0
 23,23, 0 ,0 
 *ELEMENT, TYPE=D,ELSET=AGAS
-1, 0, 1, 2
 2, 2, 3, 4
 *ELEMENT, TYPE=D,ELSET=BGAS
 3, 4, 5, 6
@@ -50,6 +49,8 @@ Model: linear net 3 elements Dtype
 10,18,19,20
 *ELEMENT, TYPE=D,ELSET=JGAS
 11,20,21,22
+*ELEMENT, TYPE=D,ELSET=FGAS
+1, 0, 1, 2
 12,22,23,0
 *MATERIAL,NAME=GAS
 *CONDUCTIVITY

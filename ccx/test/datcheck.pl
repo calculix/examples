@@ -23,12 +23,14 @@ while(<DATREF>){
     @fieldsref=split /\s+/, $_;
     $n=$#fieldsref;
     for($i=1;$i<=$n;$i++){
+#    for($i=3;$i<=$n;$i++){
 	if($fieldsref[$i] =~ /\./){
 	    if(abs($fieldsref[$i])>$xmax[$k]){
 		$xmax[$k]=abs($fieldsref[$i]);
 	    }
 	}
     }
+#    print $k,$xmax[$k],"\n";
 }
 close DATREF;
 

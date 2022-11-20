@@ -3,26 +3,15 @@
 'PLOT3D'  0
      'FORMATTED'
      'RAE2822'
-'SIUNIT'     1
-'RE'         6.5e06
-'PR'         0.7
-'MACH'       0.73e0
-'ALPHA'      0.
-'TINF'       288.
-'GAMMA'      1.4
-'REFERENCE AREA'  0.396
 'PRINT FORCES'    1
 'SOLVER'     1
     'DIAGONAL AF3F'    1
-'KAPPA'      0.
+'KAPPA'      0.3333
 'LIMIT'      3
-'MESH SEQUENCE' 1
-     500
-'NITS'       8000
-'CFL'        0.1
-'CFLFNL'     0.5
-'ITDFNL'     100
+'NITS'       10000
+'CFL'        0.9
+'CFLFNL'     0.6
+'ITDFNL'     1000
 'ITUPDT'     5
 'THIN LAYER' 1
-'REYNOLDS STRESS'  1
-  'ZSGS' 0
+'REYNOLDS STRESS'  0

@@ -1,3 +1,10 @@
 del me
+valu temperature 288.  // inlet		  
+valu pressure  1e5     // outlet		  
+valu u-velocity 247.   // inlet		  
+valu v-velocity 0.     // inlet              
+valu ref-length 0.396
+valu ini-velocity-factor 1.
 mesh all block
-send all isaac WALL profil FARFIELD far EXTRAPOLATE out
+#send all isaac WALL profil FARFIELD far EXTRAPOLATE out
+send all isaac WALL profil TANGENCY wall "SUBSONIC OUTFLOW" out JET in

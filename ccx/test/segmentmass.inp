@@ -1,11 +1,7 @@
 **
 **   Structure: disk segment
-**   Test objective: cyclic symmetry
-**                   output of two sectors
-**   The first four eigenfrequencies correspond to
-**   rigid body modes. They are small compared to
-**   the other eigenfrequencies, however, their values
-**   highly depend on the computer system
+**   Test objective: cyclic symmetry with
+**                   point mass
 **                   
 *HEADING
 Model: segment

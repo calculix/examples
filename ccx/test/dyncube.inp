@@ -77,4 +77,6 @@ Nall,3,0.
 1,1,1.
 *NODE FILE
 U,V
+*EL FILE
+ENER
 *END STEP

@@ -10,7 +10,7 @@ Then type (in the cgx-graphic window, not the xterm!)
 
 The grid is the written.
 
-Then combine the prepared input file-header with the block-structure:
+Then combine the prepared input file template with the block-structure:
 
   cat RAE2822.hdr isaac.dat >| RAE2822.dat
 
