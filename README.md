@@ -13,7 +13,6 @@ cgx-jet-engine-model | [http://www.calculix.de/fw05.html](http://www.calculix.de
 elements | FE models consisting of only 1 single element<br/>(for development purposes)
 launcher | examples taken from [CalculiX Launcher](http://www.calculixforwin.com/) v3.4
 materials | material library in INP format
-mkraska_final_ccx | M.Kraska's final models for CCX only (see [full project](https://github.com/mkraska/CalculiX-Examples))
 other | other user models
 yahoo | some models from [CalculiX Yahoo Group](https://groups.yahoo.com/neo/groups/CALCULIX)
 
