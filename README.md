@@ -15,13 +15,3 @@ launcher | examples taken from [CalculiX Launcher](http://www.calculixforwin.com
 materials | material library in INP format
 other | other user models
 yahoo | some models from [CalculiX Yahoo Group](https://groups.yahoo.com/neo/groups/CALCULIX)
-
-
-<br/><br/>
-
-
-
-# TODO
-
-Make units consistent - choose one of systems:  
-(m, kg, s, N, Pa) or (mm, t, s, N, MPa)
