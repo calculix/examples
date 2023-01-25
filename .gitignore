@@ -2,3 +2,4 @@ TODO.md
 /abaqus/*
 *.*
 !*.inp
+/default*
